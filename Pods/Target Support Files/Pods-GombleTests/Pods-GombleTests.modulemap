@@ -1,0 +1,6 @@
+framework module Pods_GombleTests {
+  umbrella header "Pods-GombleTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
