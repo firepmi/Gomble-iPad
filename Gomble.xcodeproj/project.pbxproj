@@ -1,0 +1,589 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F8E24E253F900D90C32 /* AppDelegate.swift */; };
+		FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9024E253F900D90C32 /* SceneDelegate.swift */; };
+		FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9224E253F900D90C32 /* ViewController.swift */; };
+		FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC21F9424E253F900D90C32 /* Main.storyboard */; };
+		FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC21F9724E2542300D90C32 /* Assets.xcassets */; };
+		FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC21F9924E2542300D90C32 /* LaunchScreen.storyboard */; };
+		FCC21FA624E2542600D90C32 /* GombleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FA524E2542600D90C32 /* GombleTests.swift */; };
+		FCC21FB124E2542600D90C32 /* GombleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FB024E2542600D90C32 /* GombleUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCC21FA224E2542600D90C32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCC21F8324E253F800D90C32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC21F8A24E253F800D90C32;
+			remoteInfo = Gomble;
+		};
+		FCC21FAD24E2542600D90C32 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCC21F8324E253F800D90C32 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCC21F8A24E253F800D90C32;
+			remoteInfo = Gomble;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FCC21F8B24E253F900D90C32 /* Gomble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomble.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC21F8E24E253F900D90C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FCC21F9024E253F900D90C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FCC21F9224E253F900D90C32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCC21F9524E253F900D90C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FCC21F9724E2542300D90C32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FCC21F9A24E2542300D90C32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FCC21F9C24E2542300D90C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC21FA124E2542600D90C32 /* GombleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GombleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC21FA524E2542600D90C32 /* GombleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GombleTests.swift; sourceTree = "<group>"; };
+		FCC21FA724E2542600D90C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCC21FAC24E2542600D90C32 /* GombleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GombleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCC21FB024E2542600D90C32 /* GombleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GombleUITests.swift; sourceTree = "<group>"; };
+		FCC21FB224E2542600D90C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FCC21F8824E253F800D90C32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC21F9E24E2542600D90C32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC21FA924E2542600D90C32 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FCC21F8224E253F800D90C32 = {
+			isa = PBXGroup;
+			children = (
+				FCC21F8D24E253F900D90C32 /* Gomble */,
+				FCC21FA424E2542600D90C32 /* GombleTests */,
+				FCC21FAF24E2542600D90C32 /* GombleUITests */,
+				FCC21F8C24E253F900D90C32 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FCC21F8C24E253F900D90C32 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FCC21F8B24E253F900D90C32 /* Gomble.app */,
+				FCC21FA124E2542600D90C32 /* GombleTests.xctest */,
+				FCC21FAC24E2542600D90C32 /* GombleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FCC21F8D24E253F900D90C32 /* Gomble */ = {
+			isa = PBXGroup;
+			children = (
+				FCC21F8E24E253F900D90C32 /* AppDelegate.swift */,
+				FCC21F9024E253F900D90C32 /* SceneDelegate.swift */,
+				FCC21F9224E253F900D90C32 /* ViewController.swift */,
+				FCC21F9424E253F900D90C32 /* Main.storyboard */,
+				FCC21F9724E2542300D90C32 /* Assets.xcassets */,
+				FCC21F9924E2542300D90C32 /* LaunchScreen.storyboard */,
+				FCC21F9C24E2542300D90C32 /* Info.plist */,
+			);
+			path = Gomble;
+			sourceTree = "<group>";
+		};
+		FCC21FA424E2542600D90C32 /* GombleTests */ = {
+			isa = PBXGroup;
+			children = (
+				FCC21FA524E2542600D90C32 /* GombleTests.swift */,
+				FCC21FA724E2542600D90C32 /* Info.plist */,
+			);
+			path = GombleTests;
+			sourceTree = "<group>";
+		};
+		FCC21FAF24E2542600D90C32 /* GombleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FCC21FB024E2542600D90C32 /* GombleUITests.swift */,
+				FCC21FB224E2542600D90C32 /* Info.plist */,
+			);
+			path = GombleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FCC21F8A24E253F800D90C32 /* Gomble */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC21FB524E2542600D90C32 /* Build configuration list for PBXNativeTarget "Gomble" */;
+			buildPhases = (
+				FCC21F8724E253F800D90C32 /* Sources */,
+				FCC21F8824E253F800D90C32 /* Frameworks */,
+				FCC21F8924E253F800D90C32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Gomble;
+			productName = Gomble;
+			productReference = FCC21F8B24E253F900D90C32 /* Gomble.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FCC21FA024E2542600D90C32 /* GombleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC21FB824E2542600D90C32 /* Build configuration list for PBXNativeTarget "GombleTests" */;
+			buildPhases = (
+				FCC21F9D24E2542600D90C32 /* Sources */,
+				FCC21F9E24E2542600D90C32 /* Frameworks */,
+				FCC21F9F24E2542600D90C32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCC21FA324E2542600D90C32 /* PBXTargetDependency */,
+			);
+			name = GombleTests;
+			productName = GombleTests;
+			productReference = FCC21FA124E2542600D90C32 /* GombleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FCC21FAB24E2542600D90C32 /* GombleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCC21FBB24E2542600D90C32 /* Build configuration list for PBXNativeTarget "GombleUITests" */;
+			buildPhases = (
+				FCC21FA824E2542600D90C32 /* Sources */,
+				FCC21FA924E2542600D90C32 /* Frameworks */,
+				FCC21FAA24E2542600D90C32 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FCC21FAE24E2542600D90C32 /* PBXTargetDependency */,
+			);
+			name = GombleUITests;
+			productName = GombleUITests;
+			productReference = FCC21FAC24E2542600D90C32 /* GombleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FCC21F8324E253F800D90C32 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Haley Huynh";
+				TargetAttributes = {
+					FCC21F8A24E253F800D90C32 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					FCC21FA024E2542600D90C32 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = FCC21F8A24E253F800D90C32;
+					};
+					FCC21FAB24E2542600D90C32 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = FCC21F8A24E253F800D90C32;
+					};
+				};
+			};
+			buildConfigurationList = FCC21F8624E253F800D90C32 /* Build configuration list for PBXProject "Gomble" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FCC21F8224E253F800D90C32;
+			productRefGroup = FCC21F8C24E253F900D90C32 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FCC21F8A24E253F800D90C32 /* Gomble */,
+				FCC21FA024E2542600D90C32 /* GombleTests */,
+				FCC21FAB24E2542600D90C32 /* GombleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FCC21F8924E253F800D90C32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */,
+				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
+				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC21F9F24E2542600D90C32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC21FAA24E2542600D90C32 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FCC21F8724E253F800D90C32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */,
+				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
+				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC21F9D24E2542600D90C32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC21FA624E2542600D90C32 /* GombleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCC21FA824E2542600D90C32 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCC21FB124E2542600D90C32 /* GombleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCC21FA324E2542600D90C32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC21F8A24E253F800D90C32 /* Gomble */;
+			targetProxy = FCC21FA224E2542600D90C32 /* PBXContainerItemProxy */;
+		};
+		FCC21FAE24E2542600D90C32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCC21F8A24E253F800D90C32 /* Gomble */;
+			targetProxy = FCC21FAD24E2542600D90C32 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FCC21F9424E253F900D90C32 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC21F9524E253F900D90C32 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FCC21F9924E2542300D90C32 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FCC21F9A24E2542300D90C32 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FCC21FB324E2542600D90C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FCC21FB424E2542600D90C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FCC21FB624E2542600D90C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Gomble/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Gomble;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCC21FB724E2542600D90C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Gomble/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Gomble;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FCC21FB924E2542600D90C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GombleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.GombleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomble.app/Gomble";
+			};
+			name = Debug;
+		};
+		FCC21FBA24E2542600D90C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GombleTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.GombleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gomble.app/Gomble";
+			};
+			name = Release;
+		};
+		FCC21FBC24E2542600D90C32 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GombleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.GombleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gomble;
+			};
+			name = Debug;
+		};
+		FCC21FBD24E2542600D90C32 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = GombleUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.GombleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Gomble;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FCC21F8624E253F800D90C32 /* Build configuration list for PBXProject "Gomble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC21FB324E2542600D90C32 /* Debug */,
+				FCC21FB424E2542600D90C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC21FB524E2542600D90C32 /* Build configuration list for PBXNativeTarget "Gomble" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC21FB624E2542600D90C32 /* Debug */,
+				FCC21FB724E2542600D90C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC21FB824E2542600D90C32 /* Build configuration list for PBXNativeTarget "GombleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC21FB924E2542600D90C32 /* Debug */,
+				FCC21FBA24E2542600D90C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCC21FBB24E2542600D90C32 /* Build configuration list for PBXNativeTarget "GombleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCC21FBC24E2542600D90C32 /* Debug */,
+				FCC21FBD24E2542600D90C32 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FCC21F8324E253F800D90C32 /* Project object */;
+}
