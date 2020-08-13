@@ -14,6 +14,9 @@
 		FC12065224E58F9500E5F304 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065024E58F9500E5F304 /* RoundedView.swift */; };
 		FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065324E5904300E5F304 /* RoundedTextField.swift */; };
 		FC12065724E5A60000E5F304 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065624E5A60000E5F304 /* Globals.swift */; };
+		FC12065924E5AE5B00E5F304 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065824E5AE5B00E5F304 /* Common.swift */; };
+		FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065A24E5B3AA00E5F304 /* ForgotPasswordViewController.swift */; };
+		FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */ = {isa = PBXBuildFile; fileRef = FC12065C24E5B5A100E5F304 /* icon_back.png */; };
 		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
 		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
 		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
@@ -64,6 +67,9 @@
 		FC12065024E58F9500E5F304 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		FC12065324E5904300E5F304 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		FC12065624E5A60000E5F304 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
+		FC12065824E5AE5B00E5F304 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		FC12065A24E5B3AA00E5F304 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		FC12065C24E5B5A100E5F304 /* icon_back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back.png; sourceTree = "<group>"; };
 		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
 		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
@@ -144,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FC12065624E5A60000E5F304 /* Globals.swift */,
+				FC12065824E5AE5B00E5F304 /* Common.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -163,6 +170,7 @@
 				FC5B375224E58B9900216DBD /* logo.png */,
 				FC5B374724E5849A00216DBD /* icon_check_off.png */,
 				FC5B374824E5849B00216DBD /* icon_check_on.png */,
+				FC12065C24E5B5A100E5F304 /* icon_back.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -252,6 +260,7 @@
 				FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */,
 				FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */,
 				FC5B374224E5427500216DBD /* SignUpViewController.swift */,
+				FC12065A24E5B3AA00E5F304 /* ForgotPasswordViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -368,6 +377,7 @@
 				FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */,
 				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
+				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
 				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
 				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
 				FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */,
@@ -505,9 +515,11 @@
 				FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */,
 				FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */,
 				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
+				FC12065924E5AE5B00E5F304 /* Common.swift in Sources */,
 				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
+				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */,
 				FC12065724E5A60000E5F304 /* Globals.swift in Sources */,
 				FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */,
