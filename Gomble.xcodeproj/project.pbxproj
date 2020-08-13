@@ -3,13 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		2B1E251F5063B7827B955424 /* Pods_Gomble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E59E00A92A6127B7D683070A /* Pods_Gomble.framework */; };
 		CD7CC49D0F92F6DF29A84895 /* Pods_GombleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F3162F571D595A2A0BDE2F /* Pods_GombleTests.framework */; };
 		D17F968786EB128B81BB710F /* Pods_Gomble_GombleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E23430507CC1DA5AFC0CAB /* Pods_Gomble_GombleUITests.framework */; };
+		FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12064F24E58F6900E5F304 /* RoundedButton.swift */; };
+		FC12065224E58F9500E5F304 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065024E58F9500E5F304 /* RoundedView.swift */; };
+		FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065324E5904300E5F304 /* RoundedTextField.swift */; };
+		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
+		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
+		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
+		FC5B374F24E589B200216DBD /* DMSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374C24E589B200216DBD /* DMSans-Medium.ttf */; };
+		FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374D24E589B200216DBD /* DMSans-Regular.ttf */; };
+		FC5B375124E589B200216DBD /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374E24E589B200216DBD /* DMSans-Bold.ttf */; };
+		FC5B375324E58B9900216DBD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B375224E58B9900216DBD /* logo.png */; };
 		FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F8E24E253F900D90C32 /* AppDelegate.swift */; };
 		FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9024E253F900D90C32 /* SceneDelegate.swift */; };
 		FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9224E253F900D90C32 /* ViewController.swift */; };
@@ -19,6 +29,7 @@
 		FCC21FA624E2542600D90C32 /* GombleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FA524E2542600D90C32 /* GombleTests.swift */; };
 		FCC21FB124E2542600D90C32 /* GombleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FB024E2542600D90C32 /* GombleUITests.swift */; };
 		FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */; };
+		FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +59,16 @@
 		D0F3162F571D595A2A0BDE2F /* Pods_GombleTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GombleTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E59E00A92A6127B7D683070A /* Pods_Gomble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gomble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB8C2AEEE06AB3AC59464D8 /* Pods-GombleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GombleTests.debug.xcconfig"; path = "Target Support Files/Pods-GombleTests/Pods-GombleTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC12064F24E58F6900E5F304 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		FC12065024E58F9500E5F304 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		FC12065324E5904300E5F304 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
+		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
+		FC5B374C24E589B200216DBD /* DMSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Medium.ttf"; sourceTree = "<group>"; };
+		FC5B374D24E589B200216DBD /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
+		FC5B374E24E589B200216DBD /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
+		FC5B375224E58B9900216DBD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		FCC21F8B24E253F900D90C32 /* Gomble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC21F8E24E253F900D90C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC21F9024E253F900D90C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +84,7 @@
 		FCC21FB024E2542600D90C32 /* GombleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GombleUITests.swift; sourceTree = "<group>"; };
 		FCC21FB224E2542600D90C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
+		FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,8 +135,47 @@
 				FBB8C2AEEE06AB3AC59464D8 /* Pods-GombleTests.debug.xcconfig */,
 				0E244B01858383AA5A3DABA0 /* Pods-GombleTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FC5B374524E5848600216DBD /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				FC5B374B24E5899600216DBD /* fonts */,
+				FC5B374624E5849100216DBD /* images */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		FC5B374624E5849100216DBD /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FC5B375224E58B9900216DBD /* logo.png */,
+				FC5B374724E5849A00216DBD /* icon_check_off.png */,
+				FC5B374824E5849B00216DBD /* icon_check_on.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+		FC5B374B24E5899600216DBD /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				FC5B374E24E589B200216DBD /* DMSans-Bold.ttf */,
+				FC5B374C24E589B200216DBD /* DMSans-Medium.ttf */,
+				FC5B374D24E589B200216DBD /* DMSans-Regular.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		FC5B375424E58DDE00216DBD /* views */ = {
+			isa = PBXGroup;
+			children = (
+				FC12064F24E58F6900E5F304 /* RoundedButton.swift */,
+				FC12065324E5904300E5F304 /* RoundedTextField.swift */,
+				FC12065024E58F9500E5F304 /* RoundedView.swift */,
+			);
+			name = views;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		FCC21F8224E253F800D90C32 = {
@@ -142,10 +203,12 @@
 		FCC21F8D24E253F900D90C32 /* Gomble */ = {
 			isa = PBXGroup;
 			children = (
+				FC5B374524E5848600216DBD /* resources */,
 				FCC21F8E24E253F900D90C32 /* AppDelegate.swift */,
 				FCC21F9024E253F900D90C32 /* SceneDelegate.swift */,
 				FCC21F9224E253F900D90C32 /* ViewController.swift */,
 				FCC21FC024E37ED500D90C32 /* ViewController */,
+				FC5B375424E58DDE00216DBD /* views */,
 				FCC21F9424E253F900D90C32 /* Main.storyboard */,
 				FCC21F9724E2542300D90C32 /* Assets.xcassets */,
 				FCC21F9924E2542300D90C32 /* LaunchScreen.storyboard */,
@@ -176,6 +239,8 @@
 			isa = PBXGroup;
 			children = (
 				FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */,
+				FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */,
+				FC5B374224E5427500216DBD /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -191,6 +256,7 @@
 				FCC21F8724E253F800D90C32 /* Sources */,
 				FCC21F8824E253F800D90C32 /* Frameworks */,
 				FCC21F8924E253F800D90C32 /* Resources */,
+				00F7223D7ADBFC2A246D2C03 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,6 +294,7 @@
 				FCC21FA824E2542600D90C32 /* Sources */,
 				FCC21FA924E2542600D90C32 /* Frameworks */,
 				FCC21FAA24E2542600D90C32 /* Resources */,
+				02B517168C9F187219432CB7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -288,8 +355,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */,
+				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
+				FC5B375324E58B9900216DBD /* logo.png in Resources */,
+				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
 				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
+				FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
+				FC5B374F24E589B200216DBD /* DMSans-Medium.ttf in Resources */,
+				FC5B375124E589B200216DBD /* DMSans-Bold.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +383,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		00F7223D7ADBFC2A246D2C03 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gomble/Pods-Gomble-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gomble/Pods-Gomble-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gomble/Pods-Gomble-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		02B517168C9F187219432CB7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gomble-GombleUITests/Pods-Gomble-GombleUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Gomble-GombleUITests/Pods-Gomble-GombleUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Gomble-GombleUITests/Pods-Gomble-GombleUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		03BE43735431B3D3E03A13A6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -383,9 +490,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC12065224E58F9500E5F304 /* RoundedView.swift in Sources */,
+				FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */,
 				FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */,
 				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
 				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
+				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
+				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
+				FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */,
 				FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

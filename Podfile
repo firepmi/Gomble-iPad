@@ -6,6 +6,7 @@ target 'Gomble' do
   use_frameworks!
 
   # Pods for Gomble
+pod 'XLPagerTabStrip'
 
   target 'GombleTests' do
     inherit! :search_paths
