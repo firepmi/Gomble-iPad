@@ -42,16 +42,19 @@ class SignUpViewController: UIViewController, IndicatorInfoProvider {
     }
     @IBAction func onCreateAccount(_ sender: Any) {
         if(!isChecked) {
-            Globals.alert(context: self, title: "Sign Up", message: "You should agree to the terms of service to create an account")
+            Globals.alert(context: self, title: "Sign Up", message: "You should agree to the terms of service to create an account", delayed: false)
         }
-        if(emailTextField.text == "" || passwordTextField.text == "" || confirmTextField.text == "") {
-            Globals.alert(context: self, title: "Sign Up", message: "Please fill out all required fields")
+        else if(emailTextField.text == "" || passwordTextField.text == "" || confirmTextField.text == "") {
+            Globals.alert(context: self, title: "Sign Up", message: "Please fill out all required fields", delayed: false)
         }
-        if(passwordTextField.text!.count < 6) {
-            Globals.alert(context: self, title: "Sign Up", message: "Password required at least 6 letters")
+        else if(passwordTextField.text!.count < 6) {
+            Globals.alert(context: self, title: "Sign Up", message: "Password required at least 6 letters", delayed: false)
         }
-        if(passwordTextField.text != confirmTextField.text) {
-            Globals.alert(context: self, title: "Sign Up", message: "Password does not match")
+        else if(passwordTextField.text != confirmTextField.text) {
+            Globals.alert(context: self, title: "Sign Up", message: "Password does not match", delayed: false)
+        }
+        else {
+            
         }
     }
 }

@@ -28,10 +28,12 @@ class SignInViewController: UIViewController, IndicatorInfoProvider {
     }
     @IBAction func onLogin(_ sender: Any) {
         if(emailTextField.text == "" || passwordTextField.text == "") {
-            Globals.alert(context: self, title: "Sign In", message: "Please fill out all required fields")
+            Globals.alert(context: self, title: "Sign In", message: "Please fill out all required fields", delayed: false)
+            return
         }
         if(passwordTextField.text!.count < 6) {
-            Globals.alert(context: self, title: "Sign In", message: "Password required at least 6 letters")
+            Globals.alert(context: self, title: "Sign In", message: "Password required at least 6 letters", delayed: false)
+            return
         }
     }
     @IBAction func onForgotPassword(_ sender: Any) {

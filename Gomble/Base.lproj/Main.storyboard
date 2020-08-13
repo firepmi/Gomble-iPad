@@ -408,6 +408,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Gxs-h7-Az3" id="lSt-Xl-Sap"/>
+                        <segue destination="5Um-ST-H6H" kind="presentation" identifier="toNewPassword" modalPresentationStyle="fullScreen" id="xSo-Im-kcY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aXm-hq-Kz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -618,6 +619,132 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MXj-5v-cNB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1622.65625" y="128.90625"/>
+        </scene>
+        <!--Create New Password View Controller-->
+        <scene sceneID="gP9-Db-Ex9">
+            <objects>
+                <viewController id="5Um-ST-H6H" customClass="CreateNewPasswordViewController" customModule="Gomble" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cDK-Ue-zyo">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvL-aO-fTC">
+                                <rect key="frame" x="148.5" y="270.5" width="54" height="16"/>
+                                <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="12"/>
+                                <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4r-Gw-c9v" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
+                                <rect key="frame" x="148.5" y="290.5" width="471" height="40"/>
+                                <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="471" id="qHl-3X-cc2"/>
+                                    <constraint firstAttribute="height" constant="40" id="svg-yA-10V"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                                        <real key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="5Um-ST-H6H" id="Pwd-eH-SkU"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEA-Db-AyU" customClass="RoundedButton" customModule="Gomble" customModuleProvider="target">
+                                <rect key="frame" x="226" y="379.5" width="316" height="40"/>
+                                <color key="backgroundColor" red="0.54117647059999996" green="0.54117647059999996" blue="0.54117647059999996" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="0IV-kq-uIb"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="316" id="D6g-sa-tcM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="14"/>
+                                <state key="normal" title="Confirm">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onConfirm:" destination="5Um-ST-H6H" eventType="touchUpInside" id="JVA-Qj-4hb"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_back.png" translatesAutoresizingMaskIntoConstraints="NO" id="oRX-QZ-8jO">
+                                <rect key="frame" x="42" y="52" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="Tka-Qz-cx2"/>
+                                    <constraint firstAttribute="width" constant="24" id="axh-g5-TR3"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2g-cz-cSQ">
+                                <rect key="frame" x="32" y="42" width="44" height="44"/>
+                                <connections>
+                                    <action selector="onBack:" destination="5Um-ST-H6H" eventType="touchUpInside" id="4Hb-Bi-78I"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHO-r8-3td">
+                                <rect key="frame" x="216.5" y="96" width="335" height="42"/>
+                                <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="32"/>
+                                <color key="textColor" red="0.37254901959999998" green="0.4039215686" blue="0.44705882349999998" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cL2-HS-jXb">
+                                <rect key="frame" x="256" y="168" width="256.5" height="18.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We sent you an email to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56u-3u-EGg">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                                        <color key="textColor" red="0.72941176470000002" green="0.72941176470000002" blue="0.72941176470000002" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asia@mail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irf-3a-nPe">
+                                        <rect key="frame" x="158.5" y="0.0" width="98" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                                        <color key="textColor" red="0.37254901960784315" green="0.40392156862745099" blue="0.44705882352941173" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="b2g-cz-cSQ" firstAttribute="trailing" secondItem="oRX-QZ-8jO" secondAttribute="trailing" constant="10" id="2kT-li-n4c"/>
+                            <constraint firstItem="a4r-Gw-c9v" firstAttribute="top" secondItem="hvL-aO-fTC" secondAttribute="bottom" constant="4" id="5JT-jI-LrO"/>
+                            <constraint firstItem="iEA-Db-AyU" firstAttribute="top" secondItem="a4r-Gw-c9v" secondAttribute="bottom" constant="49" id="6v2-Yn-r1C"/>
+                            <constraint firstItem="hvL-aO-fTC" firstAttribute="leading" secondItem="a4r-Gw-c9v" secondAttribute="leading" id="8NW-Q3-SAt"/>
+                            <constraint firstItem="b2g-cz-cSQ" firstAttribute="top" secondItem="oRX-QZ-8jO" secondAttribute="top" constant="-10" id="A4y-OM-sKw"/>
+                            <constraint firstItem="a4r-Gw-c9v" firstAttribute="centerX" secondItem="cDK-Ue-zyo" secondAttribute="centerX" id="C6k-Gb-UOS"/>
+                            <constraint firstItem="oRX-QZ-8jO" firstAttribute="top" secondItem="7bL-Jv-MR5" secondAttribute="top" constant="52" id="G2P-4b-J4w"/>
+                            <constraint firstItem="iEA-Db-AyU" firstAttribute="centerX" secondItem="cDK-Ue-zyo" secondAttribute="centerX" id="SAI-3f-cSs"/>
+                            <constraint firstItem="XHO-r8-3td" firstAttribute="top" secondItem="oRX-QZ-8jO" secondAttribute="bottom" constant="20" id="Tb6-ks-ary"/>
+                            <constraint firstItem="b2g-cz-cSQ" firstAttribute="bottom" secondItem="oRX-QZ-8jO" secondAttribute="bottom" constant="10" id="VfN-Y2-HI4"/>
+                            <constraint firstItem="hvL-aO-fTC" firstAttribute="top" secondItem="56u-3u-EGg" secondAttribute="bottom" constant="84" id="fD5-0V-elj"/>
+                            <constraint firstItem="XHO-r8-3td" firstAttribute="centerX" secondItem="cDK-Ue-zyo" secondAttribute="centerX" id="hrq-r4-1FN"/>
+                            <constraint firstItem="oRX-QZ-8jO" firstAttribute="leading" secondItem="7bL-Jv-MR5" secondAttribute="leading" constant="42" id="llD-sf-htJ"/>
+                            <constraint firstItem="cL2-HS-jXb" firstAttribute="top" secondItem="XHO-r8-3td" secondAttribute="bottom" constant="30" id="nVV-T9-jzb"/>
+                            <constraint firstItem="7bL-Jv-MR5" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hvL-aO-fTC" secondAttribute="trailing" symbolic="YES" id="pOH-NI-eEJ"/>
+                            <constraint firstItem="cL2-HS-jXb" firstAttribute="centerX" secondItem="cDK-Ue-zyo" secondAttribute="centerX" id="uJA-Pa-YAy"/>
+                            <constraint firstItem="b2g-cz-cSQ" firstAttribute="leading" secondItem="oRX-QZ-8jO" secondAttribute="leading" constant="-10" id="wYj-ia-pTJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="7bL-Jv-MR5"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="Irf-3a-nPe" id="V5i-PX-9S2"/>
+                        <outlet property="passwordTextField" destination="a4r-Gw-c9v" id="1PH-Ho-Bs3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="shX-E9-YsO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1623" y="855"/>
         </scene>
     </scenes>
     <resources>
