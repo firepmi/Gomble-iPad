@@ -23,6 +23,7 @@ class RoundedView: UIView {
     
     @IBInspectable var borderColor: UIColor = UIColor.clear {
         didSet {
-            layer.borderColor = borderColor.cgColor        }
+            layer.borderColor = borderColor.cgColor            
+        }
     }
 }

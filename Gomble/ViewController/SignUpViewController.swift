@@ -41,6 +41,7 @@ class SignUpViewController: UIViewController, IndicatorInfoProvider {
         print("terms of service")
     }
     @IBAction func onCreateAccount(_ sender: Any) {
+        performSegue(withIdentifier: "toSelectType", sender: nil) //TODO; remove after tested
         if(!isChecked) {
             Globals.alert(context: self, title: "Sign Up", message: "You should agree to the terms of service to create an account", delayed: false)
         }
@@ -54,7 +55,7 @@ class SignUpViewController: UIViewController, IndicatorInfoProvider {
             Globals.alert(context: self, title: "Sign Up", message: "Password does not match", delayed: false)
         }
         else {
-            
+            performSegue(withIdentifier: "toSelectType", sender: nil)
         }
     }
 }
