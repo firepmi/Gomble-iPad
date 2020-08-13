@@ -11,29 +11,34 @@ import XLPagerTabStrip
 
 class GetStartedViewController: ButtonBarPagerTabStripViewController {
     
-    let labelColor = UIColor(hexString: "#5f6772")
+    let labelColor = UIColor.white
        
     override func viewDidLoad() {
-        settings.style.buttonBarBackgroundColor = .white
-        settings.style.buttonBarItemBackgroundColor = .white
+        settings.style.buttonBarBackgroundColor = .clear
+        settings.style.buttonBarItemBackgroundColor = .clear
         settings.style.selectedBarBackgroundColor = labelColor
-        settings.style.buttonBarItemFont = UIFont(name: "DMSans-Bold", size: 16)!
+        settings.style.buttonBarItemFont = UIFont(name: "Gilroy-ExtraBold", size: 20)!
         settings.style.selectedBarHeight = 2.0
         settings.style.buttonBarMinimumLineSpacing = 0
-        settings.style.buttonBarItemTitleColor = .black
+        settings.style.buttonBarItemTitleColor = .white
         settings.style.buttonBarItemsShouldFillAvailableWidth = true
         settings.style.buttonBarLeftContentInset = 0
         settings.style.buttonBarRightContentInset = 0
 
         changeCurrentIndexProgressive = { [weak self] (oldCell: ButtonBarViewCell?, newCell: ButtonBarViewCell?, progressPercentage: CGFloat, changeCurrentIndex: Bool, animated: Bool) -> Void in
             guard changeCurrentIndex == true else { return }
-            oldCell?.label.textColor = self?.labelColor
-            oldCell?.label.font = UIFont(name: "DMSans-Regular", size: 16)!
-            newCell?.label.textColor = .black
-            newCell?.label.font = UIFont(name: "DMSans-Bold", size: 16)!
+//            oldCell?.label.textColor = self?.labelColor
+//            oldCell?.label.font = UIFont(name: "Gilroy-ExtraBold", size: 20)!
+//            newCell?.label.textColor = .black
+//            newCell?.label.font = UIFont(name: "Gilroy-ExtraBold", size: 20)!
+//            newCell?.backgroundView?.backgroundColor = UIColor.clear
         }
         super.viewDidLoad()
         
+//        for family in UIFont.familyNames.sorted() {
+//            let names = UIFont.fontNames(forFamilyName: family)
+//            print("Family: \(family) Font names: \(names)")
+//        }
     }
     // MARK: - PagerTabStripDataSource
 

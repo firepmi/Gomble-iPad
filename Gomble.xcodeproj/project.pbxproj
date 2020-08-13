@@ -21,6 +21,8 @@
 		FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12066024E5C58100E5F304 /* SelectTypeViewController.swift */; };
 		FC12066324E5D43100E5F304 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12066224E5D43100E5F304 /* RoundedImageView.swift */; };
 		FC12066624E5DADA00E5F304 /* bg_header.png in Resources */ = {isa = PBXBuildFile; fileRef = FC12066524E5DADA00E5F304 /* bg_header.png */; };
+		FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */; };
+		FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */; };
 		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
 		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
 		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
@@ -78,6 +80,8 @@
 		FC12066024E5C58100E5F304 /* SelectTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTypeViewController.swift; sourceTree = "<group>"; };
 		FC12066224E5D43100E5F304 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
 		FC12066524E5DADA00E5F304 /* bg_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_header.png; sourceTree = "<group>"; };
+		FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
+		FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
 		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
 		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
@@ -201,6 +205,8 @@
 				FC5B374E24E589B200216DBD /* DMSans-Bold.ttf */,
 				FC5B374C24E589B200216DBD /* DMSans-Medium.ttf */,
 				FC5B374D24E589B200216DBD /* DMSans-Regular.ttf */,
+				FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */,
+				FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */,
 			);
 			path = fonts;
 			sourceTree = "<group>";
@@ -395,7 +401,9 @@
 				FC12066624E5DADA00E5F304 /* bg_header.png in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
 				FC5B374F24E589B200216DBD /* DMSans-Medium.ttf in Resources */,
+				FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */,
 				FC5B375124E589B200216DBD /* DMSans-Bold.ttf in Resources */,
+				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
