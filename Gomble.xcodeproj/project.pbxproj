@@ -13,6 +13,7 @@
 		FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12064F24E58F6900E5F304 /* RoundedButton.swift */; };
 		FC12065224E58F9500E5F304 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065024E58F9500E5F304 /* RoundedView.swift */; };
 		FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065324E5904300E5F304 /* RoundedTextField.swift */; };
+		FC12065724E5A60000E5F304 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065624E5A60000E5F304 /* Globals.swift */; };
 		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
 		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
 		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
@@ -62,6 +63,7 @@
 		FC12064F24E58F6900E5F304 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		FC12065024E58F9500E5F304 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		FC12065324E5904300E5F304 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
+		FC12065624E5A60000E5F304 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
 		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
@@ -138,6 +140,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FC12065524E5A5DE00E5F304 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				FC12065624E5A60000E5F304 /* Globals.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
 		FC5B374524E5848600216DBD /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +219,7 @@
 				FCC21F9224E253F900D90C32 /* ViewController.swift */,
 				FCC21FC024E37ED500D90C32 /* ViewController */,
 				FC5B375424E58DDE00216DBD /* views */,
+				FC12065524E5A5DE00E5F304 /* Config */,
 				FCC21F9424E253F900D90C32 /* Main.storyboard */,
 				FCC21F9724E2542300D90C32 /* Assets.xcassets */,
 				FCC21F9924E2542300D90C32 /* LaunchScreen.storyboard */,
@@ -498,6 +509,7 @@
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
 				FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */,
+				FC12065724E5A60000E5F304 /* Globals.swift in Sources */,
 				FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

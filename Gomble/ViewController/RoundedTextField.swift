@@ -25,5 +25,21 @@ class RoundedTextField: UITextField {
         didSet {
             layer.borderColor = borderColor.cgColor        }
     }
+    
+    @IBInspectable var leftPadding: CGFloat = 0 {
+        didSet {
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: leftPadding, height: frame.size.height))
+            leftView = paddingView
+            leftViewMode = .always
+        }
+    }
+    
+    @IBInspectable var rightPadding: CGFloat = 0 {
+        didSet {
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: rightPadding, height: frame.size.height))
+            rightView = paddingView
+            rightViewMode = .always
+        }
+    }
 }
 
