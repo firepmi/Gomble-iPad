@@ -20,6 +20,9 @@ class SelectTypeViewController: UIViewController {
         designerView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)
     }
     @IBAction func onCustomerSelected(_ sender: Any) {
+        let customer = storyboard!.instantiateViewController(withIdentifier: "customer_home")
+        customer.modalPresentationStyle = .fullScreen
+        present(customer, animated: true, completion: nil)
     }
     @IBAction func onDesignerSelected(_ sender: Any) {
     }
