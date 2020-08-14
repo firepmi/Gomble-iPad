@@ -19,7 +19,6 @@ class SelectTypeViewController: UIViewController {
         customerView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)
         designerView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)
     }
-
     @IBAction func onCustomerSelected(_ sender: Any) {
     }
     @IBAction func onDesignerSelected(_ sender: Any) {

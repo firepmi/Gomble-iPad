@@ -11,6 +11,8 @@ import UIKit
 class CreateNewPasswordViewController: UIViewController {
 
     @IBOutlet weak var passwordTextField: RoundedTextField!
+    @IBOutlet weak var confirmTextField: RoundedTextField!
+    
     @IBOutlet weak var emailLabel: UILabel!
     
     var email = ""
@@ -27,11 +29,14 @@ class CreateNewPasswordViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func onConfirm(_ sender: Any) {
-        if(passwordTextField.text == "") {
-            Globals.alert(context: self, title: "Create New Password", message: "Password is empty", delayed: false)
+        if(passwordTextField.text == "" || confirmTextField.text == "" ) {
+            Globals.alert(context: self, title: "Create New Password", message: "Please fill out all required fields", delayed: false)
         }
         else if(passwordTextField.text!.count < 6 ) {
             Globals.alert(context: self, title: "Create New Password", message: "Password required at least 6 letters", delayed: false)
+        }
+        else if(passwordTextField.text != confirmTextField.text) {
+            Globals.alert(context: self, title: "Create New Password", message: "Password does not match", delayed: false)
         }
         else {
             closeAll()

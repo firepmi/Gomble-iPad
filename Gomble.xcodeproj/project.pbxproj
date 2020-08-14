@@ -30,6 +30,9 @@
 		FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374D24E589B200216DBD /* DMSans-Regular.ttf */; };
 		FC5B375124E589B200216DBD /* DMSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374E24E589B200216DBD /* DMSans-Bold.ttf */; };
 		FC5B375324E58B9900216DBD /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B375224E58B9900216DBD /* logo.png */; };
+		FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFD924E624C500767A4F /* img_fashion_designer.png */; };
+		FC67EFDC24E624C500767A4F /* img_customer.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDA24E624C500767A4F /* img_customer.png */; };
+		FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDD24E6284E00767A4F /* icon_back_white.png */; };
 		FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F8E24E253F900D90C32 /* AppDelegate.swift */; };
 		FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9024E253F900D90C32 /* SceneDelegate.swift */; };
 		FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9224E253F900D90C32 /* ViewController.swift */; };
@@ -89,6 +92,9 @@
 		FC5B374D24E589B200216DBD /* DMSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Regular.ttf"; sourceTree = "<group>"; };
 		FC5B374E24E589B200216DBD /* DMSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DMSans-Bold.ttf"; sourceTree = "<group>"; };
 		FC5B375224E58B9900216DBD /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		FC67EFD924E624C500767A4F /* img_fashion_designer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_fashion_designer.png; sourceTree = "<group>"; };
+		FC67EFDA24E624C500767A4F /* img_customer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_customer.png; sourceTree = "<group>"; };
+		FC67EFDD24E6284E00767A4F /* icon_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_white.png; sourceTree = "<group>"; };
 		FCC21F8B24E253F900D90C32 /* Gomble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC21F8E24E253F900D90C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC21F9024E253F900D90C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -190,6 +196,9 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC67EFDD24E6284E00767A4F /* icon_back_white.png */,
+				FC67EFDA24E624C500767A4F /* img_customer.png */,
+				FC67EFD924E624C500767A4F /* img_fashion_designer.png */,
 				FC5B375224E58B9900216DBD /* logo.png */,
 				FC5B374724E5849A00216DBD /* icon_check_off.png */,
 				FC5B374824E5849B00216DBD /* icon_check_on.png */,
@@ -393,7 +402,9 @@
 			files = (
 				FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */,
 				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
+				FC67EFDC24E624C500767A4F /* img_customer.png in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
+				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
 				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
 				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
@@ -404,6 +415,7 @@
 				FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */,
 				FC5B375124E589B200216DBD /* DMSans-Bold.ttf in Resources */,
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
+				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
