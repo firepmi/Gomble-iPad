@@ -25,6 +25,13 @@
 		FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */; };
 		FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC44BFB124E6F007008CD233 /* CustomerHomeViewController.swift */; };
 		FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC44BFB324E6F603008CD233 /* CustomerSideMenuViewController.swift */; };
+		FC44BFB624E7066B008CD233 /* btn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFB524E7066B008CD233 /* btn_close.png */; };
+		FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC44BFB924E71345008CD233 /* CustomHeaderView.swift */; };
+		FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFBB24E715B8008CD233 /* CustomHeaderView.xib */; };
+		FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFBD24E71DDB008CD233 /* icon_settings.png */; };
+		FC44BFC224E71DDB008CD233 /* icon_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFBE24E71DDB008CD233 /* icon_home.png */; };
+		FC44BFC324E71DDB008CD233 /* icon_notificationl.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFBF24E71DDB008CD233 /* icon_notificationl.png */; };
+		FC44BFC424E71DDB008CD233 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFC024E71DDB008CD233 /* icon_menu.png */; };
 		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
 		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
 		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
@@ -35,6 +42,7 @@
 		FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFD924E624C500767A4F /* img_fashion_designer.png */; };
 		FC67EFDC24E624C500767A4F /* img_customer.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDA24E624C500767A4F /* img_customer.png */; };
 		FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDD24E6284E00767A4F /* icon_back_white.png */; };
+		FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC803B3724E76431009D470D /* profile-anonymous.jpg */; };
 		FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F8E24E253F900D90C32 /* AppDelegate.swift */; };
 		FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9024E253F900D90C32 /* SceneDelegate.swift */; };
 		FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9224E253F900D90C32 /* ViewController.swift */; };
@@ -89,6 +97,13 @@
 		FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
 		FC44BFB124E6F007008CD233 /* CustomerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeViewController.swift; sourceTree = "<group>"; };
 		FC44BFB324E6F603008CD233 /* CustomerSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSideMenuViewController.swift; sourceTree = "<group>"; };
+		FC44BFB524E7066B008CD233 /* btn_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_close.png; sourceTree = "<group>"; };
+		FC44BFB924E71345008CD233 /* CustomHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomHeaderView.swift; sourceTree = "<group>"; };
+		FC44BFBB24E715B8008CD233 /* CustomHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomHeaderView.xib; sourceTree = "<group>"; };
+		FC44BFBD24E71DDB008CD233 /* icon_settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_settings.png; sourceTree = "<group>"; };
+		FC44BFBE24E71DDB008CD233 /* icon_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_home.png; sourceTree = "<group>"; };
+		FC44BFBF24E71DDB008CD233 /* icon_notificationl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_notificationl.png; sourceTree = "<group>"; };
+		FC44BFC024E71DDB008CD233 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_menu.png; sourceTree = "<group>"; };
 		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
 		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
@@ -99,6 +114,7 @@
 		FC67EFD924E624C500767A4F /* img_fashion_designer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_fashion_designer.png; sourceTree = "<group>"; };
 		FC67EFDA24E624C500767A4F /* img_customer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_customer.png; sourceTree = "<group>"; };
 		FC67EFDD24E6284E00767A4F /* icon_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_white.png; sourceTree = "<group>"; };
+		FC803B3724E76431009D470D /* profile-anonymous.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-anonymous.jpg"; sourceTree = "<group>"; };
 		FCC21F8B24E253F900D90C32 /* Gomble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC21F8E24E253F900D90C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC21F9024E253F900D90C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -180,12 +196,30 @@
 		FC12066424E5D47600E5F304 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FC44BFB824E71302008CD233 /* Header */,
+				FC44BFB724E712F0008CD233 /* Rounded */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		FC44BFB724E712F0008CD233 /* Rounded */ = {
+			isa = PBXGroup;
+			children = (
 				FC12064F24E58F6900E5F304 /* RoundedButton.swift */,
 				FC12065324E5904300E5F304 /* RoundedTextField.swift */,
 				FC12065024E58F9500E5F304 /* RoundedView.swift */,
 				FC12066224E5D43100E5F304 /* RoundedImageView.swift */,
 			);
-			path = views;
+			path = Rounded;
+			sourceTree = "<group>";
+		};
+		FC44BFB824E71302008CD233 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				FC44BFB924E71345008CD233 /* CustomHeaderView.swift */,
+				FC44BFBB24E715B8008CD233 /* CustomHeaderView.xib */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 		FC5B374524E5848600216DBD /* resources */ = {
@@ -200,6 +234,12 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC803B3724E76431009D470D /* profile-anonymous.jpg */,
+				FC44BFBE24E71DDB008CD233 /* icon_home.png */,
+				FC44BFC024E71DDB008CD233 /* icon_menu.png */,
+				FC44BFBF24E71DDB008CD233 /* icon_notificationl.png */,
+				FC44BFBD24E71DDB008CD233 /* icon_settings.png */,
+				FC44BFB524E7066B008CD233 /* btn_close.png */,
 				FC67EFDD24E6284E00767A4F /* icon_back_white.png */,
 				FC67EFDA24E624C500767A4F /* img_customer.png */,
 				FC67EFD924E624C500767A4F /* img_fashion_designer.png */,
@@ -426,16 +466,23 @@
 				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
 				FC67EFDC24E624C500767A4F /* img_customer.png in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
+				FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */,
+				FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */,
 				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
 				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
+				FC44BFC424E71DDB008CD233 /* icon_menu.png in Resources */,
 				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
 				FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */,
 				FC12066624E5DADA00E5F304 /* bg_header.png in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
 				FC5B374F24E589B200216DBD /* DMSans-Medium.ttf in Resources */,
 				FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */,
+				FC44BFB624E7066B008CD233 /* btn_close.png in Resources */,
 				FC5B375124E589B200216DBD /* DMSans-Bold.ttf in Resources */,
+				FC44BFC324E71DDB008CD233 /* icon_notificationl.png in Resources */,
+				FC44BFC224E71DDB008CD233 /* icon_home.png in Resources */,
+				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
 			);
@@ -575,6 +622,7 @@
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
 				FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */,
 				FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */,
+				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,
 				FC12065F24E5B98600E5F304 /* CreateNewPasswordViewController.swift in Sources */,

@@ -989,21 +989,57 @@
             </objects>
             <point key="canvasLocation" x="2365.625" y="128.90625"/>
         </scene>
-        <!--View Controller-->
+        <!--Customer Side Menu View Controller-->
         <scene sceneID="hLK-tA-iUC">
             <objects>
-                <viewController id="hUS-1n-1yA" sceneMemberID="viewController">
+                <viewController id="hUS-1n-1yA" customClass="CustomerSideMenuViewController" customModule="Gomble" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7aL-Yh-mDI">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="984"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="menu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-4O-xZO">
-                                <rect key="frame" x="53" y="110" width="43" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gomble" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxI-4O-xZO">
+                                <rect key="frame" x="82" y="77" width="75" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mnw-9E-DsQ">
+                                <rect key="frame" x="45" y="82" width="16" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="btn_close.png"/>
+                                <connections>
+                                    <action selector="onClose:" destination="hUS-1n-1yA" eventType="touchUpInside" id="Civ-gn-jOl"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Bdn-IP-4Rw">
+                                <rect key="frame" x="0.0" y="121" width="712" height="863"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="customMenuViewCell" id="9hH-Ae-fKX">
+                                        <rect key="frame" x="0.0" y="28" width="712" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9hH-Ae-fKX" id="ID4-aD-LXb">
+                                            <rect key="frame" x="0.0" y="0.0" width="712" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" tag="100" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lS-6w-rhF">
+                                                    <rect key="frame" x="47" y="11" width="650" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hUS-1n-1yA" id="rad-01-vby"/>
+                                    <outlet property="delegate" destination="hUS-1n-1yA" id="8BW-nr-bYs"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="szq-IW-iyz"/>
@@ -1012,14 +1048,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WsJ-i3-e8x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4743" y="-560"/>
+            <point key="canvasLocation" x="4742.96875" y="-560.15625"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="I0i-we-R1i">
             <objects>
-                <navigationController toolbarHidden="NO" id="9C5-kA-jYn" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="customeSideMenu" useStoryboardIdentifierAsRestorationIdentifier="YES" toolbarHidden="NO" id="9C5-kA-jYn" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gjM-Z8-htb">
-                        <rect key="frame" x="0.0" y="0.0" width="712" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
@@ -1064,23 +1100,41 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBg-Yb-bvT">
-                                <rect key="frame" x="121" y="130" width="39" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="menu"/>
-                                <connections>
-                                    <segue destination="9C5-kA-jYn" kind="presentation" id="BfN-bF-irn"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ojq-rS-cX9">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="106"/>
+                                <color key="backgroundColor" red="0.40000000000000002" green="0.56470588235294117" blue="1" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X3j-fZ-bWB" customClass="CustomHeaderView" customModule="Gomble" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="768" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="fZA-Ua-Nca"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Gomble"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ojq-rS-cX9" firstAttribute="leading" secondItem="p2N-Ew-Hc1" secondAttribute="leading" id="PXb-mY-Pkw"/>
+                            <constraint firstItem="Ojq-rS-cX9" firstAttribute="bottom" secondItem="X3j-fZ-bWB" secondAttribute="bottom" id="VRq-qf-9G8"/>
+                            <constraint firstItem="Ojq-rS-cX9" firstAttribute="trailing" secondItem="p2N-Ew-Hc1" secondAttribute="trailing" id="X8P-m9-gGB"/>
+                            <constraint firstItem="X3j-fZ-bWB" firstAttribute="top" secondItem="p2N-Ew-Hc1" secondAttribute="top" id="ase-cY-0sH"/>
+                            <constraint firstItem="Ojq-rS-cX9" firstAttribute="top" secondItem="f92-ej-kio" secondAttribute="top" id="dMp-fY-zvu"/>
+                            <constraint firstItem="X3j-fZ-bWB" firstAttribute="leading" secondItem="p2N-Ew-Hc1" secondAttribute="leading" id="tVi-bp-7NQ"/>
+                            <constraint firstItem="X3j-fZ-bWB" firstAttribute="trailing" secondItem="p2N-Ew-Hc1" secondAttribute="trailing" id="zx9-of-N1Y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="p2N-Ew-Hc1"/>
                     </view>
                     <navigationItem key="navigationItem" id="o88-xc-odo"/>
+                    <connections>
+                        <outlet property="customHeaderView" destination="X3j-fZ-bWB" id="clu-K0-qOd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gef-cF-JRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3938" y="114"/>
+            <point key="canvasLocation" x="3954.6875" y="128.90625"/>
         </scene>
         <!--Create New Password View Controller-->
         <scene sceneID="gP9-Db-Ex9">
@@ -1297,6 +1351,7 @@
     </scenes>
     <resources>
         <image name="bg_header.png" width="768" height="297"/>
+        <image name="btn_close.png" width="16" height="16"/>
         <image name="icon_back_white.png" width="24" height="24"/>
         <image name="icon_check_off.png" width="16" height="16"/>
         <image name="img_customer.png" width="292" height="240"/>
