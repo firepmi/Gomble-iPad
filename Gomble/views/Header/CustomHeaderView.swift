@@ -22,11 +22,12 @@ class CustomHeaderView: UIView {
         }
     }
     
-    @IBInspectable var profileImage: UIImage =  UIImage(named: "profile-anonymous.jpg")! {
+    var profileImage: UIImage =  UIImage(named: "profile-anonymous.jpg") ?? UIImage() {
         didSet {
             profileImageView?.image = profileImage
         }
     }
+    
     override class func awakeFromNib() {
         super.awakeFromNib()
 //        commonInit(self)
@@ -50,7 +51,7 @@ class CustomHeaderView: UIView {
         profileImageView.image = profileImage
     }
     func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: type(of: self))
+        let bundle = Bundle(for: CustomHeaderView.self)
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
