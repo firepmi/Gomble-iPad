@@ -55,6 +55,14 @@
 		FC803B4E24E99032009D470D /* test5.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B4924E99032009D470D /* test5.png */; };
 		FC803B4F24E99032009D470D /* test2.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B4A24E99032009D470D /* test2.png */; };
 		FC803B5124E99078009D470D /* icon_flag_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B5024E99077009D470D /* icon_flag_blue.png */; };
+		FC803B5324EA1FC7009D470D /* CustomerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC803B5224EA1FC7009D470D /* CustomerProfileViewController.swift */; };
+		FC803B5524EA2325009D470D /* icon_back_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B5424EA2324009D470D /* icon_back_grey.png */; };
+		FC803B5C24EA2677009D470D /* icon_trash.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B5824EA2676009D470D /* icon_trash.png */; };
+		FC803B5D24EA2677009D470D /* icon_camera.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B5924EA2676009D470D /* icon_camera.png */; };
+		FC803B5E24EA2677009D470D /* icon_radio_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B5A24EA2676009D470D /* icon_radio_on.png */; };
+		FC803B5F24EA2677009D470D /* test_profile.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B5B24EA2676009D470D /* test_profile.png */; };
+		FC803B6124EA283B009D470D /* RoundedLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC803B6024EA283B009D470D /* RoundedLabel.swift */; };
+		FC803B6324EA496C009D470D /* CustomerDefaultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC803B6224EA496C009D470D /* CustomerDefaultViewController.swift */; };
 		FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F8E24E253F900D90C32 /* AppDelegate.swift */; };
 		FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9024E253F900D90C32 /* SceneDelegate.swift */; };
 		FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9224E253F900D90C32 /* ViewController.swift */; };
@@ -139,6 +147,14 @@
 		FC803B4924E99032009D470D /* test5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test5.png; sourceTree = "<group>"; };
 		FC803B4A24E99032009D470D /* test2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test2.png; sourceTree = "<group>"; };
 		FC803B5024E99077009D470D /* icon_flag_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_flag_blue.png; sourceTree = "<group>"; };
+		FC803B5224EA1FC7009D470D /* CustomerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerProfileViewController.swift; sourceTree = "<group>"; };
+		FC803B5424EA2324009D470D /* icon_back_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_grey.png; sourceTree = "<group>"; };
+		FC803B5824EA2676009D470D /* icon_trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_trash.png; sourceTree = "<group>"; };
+		FC803B5924EA2676009D470D /* icon_camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_camera.png; sourceTree = "<group>"; };
+		FC803B5A24EA2676009D470D /* icon_radio_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_radio_on.png; sourceTree = "<group>"; };
+		FC803B5B24EA2676009D470D /* test_profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_profile.png; sourceTree = "<group>"; };
+		FC803B6024EA283B009D470D /* RoundedLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedLabel.swift; sourceTree = "<group>"; };
+		FC803B6224EA496C009D470D /* CustomerDefaultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerDefaultViewController.swift; sourceTree = "<group>"; };
 		FCC21F8B24E253F900D90C32 /* Gomble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC21F8E24E253F900D90C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC21F9024E253F900D90C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -230,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				FC12064F24E58F6900E5F304 /* RoundedButton.swift */,
+				FC803B6024EA283B009D470D /* RoundedLabel.swift */,
 				FC12065324E5904300E5F304 /* RoundedTextField.swift */,
 				FC12065024E58F9500E5F304 /* RoundedView.swift */,
 				FC12066224E5D43100E5F304 /* RoundedImageView.swift */,
@@ -263,6 +280,10 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC803B5924EA2676009D470D /* icon_camera.png */,
+				FC803B5A24EA2676009D470D /* icon_radio_on.png */,
+				FC803B5824EA2676009D470D /* icon_trash.png */,
+				FC803B5B24EA2676009D470D /* test_profile.png */,
 				FC803B5024E99077009D470D /* icon_flag_blue.png */,
 				FC803B4124E97D4D009D470D /* icon_dropdown.png */,
 				FC803B4224E97D4E009D470D /* icon_search.png */,
@@ -280,6 +301,7 @@
 				FC5B374824E5849B00216DBD /* icon_check_on.png */,
 				FC12065C24E5B5A100E5F304 /* icon_back.png */,
 				FC12066524E5DADA00E5F304 /* bg_header.png */,
+				FC803B5424EA2324009D470D /* icon_back_grey.png */,
 			);
 			path = images;
 			sourceTree = "<group>";
@@ -393,6 +415,8 @@
 			children = (
 				FC44BFB124E6F007008CD233 /* CustomerHomeViewController.swift */,
 				FC44BFB324E6F603008CD233 /* CustomerSideMenuViewController.swift */,
+				FC803B5224EA1FC7009D470D /* CustomerProfileViewController.swift */,
+				FC803B6224EA496C009D470D /* CustomerDefaultViewController.swift */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -515,6 +539,7 @@
 				FC803B4424E97D4E009D470D /* icon_search.png in Resources */,
 				FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */,
 				FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */,
+				FC803B5F24EA2677009D470D /* test_profile.png in Resources */,
 				FC803B4C24E99032009D470D /* test1.png in Resources */,
 				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
@@ -526,6 +551,7 @@
 				FC803B4024E934A4009D470D /* PathViewCell.xib in Resources */,
 				FC12066624E5DADA00E5F304 /* bg_header.png in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
+				FC803B5C24EA2677009D470D /* icon_trash.png in Resources */,
 				FC803B4E24E99032009D470D /* test5.png in Resources */,
 				FC5B374F24E589B200216DBD /* DMSans-Medium.ttf in Resources */,
 				FC803B3C24E92927009D470D /* CustomerPathView.xib in Resources */,
@@ -537,8 +563,11 @@
 				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
+				FC803B5E24EA2677009D470D /* icon_radio_on.png in Resources */,
 				FC803B5124E99078009D470D /* icon_flag_blue.png in Resources */,
+				FC803B5524EA2325009D470D /* icon_back_grey.png in Resources */,
 				FC803B4B24E99032009D470D /* test3.png in Resources */,
+				FC803B5D24EA2677009D470D /* icon_camera.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -672,6 +701,8 @@
 				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
 				FC12065924E5AE5B00E5F304 /* Common.swift in Sources */,
 				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
+				FC803B6124EA283B009D470D /* RoundedLabel.swift in Sources */,
+				FC803B5324EA1FC7009D470D /* CustomerProfileViewController.swift in Sources */,
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
 				FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */,
@@ -683,6 +714,7 @@
 				FC803B3A24E92915009D470D /* CustomerPathView.swift in Sources */,
 				FC12065F24E5B98600E5F304 /* CreateNewPasswordViewController.swift in Sources */,
 				FC12066324E5D43100E5F304 /* RoundedImageView.swift in Sources */,
+				FC803B6324EA496C009D470D /* CustomerDefaultViewController.swift in Sources */,
 				FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */,
 				FC12065724E5A60000E5F304 /* Globals.swift in Sources */,
 				FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */,

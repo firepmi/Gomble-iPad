@@ -46,7 +46,8 @@ class CustomerHomeViewController: UIViewController {
         print("notification")
     }
     func onProfileClicked(){
-        print("profile")
+        let profile = storyboard!.instantiateViewController(withIdentifier: "profile_customer")
+        navigationController?.pushViewController(profile, animated: true)
     }
     func onSettingsClicked(){
         print("settings")
