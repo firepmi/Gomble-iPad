@@ -14,6 +14,9 @@ class CustomerProfileViewController: CustomerDefaultViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    override func onProfileClicked() {
+        print("printed profile")
+    }
     
 }
 

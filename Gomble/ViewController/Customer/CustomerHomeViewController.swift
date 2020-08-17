@@ -9,11 +9,7 @@
 import UIKit
 import SideMenu
 
-class CustomerHomeViewController: UIViewController {
-
-    @IBOutlet weak var customHeaderView: CustomHeaderView!
-    @IBOutlet weak var pathView: CustomerPathView!
-    
+class CustomerHomeViewController: CustomerDefaultViewController {
     let techPackData = [
         ["title":"Summer dress collection", "image":"test1.png"],
         ["title":"Elegant gray dress", "image":"test2.png"],
@@ -27,30 +23,8 @@ class CustomerHomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         navigationController?.setNavigationBarHidden(true, animated: false)
-        customHeaderView.delegate = self
         pathView.setPath(path: ["Products"])
-        pathView.delegate = self
-    }
-    func onMenuClicked(){
-        let sideMenu = storyboard!.instantiateViewController(withIdentifier: "customeSideMenu") as! SideMenuNavigationController
-        var settings = SideMenuSettings()
-        settings.presentationStyle = .menuSlideIn
-        settings.presentationStyle.onTopShadowColor = .blue
-        settings.presentationStyle.onTopShadowRadius = 100
-        settings.statusBarEndAlpha = 0
-        settings.presentationStyle.menuOnTop = true
-        sideMenu.settings = settings
-        present(sideMenu, animated: true, completion: nil)
-    }
-    func onNotificationClicked(){
-        print("notification")
-    }
-    func onProfileClicked(){
-        let profile = storyboard!.instantiateViewController(withIdentifier: "profile_customer")
-        navigationController?.pushViewController(profile, animated: true)
-    }
-    func onSettingsClicked(){
-        print("settings")
+
     }
 }
 extension CustomerHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -88,20 +62,4 @@ extension CustomerHomeViewController: UICollectionViewDelegate, UICollectionView
         return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
     }
 }
-extension CustomerHomeViewController: CustomHeaderViewDelegate {
-    func customHeaderView(_ customerHeaderView: CustomHeaderView, clicked index: Int) {
-        switch index {
-        case 0: onMenuClicked()
-        case 1: onNotificationClicked()
-        case 2: onSettingsClicked()
-        case 3: onProfileClicked()
-        default:
-            break
-        }
-    }
-}
-extension CustomerHomeViewController: CustomerPathViewDelegate {
-    func customerPathView(_ customerPathView: CustomerPathView, clicked index: Int) {
-        print("selected path \(index)")
-    }
-}
+
