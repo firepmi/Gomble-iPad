@@ -2,29 +2,37 @@ PODS:
   - ImageSlideshow (1.9.1):
     - ImageSlideshow/Core (= 1.9.1)
   - ImageSlideshow/Core (1.9.1)
+  - iOSDropDown (0.3.4)
   - SideMenu (6.4.8)
+  - SwiftyJSON (5.0.0)
   - TagListView (1.4.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - ImageSlideshow
+  - iOSDropDown
   - SideMenu
+  - SwiftyJSON
   - TagListView
   - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
     - ImageSlideshow
+    - iOSDropDown
     - SideMenu
+    - SwiftyJSON
     - TagListView
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
+  iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: ae55302e8fdb984d627dbf5d5b0267b49250e745
+PODFILE CHECKSUM: 41b84f57fffcf19c4552426b508a2846a85d5039
 
 COCOAPODS: 1.9.3

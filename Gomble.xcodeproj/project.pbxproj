@@ -23,6 +23,10 @@
 		FC12066624E5DADA00E5F304 /* bg_header.png in Resources */ = {isa = PBXBuildFile; fileRef = FC12066524E5DADA00E5F304 /* bg_header.png */; };
 		FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */; };
 		FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */; };
+		FC43A8F424EC46B8005AF9BF /* MaterialItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC43A8F224EC46B8005AF9BF /* MaterialItemCell.xib */; };
+		FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43A8F324EC46B8005AF9BF /* MaterialItemCollectionView.swift */; };
+		FC43A8F724EC5A5C005AF9BF /* icon_check_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = FC43A8F624EC5A5C005AF9BF /* icon_check_circle.png */; };
+		FC43A8F924EC5A64005AF9BF /* test_material.png in Resources */ = {isa = PBXBuildFile; fileRef = FC43A8F824EC5A64005AF9BF /* test_material.png */; };
 		FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC44BFB124E6F007008CD233 /* CustomerHomeViewController.swift */; };
 		FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC44BFB324E6F603008CD233 /* CustomerSideMenuViewController.swift */; };
 		FC44BFB624E7066B008CD233 /* btn_close.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFB524E7066B008CD233 /* btn_close.png */; };
@@ -125,6 +129,10 @@
 		FC12066524E5DADA00E5F304 /* bg_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_header.png; sourceTree = "<group>"; };
 		FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
 		FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		FC43A8F224EC46B8005AF9BF /* MaterialItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaterialItemCell.xib; sourceTree = "<group>"; };
+		FC43A8F324EC46B8005AF9BF /* MaterialItemCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialItemCollectionView.swift; sourceTree = "<group>"; };
+		FC43A8F624EC5A5C005AF9BF /* icon_check_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_circle.png; sourceTree = "<group>"; };
+		FC43A8F824EC5A64005AF9BF /* test_material.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_material.png; sourceTree = "<group>"; };
 		FC44BFB124E6F007008CD233 /* CustomerHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerHomeViewController.swift; sourceTree = "<group>"; };
 		FC44BFB324E6F603008CD233 /* CustomerSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerSideMenuViewController.swift; sourceTree = "<group>"; };
 		FC44BFB524E7066B008CD233 /* btn_close.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_close.png; sourceTree = "<group>"; };
@@ -262,6 +270,15 @@
 			path = views;
 			sourceTree = "<group>";
 		};
+		FC43A8F124EC4681005AF9BF /* MaterialItemCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				FC43A8F224EC46B8005AF9BF /* MaterialItemCell.xib */,
+				FC43A8F324EC46B8005AF9BF /* MaterialItemCollectionView.swift */,
+			);
+			path = MaterialItemCollectionView;
+			sourceTree = "<group>";
+		};
 		FC44BFB724E712F0008CD233 /* Rounded */ = {
 			isa = PBXGroup;
 			children = (
@@ -297,6 +314,7 @@
 				FC4CB70524EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift */,
 				FC4CB70724EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift */,
 				FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */,
+				FC43A8F124EC4681005AF9BF /* MaterialItemCollectionView */,
 			);
 			path = CustomerTechpackPreview;
 			sourceTree = "<group>";
@@ -314,6 +332,7 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC43A8F624EC5A5C005AF9BF /* icon_check_circle.png */,
 				FC4CB6FA24EB2E9800FDDEC7 /* icon_next.png */,
 				FC4CB6FB24EB2E9800FDDEC7 /* icon_previous.png */,
 				FC4CB6F824EB2A0800FDDEC7 /* icon_full_screen.png */,
@@ -357,6 +376,7 @@
 		FC803B4524E9885E009D470D /* test assets */ = {
 			isa = PBXGroup;
 			children = (
+				FC43A8F824EC5A64005AF9BF /* test_material.png */,
 				FC803B4724E99031009D470D /* test1.png */,
 				FC803B4A24E99032009D470D /* test2.png */,
 				FC803B4624E99031009D470D /* test3.png */,
@@ -578,6 +598,8 @@
 				FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */,
 				FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */,
 				FC803B5F24EA2677009D470D /* test_profile.png in Resources */,
+				FC43A8F924EC5A64005AF9BF /* test_material.png in Resources */,
+				FC43A8F424EC46B8005AF9BF /* MaterialItemCell.xib in Resources */,
 				FC803B4C24E99032009D470D /* test1.png in Resources */,
 				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
@@ -588,6 +610,7 @@
 				FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */,
 				FC803B4024E934A4009D470D /* PathViewCell.xib in Resources */,
 				FC12066624E5DADA00E5F304 /* bg_header.png in Resources */,
+				FC43A8F724EC5A5C005AF9BF /* icon_check_circle.png in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
 				FC803B5C24EA2677009D470D /* icon_trash.png in Resources */,
 				FC803B4E24E99032009D470D /* test5.png in Resources */,
@@ -755,6 +778,7 @@
 				FC803B3E24E933C0009D470D /* PathViewCell.swift in Sources */,
 				FC4CB6F724EB18CC00FDDEC7 /* CustomerTechpackPreviewViewController.swift in Sources */,
 				FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */,
+				FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */,
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,

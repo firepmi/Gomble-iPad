@@ -10,7 +10,8 @@ pod 'XLPagerTabStrip'
 pod 'SideMenu'
 pod 'ImageSlideshow'
 pod 'TagListView'
-
+pod 'SwiftyJSON'
+pod 'iOSDropDown'
   target 'GombleTests' do
     inherit! :search_paths
     # Pods for testing
