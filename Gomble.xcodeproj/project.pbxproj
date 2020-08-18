@@ -32,6 +32,16 @@
 		FC44BFC224E71DDB008CD233 /* icon_home.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFBE24E71DDB008CD233 /* icon_home.png */; };
 		FC44BFC324E71DDB008CD233 /* icon_notificationl.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFBF24E71DDB008CD233 /* icon_notificationl.png */; };
 		FC44BFC424E71DDB008CD233 /* icon_menu.png in Resources */ = {isa = PBXBuildFile; fileRef = FC44BFC024E71DDB008CD233 /* icon_menu.png */; };
+		FC4CB6F724EB18CC00FDDEC7 /* CustomerTechpackPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB6F624EB18CC00FDDEC7 /* CustomerTechpackPreviewViewController.swift */; };
+		FC4CB6F924EB2A0800FDDEC7 /* icon_full_screen.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4CB6F824EB2A0800FDDEC7 /* icon_full_screen.png */; };
+		FC4CB6FC24EB2E9900FDDEC7 /* icon_next.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4CB6FA24EB2E9800FDDEC7 /* icon_next.png */; };
+		FC4CB6FD24EB2E9900FDDEC7 /* icon_previous.png in Resources */ = {isa = PBXBuildFile; fileRef = FC4CB6FB24EB2E9800FDDEC7 /* icon_previous.png */; };
+		FC4CB6FF24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB6FE24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift */; };
+		FC4CB70224EBD87D00FDDEC7 /* CustomerTechpackMaterialsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70124EBD87D00FDDEC7 /* CustomerTechpackMaterialsViewController.swift */; };
+		FC4CB70424EBDA0F00FDDEC7 /* CustomerTechpackGeneralInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70324EBDA0F00FDDEC7 /* CustomerTechpackGeneralInfoViewController.swift */; };
+		FC4CB70624EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70524EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift */; };
+		FC4CB70824EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70724EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift */; };
+		FC4CB70A24EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */; };
 		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
 		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
 		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
@@ -124,6 +134,16 @@
 		FC44BFBE24E71DDB008CD233 /* icon_home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_home.png; sourceTree = "<group>"; };
 		FC44BFBF24E71DDB008CD233 /* icon_notificationl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_notificationl.png; sourceTree = "<group>"; };
 		FC44BFC024E71DDB008CD233 /* icon_menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_menu.png; sourceTree = "<group>"; };
+		FC4CB6F624EB18CC00FDDEC7 /* CustomerTechpackPreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackPreviewViewController.swift; sourceTree = "<group>"; };
+		FC4CB6F824EB2A0800FDDEC7 /* icon_full_screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_full_screen.png; sourceTree = "<group>"; };
+		FC4CB6FA24EB2E9800FDDEC7 /* icon_next.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_next.png; sourceTree = "<group>"; };
+		FC4CB6FB24EB2E9800FDDEC7 /* icon_previous.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_previous.png; sourceTree = "<group>"; };
+		FC4CB6FE24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackPreviewDetailsViewController.swift; sourceTree = "<group>"; };
+		FC4CB70124EBD87D00FDDEC7 /* CustomerTechpackMaterialsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackMaterialsViewController.swift; sourceTree = "<group>"; };
+		FC4CB70324EBDA0F00FDDEC7 /* CustomerTechpackGeneralInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackGeneralInfoViewController.swift; sourceTree = "<group>"; };
+		FC4CB70524EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackOptionsViewController.swift; sourceTree = "<group>"; };
+		FC4CB70724EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackMeasurementsViewController.swift; sourceTree = "<group>"; };
+		FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackAboutDesignerViewController.swift; sourceTree = "<group>"; };
 		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
 		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
@@ -267,6 +287,20 @@
 			path = Header;
 			sourceTree = "<group>";
 		};
+		FC4CB70024EBD81E00FDDEC7 /* CustomerTechpackPreview */ = {
+			isa = PBXGroup;
+			children = (
+				FC4CB6F624EB18CC00FDDEC7 /* CustomerTechpackPreviewViewController.swift */,
+				FC4CB6FE24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift */,
+				FC4CB70124EBD87D00FDDEC7 /* CustomerTechpackMaterialsViewController.swift */,
+				FC4CB70324EBDA0F00FDDEC7 /* CustomerTechpackGeneralInfoViewController.swift */,
+				FC4CB70524EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift */,
+				FC4CB70724EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift */,
+				FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */,
+			);
+			path = CustomerTechpackPreview;
+			sourceTree = "<group>";
+		};
 		FC5B374524E5848600216DBD /* resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,10 +314,12 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC4CB6FA24EB2E9800FDDEC7 /* icon_next.png */,
+				FC4CB6FB24EB2E9800FDDEC7 /* icon_previous.png */,
+				FC4CB6F824EB2A0800FDDEC7 /* icon_full_screen.png */,
 				FC803B5924EA2676009D470D /* icon_camera.png */,
 				FC803B5A24EA2676009D470D /* icon_radio_on.png */,
 				FC803B5824EA2676009D470D /* icon_trash.png */,
-				FC803B5B24EA2676009D470D /* test_profile.png */,
 				FC803B5024E99077009D470D /* icon_flag_blue.png */,
 				FC803B4124E97D4D009D470D /* icon_dropdown.png */,
 				FC803B4224E97D4E009D470D /* icon_search.png */,
@@ -326,6 +362,7 @@
 				FC803B4624E99031009D470D /* test3.png */,
 				FC803B4824E99031009D470D /* test4.png */,
 				FC803B4924E99032009D470D /* test5.png */,
+				FC803B5B24EA2676009D470D /* test_profile.png */,
 			);
 			path = "test assets";
 			sourceTree = "<group>";
@@ -417,6 +454,7 @@
 				FC44BFB324E6F603008CD233 /* CustomerSideMenuViewController.swift */,
 				FC803B5224EA1FC7009D470D /* CustomerProfileViewController.swift */,
 				FC803B6224EA496C009D470D /* CustomerDefaultViewController.swift */,
+				FC4CB70024EBD81E00FDDEC7 /* CustomerTechpackPreview */,
 			);
 			path = Customer;
 			sourceTree = "<group>";
@@ -564,10 +602,13 @@
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
 				FC803B5E24EA2677009D470D /* icon_radio_on.png in Resources */,
+				FC4CB6FD24EB2E9900FDDEC7 /* icon_previous.png in Resources */,
 				FC803B5124E99078009D470D /* icon_flag_blue.png in Resources */,
 				FC803B5524EA2325009D470D /* icon_back_grey.png in Resources */,
+				FC4CB6F924EB2A0800FDDEC7 /* icon_full_screen.png in Resources */,
 				FC803B4B24E99032009D470D /* test3.png in Resources */,
 				FC803B5D24EA2677009D470D /* icon_camera.png in Resources */,
+				FC4CB6FC24EB2E9900FDDEC7 /* icon_next.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -698,15 +739,21 @@
 				FC12065224E58F9500E5F304 /* RoundedView.swift in Sources */,
 				FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */,
 				FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */,
+				FC4CB70224EBD87D00FDDEC7 /* CustomerTechpackMaterialsViewController.swift in Sources */,
+				FC4CB70824EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift in Sources */,
 				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
 				FC12065924E5AE5B00E5F304 /* Common.swift in Sources */,
 				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
+				FC4CB70A24EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift in Sources */,
+				FC4CB70624EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift in Sources */,
 				FC803B6124EA283B009D470D /* RoundedLabel.swift in Sources */,
 				FC803B5324EA1FC7009D470D /* CustomerProfileViewController.swift in Sources */,
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
 				FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */,
+				FC4CB6FF24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift in Sources */,
 				FC803B3E24E933C0009D470D /* PathViewCell.swift in Sources */,
+				FC4CB6F724EB18CC00FDDEC7 /* CustomerTechpackPreviewViewController.swift in Sources */,
 				FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */,
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
@@ -716,6 +763,7 @@
 				FC12066324E5D43100E5F304 /* RoundedImageView.swift in Sources */,
 				FC803B6324EA496C009D470D /* CustomerDefaultViewController.swift in Sources */,
 				FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */,
+				FC4CB70424EBDA0F00FDDEC7 /* CustomerTechpackGeneralInfoViewController.swift in Sources */,
 				FC12065724E5A60000E5F304 /* Globals.swift in Sources */,
 				FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */,
 			);

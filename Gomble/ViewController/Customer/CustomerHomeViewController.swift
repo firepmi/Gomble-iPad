@@ -51,7 +51,8 @@ extension CustomerHomeViewController: UICollectionViewDelegate, UICollectionView
         return cell;
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("item clicked")
+        let preview = storyboard!.instantiateViewController(withIdentifier: "preview_customer")
+        navigationController?.pushViewController(preview, animated: true)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 224, height: 329)

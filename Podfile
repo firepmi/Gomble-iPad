@@ -8,6 +8,8 @@ target 'Gomble' do
   # Pods for Gomble
 pod 'XLPagerTabStrip'
 pod 'SideMenu'
+pod 'ImageSlideshow'
+pod 'TagListView'
 
   target 'GombleTests' do
     inherit! :search_paths
