@@ -10,10 +10,13 @@ import UIKit
 
 class CustomerSideMenuViewController: UIViewController {
     let menus = ["Products","My Orders"]
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationController?.setNavigationBarHidden(true, animated: false)
+        tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     @IBAction func onClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
