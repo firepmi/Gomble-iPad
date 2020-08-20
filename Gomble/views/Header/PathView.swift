@@ -1,5 +1,5 @@
 //
-//  CustomerPathView.swift
+//  PathView.swift
 //  Gomble
 //
 //  Created by mobileworld on 8/16/20.
@@ -8,14 +8,14 @@
 
 import UIKit
 @IBDesignable
-class CustomerPathView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    let nibName = "CustomerPathView"
+class PathView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    let nibName = "PathView"
         
     @IBOutlet weak var collectionView: UICollectionView!
     
     var contentView:UIView?
-    var delegate:CustomerPathViewDelegate!
-    var pathData = [String]()
+    var delegate:PathViewDelegate!
+    public static var pathData = [String]()
         
     override class func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,6 @@ class CustomerPathView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
-        pathData = ["Settings","Profile"]
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -47,7 +46,7 @@ class CustomerPathView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }
     func setPath(path:[String]) {
-        pathData = path
+        PathView.pathData = path
         collectionView.reloadData()
     }
     override func prepareForInterfaceBuilder() {
@@ -57,15 +56,15 @@ class CustomerPathView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pathData.count;
+        return PathView.pathData.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PathViewCell", for: indexPath as IndexPath) as! PathViewCell
 
-        cell.pathTitle = pathData[indexPath.row]
-        if indexPath.row == pathData.count - 1 {
+        cell.pathTitle = PathView.pathData[indexPath.row]
+        if indexPath.row == PathView.pathData.count - 1 {
             cell.pathLabel.textColor = UIColor.init(hexString: "#004de0")
         }
         else {
@@ -75,12 +74,12 @@ class CustomerPathView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
         return cell;
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        delegate.customerPathView(self, clicked: indexPath.row)
+        delegate.pathView(self, clicked: indexPath.row)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PathViewCell", for: indexPath as IndexPath) as! PathViewCell
 
-        cell.pathLabel.text = pathData[indexPath.row]
+        cell.pathLabel.text = PathView.pathData[indexPath.row]
         let width = cell.pathLabel.intrinsicContentSize.width + 35
         if( width > 96 ) {
             return CGSize(width: width,height: 25)
@@ -92,7 +91,7 @@ class CustomerPathView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
     }
 }
 
-protocol CustomerPathViewDelegate {
-    func customerPathView(_ customerPathView: CustomerPathView, clicked index:Int)
+protocol PathViewDelegate {
+    func pathView(_ pathView: PathView, clicked index:Int)
 }
 

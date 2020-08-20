@@ -50,6 +50,9 @@
 		FC4CB70A24EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */; };
 		FC50826324EEBDDC0034D032 /* icon_option.png in Resources */ = {isa = PBXBuildFile; fileRef = FC50826224EEBDDC0034D032 /* icon_option.png */; };
 		FC50826524EED3DE0034D032 /* DefaultDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50826424EED3DE0034D032 /* DefaultDialogViewController.swift */; };
+		FC50826724EEE9FE0034D032 /* DesignerTechpackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50826624EEE9FE0034D032 /* DesignerTechpackViewController.swift */; };
+		FC50826924EEF4710034D032 /* img_empty_techpack.png in Resources */ = {isa = PBXBuildFile; fileRef = FC50826824EEF4710034D032 /* img_empty_techpack.png */; };
+		FC50826B24EEF7070034D032 /* NewTechpackDesignerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50826A24EEF7070034D032 /* NewTechpackDesignerViewController.swift */; };
 		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
 		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
 		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
@@ -63,8 +66,8 @@
 		FC67EFDC24E624C500767A4F /* img_customer.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDA24E624C500767A4F /* img_customer.png */; };
 		FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDD24E6284E00767A4F /* icon_back_white.png */; };
 		FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC803B3724E76431009D470D /* profile-anonymous.jpg */; };
-		FC803B3A24E92915009D470D /* CustomerPathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC803B3924E92915009D470D /* CustomerPathView.swift */; };
-		FC803B3C24E92927009D470D /* CustomerPathView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC803B3B24E92927009D470D /* CustomerPathView.xib */; };
+		FC803B3A24E92915009D470D /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC803B3924E92915009D470D /* PathView.swift */; };
+		FC803B3C24E92927009D470D /* PathView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC803B3B24E92927009D470D /* PathView.xib */; };
 		FC803B3E24E933C0009D470D /* PathViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC803B3D24E933C0009D470D /* PathViewCell.swift */; };
 		FC803B4024E934A4009D470D /* PathViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC803B3F24E934A4009D470D /* PathViewCell.xib */; };
 		FC803B4324E97D4E009D470D /* icon_dropdown.png in Resources */ = {isa = PBXBuildFile; fileRef = FC803B4124E97D4D009D470D /* icon_dropdown.png */; };
@@ -168,6 +171,9 @@
 		FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackAboutDesignerViewController.swift; sourceTree = "<group>"; };
 		FC50826224EEBDDC0034D032 /* icon_option.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_option.png; sourceTree = "<group>"; };
 		FC50826424EED3DE0034D032 /* DefaultDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDialogViewController.swift; sourceTree = "<group>"; };
+		FC50826624EEE9FE0034D032 /* DesignerTechpackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerTechpackViewController.swift; sourceTree = "<group>"; };
+		FC50826824EEF4710034D032 /* img_empty_techpack.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_empty_techpack.png; sourceTree = "<group>"; };
+		FC50826A24EEF7070034D032 /* NewTechpackDesignerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTechpackDesignerViewController.swift; sourceTree = "<group>"; };
 		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
 		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
@@ -181,8 +187,8 @@
 		FC67EFDA24E624C500767A4F /* img_customer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_customer.png; sourceTree = "<group>"; };
 		FC67EFDD24E6284E00767A4F /* icon_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_white.png; sourceTree = "<group>"; };
 		FC803B3724E76431009D470D /* profile-anonymous.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-anonymous.jpg"; sourceTree = "<group>"; };
-		FC803B3924E92915009D470D /* CustomerPathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerPathView.swift; sourceTree = "<group>"; };
-		FC803B3B24E92927009D470D /* CustomerPathView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerPathView.xib; sourceTree = "<group>"; };
+		FC803B3924E92915009D470D /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
+		FC803B3B24E92927009D470D /* PathView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathView.xib; sourceTree = "<group>"; };
 		FC803B3D24E933C0009D470D /* PathViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathViewCell.swift; sourceTree = "<group>"; };
 		FC803B3F24E934A4009D470D /* PathViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathViewCell.xib; sourceTree = "<group>"; };
 		FC803B4124E97D4D009D470D /* icon_dropdown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_dropdown.png; sourceTree = "<group>"; };
@@ -329,8 +335,8 @@
 			children = (
 				FC44BFB924E71345008CD233 /* CustomHeaderView.swift */,
 				FC44BFBB24E715B8008CD233 /* CustomHeaderView.xib */,
-				FC803B3924E92915009D470D /* CustomerPathView.swift */,
-				FC803B3B24E92927009D470D /* CustomerPathView.xib */,
+				FC803B3924E92915009D470D /* PathView.swift */,
+				FC803B3B24E92927009D470D /* PathView.xib */,
 				FC803B3D24E933C0009D470D /* PathViewCell.swift */,
 				FC803B3F24E934A4009D470D /* PathViewCell.xib */,
 			);
@@ -365,6 +371,7 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC50826824EEF4710034D032 /* img_empty_techpack.png */,
 				FC50826224EEBDDC0034D032 /* icon_option.png */,
 				FC64A5B124EE031300E2AA70 /* icon_camera_grey.png */,
 				FC97D4F724ED967200E30158 /* icon_add_white.png */,
@@ -429,6 +436,8 @@
 			isa = PBXGroup;
 			children = (
 				FC97D4F324ED7AF200E30158 /* DesignerMyFoldersViewController.swift */,
+				FC50826624EEE9FE0034D032 /* DesignerTechpackViewController.swift */,
+				FC50826A24EEF7070034D032 /* NewTechpackDesignerViewController.swift */,
 				FC97D4F924ED987E00E30158 /* DesignerSideMenuViewController.swift */,
 				FC97D4FB24EDA95500E30158 /* CompleteDesignerProfileViewController.swift */,
 				FC11672E24EE1A2E00AB6814 /* CreateFolderDesignerViewController.swift */,
@@ -678,7 +687,7 @@
 				FC803B5C24EA2677009D470D /* icon_trash.png in Resources */,
 				FC803B4E24E99032009D470D /* test5.png in Resources */,
 				FC5B374F24E589B200216DBD /* DMSans-Medium.ttf in Resources */,
-				FC803B3C24E92927009D470D /* CustomerPathView.xib in Resources */,
+				FC803B3C24E92927009D470D /* PathView.xib in Resources */,
 				FC64A5B224EE031300E2AA70 /* icon_camera_grey.png in Resources */,
 				FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */,
 				FC44BFB624E7066B008CD233 /* btn_close.png in Resources */,
@@ -686,6 +695,7 @@
 				FC44BFC324E71DDB008CD233 /* icon_notificationl.png in Resources */,
 				FC97D4F624ED94B500E30158 /* img_empty_folder.png in Resources */,
 				FC44BFC224E71DDB008CD233 /* icon_home.png in Resources */,
+				FC50826924EEF4710034D032 /* img_empty_techpack.png in Resources */,
 				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
@@ -839,6 +849,7 @@
 				FC803B6124EA283B009D470D /* RoundedLabel.swift in Sources */,
 				FC803B5324EA1FC7009D470D /* CustomerProfileViewController.swift in Sources */,
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
+				FC50826B24EEF7070034D032 /* NewTechpackDesignerViewController.swift in Sources */,
 				FC97D4F424ED7AF200E30158 /* DesignerMyFoldersViewController.swift in Sources */,
 				FC97D4FC24EDA95500E30158 /* CompleteDesignerProfileViewController.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
@@ -852,8 +863,9 @@
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,
-				FC803B3A24E92915009D470D /* CustomerPathView.swift in Sources */,
+				FC803B3A24E92915009D470D /* PathView.swift in Sources */,
 				FC12065F24E5B98600E5F304 /* CreateNewPasswordViewController.swift in Sources */,
+				FC50826724EEE9FE0034D032 /* DesignerTechpackViewController.swift in Sources */,
 				FC50826524EED3DE0034D032 /* DefaultDialogViewController.swift in Sources */,
 				FC12066324E5D43100E5F304 /* RoundedImageView.swift in Sources */,
 				FC803B6324EA496C009D470D /* DefaultViewController.swift in Sources */,

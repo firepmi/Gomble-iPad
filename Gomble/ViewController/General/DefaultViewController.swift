@@ -11,7 +11,7 @@ import SideMenu
 
 class DefaultViewController: UIViewController {
     @IBOutlet weak var customHeaderView: CustomHeaderView!
-    @IBOutlet weak var pathView: CustomerPathView!
+    @IBOutlet weak var pathView: PathView!
     var type = "customer"
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +48,13 @@ class DefaultViewController: UIViewController {
         
         self.present(vc, animated: true, completion:nil)
     }
-    func navigateTo(id:String) {
+    func navigateTo(id:String, pathId:String = "") {
+        if pathId == "" {
+            PathView.pathData.append(id)
+        }
+        else {
+            PathView.pathData.append(pathId)
+        }
         let preview = storyboard!.instantiateViewController(withIdentifier: id)
         navigationController?.pushViewController(preview, animated: true)
     }
@@ -56,8 +62,12 @@ class DefaultViewController: UIViewController {
         print("notification")
     }
     func onProfileClicked(){
-        let profile = storyboard!.instantiateViewController(withIdentifier: "profile_customer")
-        navigationController?.pushViewController(profile, animated: true)
+        if type == "designer" {
+            openDialog(id: "complete_profile_designer")
+        }
+        else {
+            navigateTo(id: "profile_customer")
+        }
     }
     func onSettingsClicked(){
         print("settings")
@@ -67,6 +77,7 @@ class DefaultViewController: UIViewController {
     }
     func onBack(){
         navigationController?.popViewController(animated: true)
+        PathView.pathData.popLast()
     }
 }
 
@@ -82,8 +93,8 @@ extension DefaultViewController: CustomHeaderViewDelegate {
         }
     }
 }
-extension DefaultViewController: CustomerPathViewDelegate {
-    func customerPathView(_ customerPathView: CustomerPathView, clicked index: Int) {
+extension DefaultViewController: PathViewDelegate {
+    func pathView(_ pathView: PathView, clicked index: Int) {
         print("selected path \(index)")
     }
 }
