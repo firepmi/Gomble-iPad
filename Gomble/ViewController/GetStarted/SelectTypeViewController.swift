@@ -25,6 +25,9 @@ class SelectTypeViewController: UIViewController {
         present(customer, animated: true, completion: nil)
     }
     @IBAction func onDesignerSelected(_ sender: Any) {
+        let customer = storyboard!.instantiateViewController(withIdentifier: "designer_home")
+        customer.modalPresentationStyle = .fullScreen
+        present(customer, animated: true, completion: nil)
     }
 }
 

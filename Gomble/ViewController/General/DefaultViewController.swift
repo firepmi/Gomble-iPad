@@ -1,5 +1,5 @@
 //
-//  CustomerDefaultViewController.swift
+//  DefaultViewController.swift
 //  Gomble
 //
 //  Created by mobileworld on 8/16/20.
@@ -9,17 +9,23 @@
 import UIKit
 import SideMenu
 
-class CustomerDefaultViewController: UIViewController {
+class DefaultViewController: UIViewController {
     @IBOutlet weak var customHeaderView: CustomHeaderView!
-       @IBOutlet weak var pathView: CustomerPathView!
+    @IBOutlet weak var pathView: CustomerPathView!
+    var type = "customer"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         customHeaderView.delegate = self
         pathView.delegate = self
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     func onMenuClicked(){
-        let sideMenu = storyboard!.instantiateViewController(withIdentifier: "customeSideMenu") as! SideMenuNavigationController
+        var sideMenuId = "customeSideMenu"
+        if type == "designer" {
+            sideMenuId = "designerSideMenu"
+        }
+        let sideMenu = storyboard!.instantiateViewController(withIdentifier: sideMenuId) as! SideMenuNavigationController
         var settings = SideMenuSettings()
         settings.presentationStyle = .menuSlideIn
         settings.presentationStyle.onTopShadowColor = .blue
@@ -28,6 +34,19 @@ class CustomerDefaultViewController: UIViewController {
         settings.presentationStyle.menuOnTop = true
         sideMenu.settings = settings
         present(sideMenu, animated: true, completion: nil)
+    }
+    func openDialog(id:String){
+        let vc = storyboard!.instantiateViewController(withIdentifier: id)
+                
+        vc.modalPresentationStyle = .overFullScreen
+//        vc.dialogDelegate = self
+        let popover = vc.popoverPresentationController
+        popover?.sourceView = self.view
+        popover?.sourceRect = self.view.bounds
+        popover?.delegate = self as? UIPopoverPresentationControllerDelegate
+        vc.modalTransitionStyle = .crossDissolve
+        
+        self.present(vc, animated: true, completion:nil)
     }
     func onNotificationClicked(){
         print("notification")
@@ -47,7 +66,7 @@ class CustomerDefaultViewController: UIViewController {
     }
 }
 
-extension CustomerDefaultViewController: CustomHeaderViewDelegate {
+extension DefaultViewController: CustomHeaderViewDelegate {
     func customHeaderView(_ customerHeaderView: CustomHeaderView, clicked index: Int) {
         switch index {
         case 0: onMenuClicked()
@@ -59,7 +78,7 @@ extension CustomerDefaultViewController: CustomHeaderViewDelegate {
         }
     }
 }
-extension CustomerDefaultViewController: CustomerPathViewDelegate {
+extension DefaultViewController: CustomerPathViewDelegate {
     func customerPathView(_ customerPathView: CustomerPathView, clicked index: Int) {
         print("selected path \(index)")
     }

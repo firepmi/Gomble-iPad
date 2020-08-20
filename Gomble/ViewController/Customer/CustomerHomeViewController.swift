@@ -9,7 +9,7 @@
 import UIKit
 import SideMenu
 
-class CustomerHomeViewController: CustomerDefaultViewController {
+class CustomerHomeViewController: DefaultViewController {
     let techPackData = [
         ["title":"Summer dress collection", "image":"test1.png"],
         ["title":"Elegant gray dress", "image":"test2.png"],
@@ -22,7 +22,7 @@ class CustomerHomeViewController: CustomerDefaultViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        navigationController?.setNavigationBarHidden(true, animated: false)
+        type = "customer"
         pathView.setPath(path: ["Products"])
 
     }

@@ -77,6 +77,19 @@ class CustomerPathView: UIView, UICollectionViewDelegate, UICollectionViewDataSo
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate.customerPathView(self, clicked: indexPath.row)
     }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PathViewCell", for: indexPath as IndexPath) as! PathViewCell
+
+        cell.pathLabel.text = pathData[indexPath.row]
+        let width = cell.pathLabel.intrinsicContentSize.width + 35
+        if( width > 96 ) {
+            return CGSize(width: width,height: 25)
+        }
+        else {
+            return CGSize(width: 96,height: 25)
+        }
+        
+    }
 }
 
 protocol CustomerPathViewDelegate {

@@ -35,6 +35,11 @@ class SignInViewController: UIViewController, IndicatorInfoProvider {
             Globals.alert(context: self, title: "Sign In", message: "Password required at least 6 letters", delayed: false)
             return
         }
+        
+        let customer = storyboard!.instantiateViewController(withIdentifier: "select_type")
+        customer.modalPresentationStyle = .fullScreen
+        present(customer, animated: true, completion: nil)
+        
     }
     @IBAction func onForgotPassword(_ sender: Any) {
     }

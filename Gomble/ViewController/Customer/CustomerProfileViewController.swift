@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomerProfileViewController: CustomerDefaultViewController {
+class CustomerProfileViewController: DefaultViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
