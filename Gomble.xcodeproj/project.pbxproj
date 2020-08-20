@@ -11,6 +11,7 @@
 		CD7CC49D0F92F6DF29A84895 /* Pods_GombleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D0F3162F571D595A2A0BDE2F /* Pods_GombleTests.framework */; };
 		D17F968786EB128B81BB710F /* Pods_Gomble_GombleUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63E23430507CC1DA5AFC0CAB /* Pods_Gomble_GombleUITests.framework */; };
 		FC11672F24EE1A2E00AB6814 /* CreateFolderDesignerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11672E24EE1A2E00AB6814 /* CreateFolderDesignerViewController.swift */; };
+		FC11673324EE790900AB6814 /* Testdatabase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC11673224EE790900AB6814 /* Testdatabase.swift */; };
 		FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12064F24E58F6900E5F304 /* RoundedButton.swift */; };
 		FC12065224E58F9500E5F304 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065024E58F9500E5F304 /* RoundedView.swift */; };
 		FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC12065324E5904300E5F304 /* RoundedTextField.swift */; };
@@ -47,6 +48,8 @@
 		FC4CB70624EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70524EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift */; };
 		FC4CB70824EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70724EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift */; };
 		FC4CB70A24EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */; };
+		FC50826324EEBDDC0034D032 /* icon_option.png in Resources */ = {isa = PBXBuildFile; fileRef = FC50826224EEBDDC0034D032 /* icon_option.png */; };
+		FC50826524EED3DE0034D032 /* DefaultDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC50826424EED3DE0034D032 /* DefaultDialogViewController.swift */; };
 		FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC5B374224E5427500216DBD /* SignUpViewController.swift */; };
 		FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374724E5849A00216DBD /* icon_check_off.png */; };
 		FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */ = {isa = PBXBuildFile; fileRef = FC5B374824E5849B00216DBD /* icon_check_on.png */; };
@@ -126,6 +129,7 @@
 		E59E00A92A6127B7D683070A /* Pods_Gomble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Gomble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBB8C2AEEE06AB3AC59464D8 /* Pods-GombleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GombleTests.debug.xcconfig"; path = "Target Support Files/Pods-GombleTests/Pods-GombleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC11672E24EE1A2E00AB6814 /* CreateFolderDesignerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateFolderDesignerViewController.swift; sourceTree = "<group>"; };
+		FC11673224EE790900AB6814 /* Testdatabase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Testdatabase.swift; sourceTree = "<group>"; };
 		FC12064F24E58F6900E5F304 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		FC12065024E58F9500E5F304 /* RoundedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
 		FC12065324E5904300E5F304 /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
@@ -162,6 +166,8 @@
 		FC4CB70524EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackOptionsViewController.swift; sourceTree = "<group>"; };
 		FC4CB70724EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackMeasurementsViewController.swift; sourceTree = "<group>"; };
 		FC4CB70924EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomerTechpackAboutDesignerViewController.swift; sourceTree = "<group>"; };
+		FC50826224EEBDDC0034D032 /* icon_option.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_option.png; sourceTree = "<group>"; };
+		FC50826424EED3DE0034D032 /* DefaultDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultDialogViewController.swift; sourceTree = "<group>"; };
 		FC5B374224E5427500216DBD /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		FC5B374724E5849A00216DBD /* icon_check_off.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_off.png; sourceTree = "<group>"; };
 		FC5B374824E5849B00216DBD /* icon_check_on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_on.png; sourceTree = "<group>"; };
@@ -270,6 +276,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FC11673124EE788500AB6814 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				FC11673224EE790900AB6814 /* Testdatabase.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
 		FC12065524E5A5DE00E5F304 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -351,6 +365,7 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC50826224EEBDDC0034D032 /* icon_option.png */,
 				FC64A5B124EE031300E2AA70 /* icon_camera_grey.png */,
 				FC97D4F724ED967200E30158 /* icon_add_white.png */,
 				FC97D4F524ED94B500E30158 /* img_empty_folder.png */,
@@ -425,6 +440,7 @@
 			isa = PBXGroup;
 			children = (
 				FC803B6224EA496C009D470D /* DefaultViewController.swift */,
+				FC50826424EED3DE0034D032 /* DefaultDialogViewController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -461,6 +477,7 @@
 				FCC21FC024E37ED500D90C32 /* ViewController */,
 				FC12066424E5D47600E5F304 /* views */,
 				FC12065524E5A5DE00E5F304 /* Config */,
+				FC11673124EE788500AB6814 /* Database */,
 				FCC21F9424E253F900D90C32 /* Main.storyboard */,
 				FCC21F9724E2542300D90C32 /* Assets.xcassets */,
 				FCC21F9924E2542300D90C32 /* LaunchScreen.storyboard */,
@@ -636,6 +653,7 @@
 				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
 				FC803B4D24E99032009D470D /* test4.png in Resources */,
 				FC97D4F824ED967200E30158 /* icon_add_white.png in Resources */,
+				FC50826324EEBDDC0034D032 /* icon_option.png in Resources */,
 				FC67EFDC24E624C500767A4F /* img_customer.png in Resources */,
 				FC803B4324E97D4E009D470D /* icon_dropdown.png in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
@@ -810,6 +828,7 @@
 				FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */,
 				FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */,
 				FC4CB70224EBD87D00FDDEC7 /* CustomerTechpackMaterialsViewController.swift in Sources */,
+				FC11673324EE790900AB6814 /* Testdatabase.swift in Sources */,
 				FC64A5B024EDCF4800E2AA70 /* RoundedTextView.swift in Sources */,
 				FC4CB70824EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift in Sources */,
 				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
@@ -835,6 +854,7 @@
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,
 				FC803B3A24E92915009D470D /* CustomerPathView.swift in Sources */,
 				FC12065F24E5B98600E5F304 /* CreateNewPasswordViewController.swift in Sources */,
+				FC50826524EED3DE0034D032 /* DefaultDialogViewController.swift in Sources */,
 				FC12066324E5D43100E5F304 /* RoundedImageView.swift in Sources */,
 				FC803B6324EA496C009D470D /* DefaultViewController.swift in Sources */,
 				FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */,

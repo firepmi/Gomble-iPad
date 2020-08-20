@@ -35,11 +35,11 @@ class DefaultViewController: UIViewController {
         sideMenu.settings = settings
         present(sideMenu, animated: true, completion: nil)
     }
-    func openDialog(id:String){
-        let vc = storyboard!.instantiateViewController(withIdentifier: id)
+    func openDialog(id:String, completion: (()->Void)? = nil) {
+        let vc = storyboard!.instantiateViewController(withIdentifier: id) as! DefaultDialogViewController
                 
         vc.modalPresentationStyle = .overFullScreen
-//        vc.dialogDelegate = self
+        vc.completion = completion
         let popover = vc.popoverPresentationController
         popover?.sourceView = self.view
         popover?.sourceRect = self.view.bounds
@@ -47,6 +47,10 @@ class DefaultViewController: UIViewController {
         vc.modalTransitionStyle = .crossDissolve
         
         self.present(vc, animated: true, completion:nil)
+    }
+    func navigateTo(id:String) {
+        let preview = storyboard!.instantiateViewController(withIdentifier: id)
+        navigationController?.pushViewController(preview, animated: true)
     }
     func onNotificationClicked(){
         print("notification")

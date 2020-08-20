@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompleteDesignerProfileViewController: UIViewController {
+class CompleteDesignerProfileViewController: DefaultDialogViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +19,6 @@ class CompleteDesignerProfileViewController: UIViewController {
     }
     
     @IBAction func onBack(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func onClose(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func onNext(_ sender: Any) {
