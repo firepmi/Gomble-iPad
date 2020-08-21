@@ -27,6 +27,7 @@ class CreateFolderDesignerViewController: DefaultDialogViewController {
     @IBAction func onCreateFolder(_ sender: Any) {
         if folderNameLabel.text == "" {
             folderNameLabel.borderColor = UIColor.red
+            return
         }
         else {
             folderNameLabel.borderColor = UIColor.init(hexString:"#D7E1EC")

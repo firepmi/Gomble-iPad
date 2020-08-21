@@ -1,5 +1,5 @@
 //
-//  DesignerTechpackViewController.swift
+//  DesignerTechpacksViewController.swift
 //  Gomble
 //
 //  Created by mobileworld on 8/20/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DesignerTechpackViewController: DefaultViewController {
+class DesignerTechpacksViewController: DefaultViewController {
 
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -35,14 +35,11 @@ class DesignerTechpackViewController: DefaultViewController {
     }
      
     @IBAction func onCreateTechpack(_ sender: Any) {
-        openDialog(id: "create_folder_designer") {
-            self.collectionView.reloadData()
-            self.refreshView()
-        }
+        navigateTo(id: "new_techpack_designer", pathId: "New techpack")
     }
 }
 
-extension DesignerTechpackViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+extension DesignerTechpacksViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return Testdatabase.techpacks.count;
     }

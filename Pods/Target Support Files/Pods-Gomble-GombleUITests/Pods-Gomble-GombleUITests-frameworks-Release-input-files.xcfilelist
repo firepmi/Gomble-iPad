@@ -1,4 +1,5 @@
 ${PODS_ROOT}/Target Support Files/Pods-Gomble-GombleUITests/Pods-Gomble-GombleUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/ExpandableCell/ExpandableCell.framework
 ${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework
 ${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework

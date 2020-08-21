@@ -12,6 +12,8 @@ pod 'ImageSlideshow'
 pod 'TagListView'
 pod 'SwiftyJSON'
 pod 'iOSDropDown'
+pod 'ExpandableCell'
+
   target 'GombleTests' do
     inherit! :search_paths
     # Pods for testing
