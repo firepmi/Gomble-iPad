@@ -19,4 +19,11 @@ class Testdatabase {
         ["title":"Summer dress collection with dot", "image":"test4.png"],
         ["title":"Summer dress collection with flowers", "image":"test5.png"]
     ]
+    public static func getTestColaborationData() -> [JSON]{
+        var json = JSON()
+        json["first_name"].string = "John"
+        json["last_name"].string = "Doe"
+        json["email"].string = "john.doe@email.com"
+        return [json]
+    }
 }

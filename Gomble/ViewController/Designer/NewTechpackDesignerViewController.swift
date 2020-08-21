@@ -66,7 +66,7 @@ class NewTechpackDesignerViewController: DefaultViewController {
 
 extension NewTechpackDesignerViewController: ExpandableDelegate {
     func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCellsForRowAt indexPath: IndexPath) -> [UITableViewCell]? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: categoryCells[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: categoryCells[indexPath.row])        
         return [cell!]
     }
         
@@ -74,7 +74,7 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
         
         switch indexPath.row {
             case 0:
-                return [100]
+                return [325]
             case 1:
                 return [120]
             case 2:

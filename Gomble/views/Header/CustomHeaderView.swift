@@ -27,7 +27,7 @@ class CustomHeaderView: UIView {
             profileImageView?.image = profileImage
         }
     }
-    
+        
     override class func awakeFromNib() {
         super.awakeFromNib()
 //        commonInit(self)

@@ -93,6 +93,13 @@
 		FC97D4F824ED967200E30158 /* icon_add_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FC97D4F724ED967200E30158 /* icon_add_white.png */; };
 		FC97D4FA24ED987E00E30158 /* DesignerSideMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC97D4F924ED987E00E30158 /* DesignerSideMenuViewController.swift */; };
 		FC97D4FC24EDA95500E30158 /* CompleteDesignerProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC97D4FB24EDA95500E30158 /* CompleteDesignerProfileViewController.swift */; };
+		FCB07B0924EF828D00A2E5F1 /* CollaborationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB07B0824EF828C00A2E5F1 /* CollaborationView.swift */; };
+		FCB07B0B24EF82B700A2E5F1 /* CollaborationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B0A24EF82B700A2E5F1 /* CollaborationView.xib */; };
+		FCB07B0D24EF8F6B00A2E5F1 /* icon_link.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B0C24EF8F6B00A2E5F1 /* icon_link.png */; };
+		FCB07B0F24EFC8F000A2E5F1 /* icon_email.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B0E24EFC8F000A2E5F1 /* icon_email.png */; };
+		FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */; };
+		FCB07B1324EFCC4900A2E5F1 /* CollaborationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB07B1224EFCC4900A2E5F1 /* CollaborationTableViewCell.swift */; };
+		FCB07B1524EFCF7600A2E5F1 /* icon_added.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B1424EFCF7600A2E5F1 /* icon_added.png */; };
 		FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F8E24E253F900D90C32 /* AppDelegate.swift */; };
 		FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9024E253F900D90C32 /* SceneDelegate.swift */; };
 		FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9224E253F900D90C32 /* ViewController.swift */; };
@@ -215,6 +222,13 @@
 		FC97D4F724ED967200E30158 /* icon_add_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_add_white.png; sourceTree = "<group>"; };
 		FC97D4F924ED987E00E30158 /* DesignerSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerSideMenuViewController.swift; sourceTree = "<group>"; };
 		FC97D4FB24EDA95500E30158 /* CompleteDesignerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDesignerProfileViewController.swift; sourceTree = "<group>"; };
+		FCB07B0824EF828C00A2E5F1 /* CollaborationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationView.swift; sourceTree = "<group>"; };
+		FCB07B0A24EF82B700A2E5F1 /* CollaborationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollaborationView.xib; sourceTree = "<group>"; };
+		FCB07B0C24EF8F6B00A2E5F1 /* icon_link.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_link.png; sourceTree = "<group>"; };
+		FCB07B0E24EFC8F000A2E5F1 /* icon_email.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_email.png; sourceTree = "<group>"; };
+		FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollaborationTableViewCell.xib; sourceTree = "<group>"; };
+		FCB07B1224EFCC4900A2E5F1 /* CollaborationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationTableViewCell.swift; sourceTree = "<group>"; };
+		FCB07B1424EFCF7600A2E5F1 /* icon_added.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_added.png; sourceTree = "<group>"; };
 		FCC21F8B24E253F900D90C32 /* Gomble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC21F8E24E253F900D90C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC21F9024E253F900D90C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -304,6 +318,7 @@
 		FC12066424E5D47600E5F304 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FCB07B0724EF7F7400A2E5F1 /* techpack */,
 				FC44BFB824E71302008CD233 /* Header */,
 				FC44BFB724E712F0008CD233 /* Rounded */,
 			);
@@ -373,6 +388,9 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FCB07B1424EFCF7600A2E5F1 /* icon_added.png */,
+				FCB07B0E24EFC8F000A2E5F1 /* icon_email.png */,
+				FCB07B0C24EF8F6B00A2E5F1 /* icon_link.png */,
 				FC50826C24EF0D110034D032 /* icon_left_arrow_white.png */,
 				FC50826824EEF4710034D032 /* img_empty_techpack.png */,
 				FC50826224EEBDDC0034D032 /* icon_option.png */,
@@ -455,6 +473,17 @@
 				FC50826424EED3DE0034D032 /* DefaultDialogViewController.swift */,
 			);
 			path = General;
+			sourceTree = "<group>";
+		};
+		FCB07B0724EF7F7400A2E5F1 /* techpack */ = {
+			isa = PBXGroup;
+			children = (
+				FCB07B0824EF828C00A2E5F1 /* CollaborationView.swift */,
+				FCB07B0A24EF82B700A2E5F1 /* CollaborationView.xib */,
+				FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */,
+				FCB07B1224EFCC4900A2E5F1 /* CollaborationTableViewCell.swift */,
+			);
+			path = techpack;
 			sourceTree = "<group>";
 		};
 		FCC21F8224E253F800D90C32 = {
@@ -668,8 +697,10 @@
 				FC50826324EEBDDC0034D032 /* icon_option.png in Resources */,
 				FC67EFDC24E624C500767A4F /* img_customer.png in Resources */,
 				FC803B4324E97D4E009D470D /* icon_dropdown.png in Resources */,
+				FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
 				FC803B4424E97D4E009D470D /* icon_search.png in Resources */,
+				FCB07B0D24EF8F6B00A2E5F1 /* icon_link.png in Resources */,
 				FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */,
 				FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */,
 				FC803B5F24EA2677009D470D /* test_profile.png in Resources */,
@@ -678,6 +709,7 @@
 				FC803B4C24E99032009D470D /* test1.png in Resources */,
 				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
+				FCB07B0B24EF82B700A2E5F1 /* CollaborationView.xib in Resources */,
 				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
 				FC44BFC424E71DDB008CD233 /* icon_menu.png in Resources */,
 				FC803B4F24E99032009D470D /* test2.png in Resources */,
@@ -703,10 +735,12 @@
 				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
+				FCB07B0F24EFC8F000A2E5F1 /* icon_email.png in Resources */,
 				FC803B5E24EA2677009D470D /* icon_radio_on.png in Resources */,
 				FC4CB6FD24EB2E9900FDDEC7 /* icon_previous.png in Resources */,
 				FC803B5124E99078009D470D /* icon_flag_blue.png in Resources */,
 				FC803B5524EA2325009D470D /* icon_back_grey.png in Resources */,
+				FCB07B1524EFCF7600A2E5F1 /* icon_added.png in Resources */,
 				FC4CB6F924EB2A0800FDDEC7 /* icon_full_screen.png in Resources */,
 				FC803B4B24E99032009D470D /* test3.png in Resources */,
 				FC803B5D24EA2677009D470D /* icon_camera.png in Resources */,
@@ -858,6 +892,7 @@
 				FC97D4FC24EDA95500E30158 /* CompleteDesignerProfileViewController.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
 				FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */,
+				FCB07B1324EFCC4900A2E5F1 /* CollaborationTableViewCell.swift in Sources */,
 				FC4CB6FF24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift in Sources */,
 				FC11672F24EE1A2E00AB6814 /* CreateFolderDesignerViewController.swift in Sources */,
 				FC803B3E24E933C0009D470D /* PathViewCell.swift in Sources */,
@@ -865,6 +900,7 @@
 				FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */,
 				FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */,
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
+				FCB07B0924EF828D00A2E5F1 /* CollaborationView.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,
 				FC803B3A24E92915009D470D /* PathView.swift in Sources */,
