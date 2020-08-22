@@ -20,10 +20,18 @@ class Testdatabase {
         ["title":"Summer dress collection with flowers", "image":"test5.png"]
     ]
     public static func getTestColaborationData() -> [JSON]{
-        var json = JSON()
-        json["first_name"].string = "John"
-        json["last_name"].string = "Doe"
-        json["email"].string = "john.doe@email.com"
-        return [json]
+        var json1 = JSON()
+        json1["first_name"].string = "John"
+        json1["last_name"].string = "Doe"
+        json1["email"].string = "john.doe@email.com"
+        var json2 = JSON()
+        json2["first_name"].string = "John"
+        json2["last_name"].string = "Doe"
+        json2["email"].string = "john.doe@email.com"
+        var json3 = JSON()
+        json3["first_name"].string = "John"
+        json3["last_name"].string = "Doe"
+        json3["email"].string = "john.doe@email.com"
+        return [json1,json2,json3,]
     }
 }

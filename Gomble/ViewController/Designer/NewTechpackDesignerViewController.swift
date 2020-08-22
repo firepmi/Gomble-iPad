@@ -74,11 +74,11 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
         
         switch indexPath.row {
             case 0:
-                return [325]
+                return [425]
             case 1:
-                return [120]
+                return [590]
             case 2:
-                return [130]
+                return [613]
             case 3:
                 return [140]
             case 4:

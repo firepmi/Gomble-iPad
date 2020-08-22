@@ -28,9 +28,9 @@ class SignInViewController: UIViewController, IndicatorInfoProvider {
     }
     @IBAction func onLogin(_ sender: Any) {
         //TODO: remove after tested
-        let customer = storyboard!.instantiateViewController(withIdentifier: "designer_home")
-        customer.modalPresentationStyle = .fullScreen
-        present(customer, animated: true, completion: nil)
+//        let customer = storyboard!.instantiateViewController(withIdentifier: "designer_home")
+//        customer.modalPresentationStyle = .fullScreen
+//        present(customer, animated: true, completion: nil)
         if(emailTextField.text == "" || passwordTextField.text == "") {
             Globals.alert(context: self, title: "Sign In", message: "Please fill out all required fields", delayed: false)
             return
@@ -40,9 +40,9 @@ class SignInViewController: UIViewController, IndicatorInfoProvider {
             return
         }
         
-//        let customer = storyboard!.instantiateViewController(withIdentifier: "select_type")
-//        customer.modalPresentationStyle = .fullScreen
-//        present(customer, animated: true, completion: nil)
+        let customer = storyboard!.instantiateViewController(withIdentifier: "select_type")
+        customer.modalPresentationStyle = .fullScreen
+        present(customer, animated: true, completion: nil)
         
     }
     @IBAction func onForgotPassword(_ sender: Any) {

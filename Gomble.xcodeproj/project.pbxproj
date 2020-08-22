@@ -100,6 +100,15 @@
 		FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */; };
 		FCB07B1324EFCC4900A2E5F1 /* CollaborationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB07B1224EFCC4900A2E5F1 /* CollaborationTableViewCell.swift */; };
 		FCB07B1524EFCF7600A2E5F1 /* icon_added.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B1424EFCF7600A2E5F1 /* icon_added.png */; };
+		FCB07B1924F0114500A2E5F1 /* StageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB07B1824F0114500A2E5F1 /* StageView.swift */; };
+		FCB07B1B24F0115F00A2E5F1 /* StageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B1A24F0115F00A2E5F1 /* StageView.xib */; };
+		FCB07B1E24F0212200A2E5F1 /* icon_radio_off_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B1C24F0212200A2E5F1 /* icon_radio_off_grey.png */; };
+		FCB07B1F24F0212200A2E5F1 /* icon_radio_on_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B1D24F0212200A2E5F1 /* icon_radio_on_grey.png */; };
+		FCB07B2124F024AB00A2E5F1 /* icon_flag_grey.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B2024F024AB00A2E5F1 /* icon_flag_grey.png */; };
+		FCB07B2324F03EEE00A2E5F1 /* icon_calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B2224F03EEE00A2E5F1 /* icon_calendar.png */; };
+		FCB07B2624F05A3400A2E5F1 /* GeneralInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B2524F05A3400A2E5F1 /* GeneralInfoView.xib */; };
+		FCB07B2824F05A8400A2E5F1 /* GeneralInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB07B2724F05A8400A2E5F1 /* GeneralInfoView.swift */; };
+		FCB07B2A24F062E300A2E5F1 /* bg_general_info.png in Resources */ = {isa = PBXBuildFile; fileRef = FCB07B2924F062E300A2E5F1 /* bg_general_info.png */; };
 		FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F8E24E253F900D90C32 /* AppDelegate.swift */; };
 		FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9024E253F900D90C32 /* SceneDelegate.swift */; };
 		FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21F9224E253F900D90C32 /* ViewController.swift */; };
@@ -229,6 +238,15 @@
 		FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollaborationTableViewCell.xib; sourceTree = "<group>"; };
 		FCB07B1224EFCC4900A2E5F1 /* CollaborationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationTableViewCell.swift; sourceTree = "<group>"; };
 		FCB07B1424EFCF7600A2E5F1 /* icon_added.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_added.png; sourceTree = "<group>"; };
+		FCB07B1824F0114500A2E5F1 /* StageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageView.swift; sourceTree = "<group>"; };
+		FCB07B1A24F0115F00A2E5F1 /* StageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StageView.xib; sourceTree = "<group>"; };
+		FCB07B1C24F0212200A2E5F1 /* icon_radio_off_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_radio_off_grey.png; sourceTree = "<group>"; };
+		FCB07B1D24F0212200A2E5F1 /* icon_radio_on_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_radio_on_grey.png; sourceTree = "<group>"; };
+		FCB07B2024F024AB00A2E5F1 /* icon_flag_grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_flag_grey.png; sourceTree = "<group>"; };
+		FCB07B2224F03EEE00A2E5F1 /* icon_calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_calendar.png; sourceTree = "<group>"; };
+		FCB07B2524F05A3400A2E5F1 /* GeneralInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GeneralInfoView.xib; sourceTree = "<group>"; };
+		FCB07B2724F05A8400A2E5F1 /* GeneralInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralInfoView.swift; sourceTree = "<group>"; };
+		FCB07B2924F062E300A2E5F1 /* bg_general_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_general_info.png; sourceTree = "<group>"; };
 		FCC21F8B24E253F900D90C32 /* Gomble.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gomble.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC21F8E24E253F900D90C32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC21F9024E253F900D90C32 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -388,6 +406,11 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FCB07B2924F062E300A2E5F1 /* bg_general_info.png */,
+				FCB07B2224F03EEE00A2E5F1 /* icon_calendar.png */,
+				FCB07B2024F024AB00A2E5F1 /* icon_flag_grey.png */,
+				FCB07B1C24F0212200A2E5F1 /* icon_radio_off_grey.png */,
+				FCB07B1D24F0212200A2E5F1 /* icon_radio_on_grey.png */,
 				FCB07B1424EFCF7600A2E5F1 /* icon_added.png */,
 				FCB07B0E24EFC8F000A2E5F1 /* icon_email.png */,
 				FCB07B0C24EF8F6B00A2E5F1 /* icon_link.png */,
@@ -478,12 +501,40 @@
 		FCB07B0724EF7F7400A2E5F1 /* techpack */ = {
 			isa = PBXGroup;
 			children = (
+				FCB07B2424F05A0700A2E5F1 /* GeneralInfo */,
+				FCB07B1724F0109500A2E5F1 /* Stage */,
+				FCB07B1624F0108000A2E5F1 /* Collaboration */,
+			);
+			path = techpack;
+			sourceTree = "<group>";
+		};
+		FCB07B1624F0108000A2E5F1 /* Collaboration */ = {
+			isa = PBXGroup;
+			children = (
 				FCB07B0824EF828C00A2E5F1 /* CollaborationView.swift */,
 				FCB07B0A24EF82B700A2E5F1 /* CollaborationView.xib */,
 				FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */,
 				FCB07B1224EFCC4900A2E5F1 /* CollaborationTableViewCell.swift */,
 			);
-			path = techpack;
+			path = Collaboration;
+			sourceTree = "<group>";
+		};
+		FCB07B1724F0109500A2E5F1 /* Stage */ = {
+			isa = PBXGroup;
+			children = (
+				FCB07B1824F0114500A2E5F1 /* StageView.swift */,
+				FCB07B1A24F0115F00A2E5F1 /* StageView.xib */,
+			);
+			path = Stage;
+			sourceTree = "<group>";
+		};
+		FCB07B2424F05A0700A2E5F1 /* GeneralInfo */ = {
+			isa = PBXGroup;
+			children = (
+				FCB07B2724F05A8400A2E5F1 /* GeneralInfoView.swift */,
+				FCB07B2524F05A3400A2E5F1 /* GeneralInfoView.xib */,
+			);
+			path = GeneralInfo;
 			sourceTree = "<group>";
 		};
 		FCC21F8224E253F800D90C32 = {
@@ -700,6 +751,7 @@
 				FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
 				FC803B4424E97D4E009D470D /* icon_search.png in Resources */,
+				FCB07B1E24F0212200A2E5F1 /* icon_radio_off_grey.png in Resources */,
 				FCB07B0D24EF8F6B00A2E5F1 /* icon_link.png in Resources */,
 				FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */,
 				FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */,
@@ -707,6 +759,7 @@
 				FC43A8F924EC5A64005AF9BF /* test_material.png in Resources */,
 				FC43A8F424EC46B8005AF9BF /* MaterialItemCell.xib in Resources */,
 				FC803B4C24E99032009D470D /* test1.png in Resources */,
+				FCB07B1F24F0212200A2E5F1 /* icon_radio_on_grey.png in Resources */,
 				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
 				FCB07B0B24EF82B700A2E5F1 /* CollaborationView.xib in Resources */,
@@ -714,12 +767,16 @@
 				FC44BFC424E71DDB008CD233 /* icon_menu.png in Resources */,
 				FC803B4F24E99032009D470D /* test2.png in Resources */,
 				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
+				FCB07B2A24F062E300A2E5F1 /* bg_general_info.png in Resources */,
 				FC50826D24EF0D120034D032 /* icon_left_arrow_white.png in Resources */,
+				FCB07B1B24F0115F00A2E5F1 /* StageView.xib in Resources */,
 				FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */,
 				FC803B4024E934A4009D470D /* PathViewCell.xib in Resources */,
 				FC12066624E5DADA00E5F304 /* bg_header.png in Resources */,
+				FCB07B2324F03EEE00A2E5F1 /* icon_calendar.png in Resources */,
 				FC43A8F724EC5A5C005AF9BF /* icon_check_circle.png in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
+				FCB07B2624F05A3400A2E5F1 /* GeneralInfoView.xib in Resources */,
 				FC803B5C24EA2677009D470D /* icon_trash.png in Resources */,
 				FC803B4E24E99032009D470D /* test5.png in Resources */,
 				FC5B374F24E589B200216DBD /* DMSans-Medium.ttf in Resources */,
@@ -731,6 +788,7 @@
 				FC44BFC324E71DDB008CD233 /* icon_notificationl.png in Resources */,
 				FC97D4F624ED94B500E30158 /* img_empty_folder.png in Resources */,
 				FC44BFC224E71DDB008CD233 /* icon_home.png in Resources */,
+				FCB07B2124F024AB00A2E5F1 /* icon_flag_grey.png in Resources */,
 				FC50826924EEF4710034D032 /* img_empty_techpack.png in Resources */,
 				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
@@ -889,6 +947,7 @@
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
 				FC50826B24EEF7070034D032 /* NewTechpackDesignerViewController.swift in Sources */,
 				FC97D4F424ED7AF200E30158 /* DesignerMyFoldersViewController.swift in Sources */,
+				FCB07B2824F05A8400A2E5F1 /* GeneralInfoView.swift in Sources */,
 				FC97D4FC24EDA95500E30158 /* CompleteDesignerProfileViewController.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
 				FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */,
@@ -900,6 +959,7 @@
 				FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */,
 				FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */,
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
+				FCB07B1924F0114500A2E5F1 /* StageView.swift in Sources */,
 				FCB07B0924EF828D00A2E5F1 /* CollaborationView.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,
