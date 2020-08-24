@@ -48,9 +48,13 @@ class NewTechpackDesignerViewController: DefaultViewController {
         type = "designer"
         titleLabel.text = "New techpack"
         previewButtonView.roundCorners(corners: [.topLeft, .bottomLeft], radius: 13.5)
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
         tableView.expandableDelegate = self
         tableView.animation = .automatic
         tableView.expansionStyle = .single
+        tableView.autoReleaseDelegate = false
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -66,21 +70,25 @@ class NewTechpackDesignerViewController: DefaultViewController {
 
 extension NewTechpackDesignerViewController: ExpandableDelegate {
     func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCellsForRowAt indexPath: IndexPath) -> [UITableViewCell]? {
-        let cell = tableView.dequeueReusableCell(withIdentifier: categoryCells[indexPath.row])        
+        let cell = tableView.dequeueReusableCell(withIdentifier: categoryCells[indexPath.row])
+        if indexPath.row == 2 {
+            let view = cell?.viewWithTag(100) as! GeneralInfoView
+            view.delegate = self
+        }
         return [cell!]
     }
-        
+
     func expandableTableView(_ expandableTableView: ExpandableTableView, heightsForExpandedRowAt indexPath: IndexPath) -> [CGFloat]? {
         
         switch indexPath.row {
             case 0:
-                return [425]
+                return [425] //Collaboration
             case 1:
-                return [590]
+                return [590] //Stage
             case 2:
-                return [613]
+                return [650] //General info
             case 3:
-                return [140]
+                return [280] //Sketches
             case 4:
                 return [150]
             case 5:
@@ -134,8 +142,8 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
     
     @objc(expandableTableView:didCloseRowAt:) func expandableTableView(_ expandableTableView: UITableView, didCloseRowAt indexPath: IndexPath) {
         let cell = expandableTableView.cellForRow(at: indexPath)
-        cell?.contentView.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
-        cell?.backgroundColor = #colorLiteral(red: 0.1764705926, green: 0.01176470611, blue: 0.5607843399, alpha: 1)
+        cell?.contentView.backgroundColor = #colorLiteral(red: 0.3004622757, green: 0.9877796769, blue: 0.9991204143, alpha: 1)
+        cell?.backgroundColor = #colorLiteral(red: 0.3004622757, green: 0.9877796769, blue: 0.9991204143, alpha: 1)
     }
     
     func expandableTableView(_ expandableTableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {

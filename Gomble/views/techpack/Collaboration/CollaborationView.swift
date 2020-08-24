@@ -10,12 +10,7 @@ import UIKit
 import SwiftyJSON
 
 @IBDesignable
-class CollaborationView: UIView, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    let nibName = "CollaborationView"
-    
-    var contentView:UIView?
+class CollaborationView: DefaultView, UITableViewDelegate, UITableViewDataSource {
             
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
@@ -34,40 +29,16 @@ class CollaborationView: UIView, UITableViewDelegate, UITableViewDataSource {
         }
     }
     
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-//        commonInit(self)
+    override func setNibName() {
+        nibName = "CollaborationView"
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    func commonInit(){
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(view)
-        contentView = view
+    override func initView() {
         contactsData = Testdatabase.getTestColaborationData()
         tableView.register(UINib(nibName: "CollaborationTableViewCell", bundle: nil), forCellReuseIdentifier: "collaborationTableViewCell")
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
-    func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: CustomHeaderView.self)
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        commonInit()
-        contentView?.prepareForInterfaceBuilder()
-    }
-        
+   
     @IBAction func onCopyLink(_ sender: Any) {
         
     }

@@ -8,43 +8,20 @@
 
 import UIKit
 @IBDesignable
-class PathView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    let nibName = "PathView"
-        
+class PathView: DefaultView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var contentView:UIView?
     var delegate:PathViewDelegate!
     public static var pathData = [String]()
         
-    override class func awakeFromNib() {
-        super.awakeFromNib()
+    override func setNibName() {
+        nibName = "PathView"
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    func commonInit(){
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(view)
-        contentView = view
-        
+    override func initView() {
         collectionView.register(UINib(nibName: "PathViewCell", bundle: nil), forCellWithReuseIdentifier: "PathViewCell")
-//        collectionView.delegate = self
-//        collectionView.dataSource = self
     }
-    func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: CustomHeaderView.self)
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
+    
     func setPath(path:[String]) {
         PathView.pathData = path
         collectionView.reloadData()

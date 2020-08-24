@@ -8,10 +8,7 @@
 
 import UIKit
 @IBDesignable
-class StageView: UIView {
-    let nibName = "StageView"
-
-    var contentView:UIView?
+class StageView: DefaultView {
     var selectedColor = UIColor.init(hexString:"#4B62FF")
     
     @IBOutlet weak var ideaView: RoundedView!
@@ -24,36 +21,10 @@ class StageView: UIView {
     @IBOutlet weak var iconRadio3: UIImageView!
     @IBOutlet weak var iconRadio4: UIImageView!
     
-    override class func awakeFromNib() {
-        super.awakeFromNib()
+    override func setNibName() {
+        nibName = "StageView"
     }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    func commonInit(){
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(view)
-        contentView = view
-    }
-    func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: CustomHeaderView.self)
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        commonInit()
-        contentView?.prepareForInterfaceBuilder()
-    }
-    
+        
     @IBAction func onCardSelected(_ sender: UIButton) {
         ideaView.borderColor = .clear
         sampleView.borderColor = .clear

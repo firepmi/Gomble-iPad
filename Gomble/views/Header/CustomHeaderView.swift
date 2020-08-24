@@ -8,12 +8,10 @@
 
 import UIKit
 @IBDesignable
-class CustomHeaderView: UIView {
-    let nibName = "CustomHeaderView"
+class CustomHeaderView: DefaultView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileImageView: RoundedImageView!
-    var contentView:UIView?
     var delegate:CustomHeaderViewDelegate!
     
     @IBInspectable var title: String = "Gomble" {
@@ -27,39 +25,16 @@ class CustomHeaderView: UIView {
             profileImageView?.image = profileImage
         }
     }
-        
-    override class func awakeFromNib() {
-        super.awakeFromNib()
-//        commonInit(self)
+    
+    override func setNibName() {
+        nibName = "CustomHeaderView"
     }
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        commonInit()
-    }
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        commonInit()
-    }
-    func commonInit(){
-        guard let view = loadViewFromNib() else { return }
-        view.frame = self.bounds
-        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        self.addSubview(view)
-        contentView = view
+    override func initView() {
         titleLabel.text = title
         profileImageView.image = profileImage
     }
-    func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: CustomHeaderView.self)
-        let nib = UINib(nibName: nibName, bundle: bundle)
-        return nib.instantiate(withOwner: self, options: nil).first as? UIView
-    }
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        commonInit()
-        contentView?.prepareForInterfaceBuilder()
-    }
+    
     @IBAction func onMenuClicked(_ sender: Any) {
         delegate.customHeaderView(self, clicked: 0)
     }

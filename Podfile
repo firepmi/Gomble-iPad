@@ -13,6 +13,7 @@ pod 'TagListView'
 pod 'SwiftyJSON'
 pod 'iOSDropDown'
 pod 'ExpandableCell'
+pod 'AKImageCropperView'
 
   target 'GombleTests' do
     inherit! :search_paths

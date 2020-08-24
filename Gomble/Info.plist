@@ -68,5 +68,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Gomble wants access your photo library for the new techpack and profile image</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Gomble wants access your camera for the new techpack and profile image</string>
 </dict>
 </plist>
