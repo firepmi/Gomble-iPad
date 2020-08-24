@@ -11,9 +11,6 @@ import ExpandableCell
 
 
 class NewTechpackDesignerViewController: DefaultViewController {
-
-    @IBOutlet weak var emptyView: UIView!
-    @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var previewButtonView: UIView!
     @IBOutlet weak var tableView: ExpandableTableView!
@@ -41,6 +38,18 @@ class NewTechpackDesignerViewController: DefaultViewController {
         "Pattern/ 3D Pattern",
         "Factory",
         "Price",
+    ]
+    var categoryHeights:[CGFloat] = [
+        425, //Collaboration
+        590, //Stage
+        650, //General info
+        280, //Sketches
+        150,
+        160,
+        170,
+        180,
+        190,
+        200,
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +87,13 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
         else if indexPath.row == 3 {
             let view = cell?.viewWithTag(100) as! SketchesView
             view.delegate = self
+            view.onHightChanged = { height in
+                self.categoryHeights[3] = height
+                self.tableView.close(at: IndexPath(row: 3, section: 0))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.tableView.open(at: IndexPath(row: 3, section: 0))
+                }
+            }
         }
         
         cell?.selectionStyle = .none
@@ -85,33 +101,7 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
     }
 
     func expandableTableView(_ expandableTableView: ExpandableTableView, heightsForExpandedRowAt indexPath: IndexPath) -> [CGFloat]? {
-        
-        switch indexPath.row {
-            case 0:
-                return [425] //Collaboration
-            case 1:
-                return [590] //Stage
-            case 2:
-                return [650] //General info
-            case 3:
-                return [280] //Sketches
-            case 4:
-                return [150]
-            case 5:
-                return [160]
-            case 6:
-                return [170]
-            case 7:
-                return [180]
-            case 8:
-                return [190]
-            case 9:
-                return [200]
-            default:
-                break
-            }
-        return nil
-        
+        return [categoryHeights[indexPath.row]]
     }
     
     func expandableTableView(_ expandableTableView: ExpandableTableView, numberOfRowsInSection section: Int) -> Int {

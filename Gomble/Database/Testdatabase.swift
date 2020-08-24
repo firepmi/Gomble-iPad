@@ -12,6 +12,7 @@ import SwiftyJSON
 class Testdatabase {
     public static var folders = [JSON]()
     public static var techpacks = [JSON]()
+    public static var sketchData = [JSON]()
     public static let techPackData = [
         ["title":"Summer dress collection", "image":"test1.png"],
         ["title":"Elegant gray dress", "image":"test2.png"],
@@ -33,17 +34,5 @@ class Testdatabase {
         json3["last_name"].string = "Doe"
         json3["email"].string = "john.doe@email.com"
         return [json1,json2,json3,]
-    }
-    public static func getTestSketchData() -> [JSON]{
-        var json1 = JSON()
-        json1["title"].string = "Front"
-        json1["tag"].arrayObject = ["dress","front"]
-        json1["description"].string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus egestas risus, ultrices faucibus adipiscing in morbi lorem ipsum dolor"
-        var json2 = JSON()
-        json2["title"].string = "Back"
-        json2["tag"].arrayObject = ["dress","back"]
-        json2["description"].string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lacus egestas risus, ultrices faucibus adipiscing in morbi lorem ipsum dolor"
-        
-        return [json1,json2,]
-    }
+    }    
 }

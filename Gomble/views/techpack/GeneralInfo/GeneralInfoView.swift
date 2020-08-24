@@ -128,4 +128,7 @@ extension GeneralInfoView: TagListViewDelegate {
     func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
         tagListView.removeTag(title)
     }
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        tagListView.removeTag(title)
+    }
 }

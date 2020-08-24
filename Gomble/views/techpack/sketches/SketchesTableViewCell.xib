@@ -30,14 +30,14 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blablablablablablablalbalblabla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssF-vk-ZFR">
-                        <rect key="frame" x="186" y="41.5" width="198" height="17"/>
+                        <rect key="frame" x="186" y="41.5" width="357" height="17"/>
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" red="0.42352941179999998" green="0.46274509800000002" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view tag="103" contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VWi-52-uf9" customClass="TagListView" customModule="Gomble" customModuleProvider="target">
                         <rect key="frame" x="186" y="115.5" width="413" height="24"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="3CB-WQ-WZx"/>
                         </constraints>
@@ -103,14 +103,13 @@
                     <constraint firstItem="cWj-e8-ij4" firstAttribute="leading" secondItem="tbG-fj-0Bd" secondAttribute="leading" constant="24" id="ngn-Mn-3me"/>
                     <constraint firstItem="cWj-e8-ij4" firstAttribute="centerY" secondItem="tbG-fj-0Bd" secondAttribute="centerY" id="qNE-kR-EuX"/>
                     <constraint firstItem="ssF-vk-ZFR" firstAttribute="top" secondItem="HV6-Ys-xff" secondAttribute="bottom" constant="8" id="rkB-sZ-Uv7"/>
+                    <constraint firstItem="srq-Qb-4mr" firstAttribute="leading" secondItem="ssF-vk-ZFR" secondAttribute="trailing" constant="24" id="ul5-cD-tX5"/>
                     <constraint firstItem="zYD-GT-2U7" firstAttribute="leading" secondItem="srq-Qb-4mr" secondAttribute="leading" id="viz-gI-RNp"/>
                     <constraint firstItem="zYD-GT-2U7" firstAttribute="top" secondItem="srq-Qb-4mr" secondAttribute="bottom" constant="16" id="xYK-4b-203"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="descriptionLabel" destination="ssF-vk-ZFR" id="VHd-oq-0fO"/>
-                <outlet property="imageView" destination="cWj-e8-ij4" id="Lzc-yf-cLg"/>
-                <outlet property="inviteIconImageView" destination="cWj-e8-ij4" id="ifz-sH-Mlv"/>
                 <outlet property="sketchimageView" destination="cWj-e8-ij4" id="M7z-o6-yIc"/>
                 <outlet property="tagView" destination="VWi-52-uf9" id="nXH-0R-qBB"/>
                 <outlet property="titleLabel" destination="HV6-Ys-xff" id="QvB-OI-8jf"/>
