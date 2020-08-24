@@ -128,6 +128,14 @@
 		FCF08F3524F406D00032A629 /* SketchesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F3424F406D00032A629 /* SketchesView.swift */; };
 		FCF08F3724F406E90032A629 /* SketchesView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F3624F406E90032A629 /* SketchesView.xib */; };
 		FCF08F3924F407AB0032A629 /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F3824F407AB0032A629 /* DefaultView.swift */; };
+		FCF08F3B24F4103B0032A629 /* bg_sketches.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F3A24F4103B0032A629 /* bg_sketches.png */; };
+		FCF08F3D24F41FCE0032A629 /* SketchesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F3C24F41FCE0032A629 /* SketchesTableViewCell.swift */; };
+		FCF08F3F24F41FE80032A629 /* SketchesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F3E24F41FE80032A629 /* SketchesTableViewCell.xib */; };
+		FCF08F4124F421DF0032A629 /* test_sketch.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F4024F421DF0032A629 /* test_sketch.png */; };
+		FCF08F4324F432340032A629 /* AddSketchDialogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F4224F432340032A629 /* AddSketchDialogViewController.swift */; };
+		FCF08F4D24F433FD0032A629 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F4A24F433FD0032A629 /* CloseButton.swift */; };
+		FCF08F4E24F433FD0032A629 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F4B24F433FD0032A629 /* TagListView.swift */; };
+		FCF08F4F24F433FD0032A629 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F4C24F433FD0032A629 /* TagView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -281,6 +289,14 @@
 		FCF08F3424F406D00032A629 /* SketchesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchesView.swift; sourceTree = "<group>"; };
 		FCF08F3624F406E90032A629 /* SketchesView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SketchesView.xib; sourceTree = "<group>"; };
 		FCF08F3824F407AB0032A629 /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
+		FCF08F3A24F4103B0032A629 /* bg_sketches.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_sketches.png; sourceTree = "<group>"; };
+		FCF08F3C24F41FCE0032A629 /* SketchesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SketchesTableViewCell.swift; sourceTree = "<group>"; };
+		FCF08F3E24F41FE80032A629 /* SketchesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SketchesTableViewCell.xib; sourceTree = "<group>"; };
+		FCF08F4024F421DF0032A629 /* test_sketch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_sketch.png; sourceTree = "<group>"; };
+		FCF08F4224F432340032A629 /* AddSketchDialogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddSketchDialogViewController.swift; sourceTree = "<group>"; };
+		FCF08F4A24F433FD0032A629 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
+		FCF08F4B24F433FD0032A629 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
+		FCF08F4C24F433FD0032A629 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -355,6 +371,7 @@
 		FC12066424E5D47600E5F304 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FCF08F4924F433EC0032A629 /* TagListView */,
 				FCB07B0724EF7F7400A2E5F1 /* techpack */,
 				FC44BFB824E71302008CD233 /* Header */,
 				FC44BFB724E712F0008CD233 /* Rounded */,
@@ -426,6 +443,7 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FCF08F3A24F4103B0032A629 /* bg_sketches.png */,
 				FCF08F2D24F3F29C0032A629 /* icon_delete.png */,
 				FCF08F2E24F3F29C0032A629 /* icon_edit.png */,
 				FCF08F2B24F3E73B0032A629 /* icon_save.png */,
@@ -490,6 +508,7 @@
 		FC803B4524E9885E009D470D /* test assets */ = {
 			isa = PBXGroup;
 			children = (
+				FCF08F4024F421DF0032A629 /* test_sketch.png */,
 				FC43A8F824EC5A64005AF9BF /* test_material.png */,
 				FC803B4724E99031009D470D /* test1.png */,
 				FC803B4A24E99032009D470D /* test2.png */,
@@ -510,6 +529,7 @@
 				FC11672E24EE1A2E00AB6814 /* CreateFolderDesignerViewController.swift */,
 				FC50826624EEE9FE0034D032 /* DesignerTechpacksViewController.swift */,
 				FC50826A24EEF7070034D032 /* NewTechpackDesignerViewController.swift */,
+				FCF08F4224F432340032A629 /* AddSketchDialogViewController.swift */,
 			);
 			path = Designer;
 			sourceTree = "<group>";
@@ -539,8 +559,8 @@
 			children = (
 				FCB07B0824EF828C00A2E5F1 /* CollaborationView.swift */,
 				FCB07B0A24EF82B700A2E5F1 /* CollaborationView.xib */,
-				FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */,
 				FCB07B1224EFCC4900A2E5F1 /* CollaborationTableViewCell.swift */,
+				FCB07B1024EFCB6600A2E5F1 /* CollaborationTableViewCell.xib */,
 			);
 			path = Collaboration;
 			sourceTree = "<group>";
@@ -638,8 +658,20 @@
 			children = (
 				FCF08F3424F406D00032A629 /* SketchesView.swift */,
 				FCF08F3624F406E90032A629 /* SketchesView.xib */,
+				FCF08F3C24F41FCE0032A629 /* SketchesTableViewCell.swift */,
+				FCF08F3E24F41FE80032A629 /* SketchesTableViewCell.xib */,
 			);
 			path = sketches;
+			sourceTree = "<group>";
+		};
+		FCF08F4924F433EC0032A629 /* TagListView */ = {
+			isa = PBXGroup;
+			children = (
+				FCF08F4A24F433FD0032A629 /* CloseButton.swift */,
+				FCF08F4B24F433FD0032A629 /* TagListView.swift */,
+				FCF08F4C24F433FD0032A629 /* TagView.swift */,
+			);
+			path = TagListView;
 			sourceTree = "<group>";
 		};
 		FCF374C924E6CFC10035B84D /* GetStarted */ = {
@@ -786,6 +818,7 @@
 				FC803B4324E97D4E009D470D /* icon_dropdown.png in Resources */,
 				FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
+				FCF08F4124F421DF0032A629 /* test_sketch.png in Resources */,
 				FCF08F3724F406E90032A629 /* SketchesView.xib in Resources */,
 				FC803B4424E97D4E009D470D /* icon_search.png in Resources */,
 				FC4E968124F3CBEC00EA6221 /* icon_add_grey.png in Resources */,
@@ -801,6 +834,7 @@
 				FCB07B1F24F0212200A2E5F1 /* icon_radio_on_grey.png in Resources */,
 				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
+				FCF08F3B24F4103B0032A629 /* bg_sketches.png in Resources */,
 				FCB07B0B24EF82B700A2E5F1 /* CollaborationView.xib in Resources */,
 				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
 				FC44BFC424E71DDB008CD233 /* icon_menu.png in Resources */,
@@ -833,6 +867,7 @@
 				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
+				FCF08F3F24F41FE80032A629 /* SketchesTableViewCell.xib in Resources */,
 				FCB07B0F24EFC8F000A2E5F1 /* icon_email.png in Resources */,
 				FC803B5E24EA2677009D470D /* icon_radio_on.png in Resources */,
 				FCF08F2C24F3E73B0032A629 /* icon_save.png in Resources */,
@@ -972,10 +1007,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC12065224E58F9500E5F304 /* RoundedView.swift in Sources */,
+				FCF08F4F24F433FD0032A629 /* TagView.swift in Sources */,
 				FC5B374324E5427500216DBD /* SignUpViewController.swift in Sources */,
 				FCC21F9324E253F900D90C32 /* ViewController.swift in Sources */,
+				FCF08F3D24F41FCE0032A629 /* SketchesTableViewCell.swift in Sources */,
 				FC4CB70224EBD87D00FDDEC7 /* CustomerTechpackMaterialsViewController.swift in Sources */,
 				FCF08F3224F3F7EC0032A629 /* CropperViewController.swift in Sources */,
+				FCF08F4D24F433FD0032A629 /* CloseButton.swift in Sources */,
 				FC11673324EE790900AB6814 /* Testdatabase.swift in Sources */,
 				FC64A5B024EDCF4800E2AA70 /* RoundedTextView.swift in Sources */,
 				FC4CB70824EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift in Sources */,
@@ -991,8 +1029,10 @@
 				FC97D4F424ED7AF200E30158 /* DesignerMyFoldersViewController.swift in Sources */,
 				FCB07B2824F05A8400A2E5F1 /* GeneralInfoView.swift in Sources */,
 				FC97D4FC24EDA95500E30158 /* CompleteDesignerProfileViewController.swift in Sources */,
+				FCF08F4E24F433FD0032A629 /* TagListView.swift in Sources */,
 				FCF08F3524F406D00032A629 /* SketchesView.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
+				FCF08F4324F432340032A629 /* AddSketchDialogViewController.swift in Sources */,
 				FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */,
 				FCB07B1324EFCC4900A2E5F1 /* CollaborationTableViewCell.swift in Sources */,
 				FC4CB6FF24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift in Sources */,

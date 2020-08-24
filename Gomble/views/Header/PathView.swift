@@ -26,12 +26,7 @@ class PathView: DefaultView, UICollectionViewDelegate, UICollectionViewDataSourc
         PathView.pathData = path
         collectionView.reloadData()
     }
-    override func prepareForInterfaceBuilder() {
-        super.prepareForInterfaceBuilder()
-        commonInit()
-        contentView?.prepareForInterfaceBuilder()
-    }
-    
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return PathView.pathData.count;
     }

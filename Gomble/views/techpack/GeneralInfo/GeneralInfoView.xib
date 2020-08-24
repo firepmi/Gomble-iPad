@@ -190,11 +190,11 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCN-Qs-IqM" customClass="RoundedView" customModule="Gomble" customModuleProvider="target">
                     <rect key="frame" x="24" y="397" width="722" height="48"/>
                     <subviews>
-                        <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V35-Yl-5it" customClass="TagListView" customModule="TagListView">
+                        <view contentMode="scaleToFill" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="V35-Yl-5it" customClass="TagListView" customModule="Gomble" customModuleProvider="target">
                             <rect key="frame" x="16" y="12" width="690" height="24"/>
                             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="24" id="8L9-7G-F93"/>
+                                <constraint firstAttribute="height" constant="24" id="8L9-7G-F93"/>
                             </constraints>
                             <userDefinedRuntimeAttributes>
                                 <userDefinedRuntimeAttribute type="color" keyPath="textColor">
@@ -219,6 +219,7 @@
                                 <userDefinedRuntimeAttribute type="number" keyPath="paddingX">
                                     <real key="value" value="7"/>
                                 </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="YES"/>
                             </userDefinedRuntimeAttributes>
                         </view>
                     </subviews>

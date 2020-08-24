@@ -75,6 +75,12 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
             let view = cell?.viewWithTag(100) as! GeneralInfoView
             view.delegate = self
         }
+        else if indexPath.row == 3 {
+            let view = cell?.viewWithTag(100) as! SketchesView
+            view.delegate = self
+        }
+        
+        cell?.selectionStyle = .none
         return [cell!]
     }
 
@@ -125,6 +131,8 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
             let cellTitleLabel = cellFirst.viewWithTag(100) as! UILabel
             cellTitleLabel.text = categoryTitles[indexPath.row]
             cellFirst.rightMargin = 40
+            cellFirst.highlightAnimation = .none
+            cellFirst.selectionStyle = .none
             return cellFirst
         }
         else {
@@ -132,6 +140,8 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
             let cellTitleLabel = cell.viewWithTag(100) as! UILabel
             cellTitleLabel.text = categoryTitles[indexPath.row]
             cell.rightMargin = 40
+            cell.highlightAnimation = .none
+            cell.selectionStyle = .none
             return cell
         }
     }

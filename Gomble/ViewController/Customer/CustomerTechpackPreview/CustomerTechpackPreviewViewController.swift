@@ -8,7 +8,6 @@
 
 import UIKit
 import ImageSlideshow
-import TagListView
 import XLPagerTabStrip
 
 class CustomerTechpackPreviewViewController: DefaultViewController {

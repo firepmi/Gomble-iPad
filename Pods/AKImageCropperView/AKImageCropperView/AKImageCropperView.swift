@@ -40,7 +40,7 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
     fileprivate var reversedRect: CGRect {
         return CGRect(
             origin  : .zero,
-            size    : ((angle / M_PI_2).truncatingRemainder(dividingBy: 2)) == 1
+            size    : ((angle / (.pi / 2)).truncatingRemainder(dividingBy: 2)) == 1
                 ? CGSize(width: frame.size.height, height: frame.size.width)
                 : frame.size)
     }
@@ -52,19 +52,19 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
         var newEdgeInsets: UIEdgeInsets
         
         switch angle {
-        case M_PI_2:
+        case (.pi / 2):
             newEdgeInsets = UIEdgeInsets(
                 top: minEdgeInsets.right,
                 left: minEdgeInsets.top,
                 bottom: minEdgeInsets.left,
                 right: minEdgeInsets.bottom)
-        case M_PI:
+        case .pi:
             newEdgeInsets = UIEdgeInsets(
                 top: minEdgeInsets.bottom,
                 left: minEdgeInsets.right,
                 bottom: minEdgeInsets.top,
                 right: minEdgeInsets.left)
-        case M_PI_2 * 3:
+        case (.pi / 2) * 3:
             newEdgeInsets = UIEdgeInsets(
                 top: minEdgeInsets.left,
                 left: minEdgeInsets.bottom,
@@ -563,7 +563,7 @@ open class AKImageCropperView: UIView, UIScrollViewDelegate, UIGestureRecognizer
     
     open func rotate(_ angle: Double, withDuration duration: TimeInterval = 0, options: UIView.AnimationOptions = .curveEaseInOut, completion: ((Bool) -> Void)? = nil) {
         
-        guard angle.truncatingRemainder(dividingBy: M_PI_2) == 0 else {
+        guard angle.truncatingRemainder(dividingBy: (.pi / 2)) == 0 else {
             return
         }
         

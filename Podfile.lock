@@ -7,7 +7,6 @@ PODS:
   - iOSDropDown (0.3.4)
   - SideMenu (6.4.8)
   - SwiftyJSON (5.0.0)
-  - TagListView (1.4.0)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
@@ -17,7 +16,6 @@ DEPENDENCIES:
   - iOSDropDown
   - SideMenu
   - SwiftyJSON
-  - TagListView
   - XLPagerTabStrip
 
 SPEC REPOS:
@@ -28,7 +26,6 @@ SPEC REPOS:
     - iOSDropDown
     - SideMenu
     - SwiftyJSON
-    - TagListView
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
@@ -38,9 +35,8 @@ SPEC CHECKSUMS:
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
-  TagListView: 987b0bdbb16cd9d9e7c0e2ec32aff37ecba8b173
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: e8904aac506fa74de7b9c306833c1f66aa0a7d41
+PODFILE CHECKSUM: f4cb899c143fd5d92e57464f30effc4b48ddc4a8
 
 COCOAPODS: 1.9.3

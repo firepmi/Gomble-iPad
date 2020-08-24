@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TagListView
 
 @IBDesignable
 class GeneralInfoView: DefaultView {
@@ -19,7 +18,7 @@ class GeneralInfoView: DefaultView {
     @IBOutlet weak var imageView: UIImageView!
     var delegate: UIViewController?
     let picker:UIImagePickerController?=UIImagePickerController()
-    
+    var tags = [String]()
     override func setNibName() {
         nibName = "GeneralInfoView"        
     }
@@ -28,7 +27,9 @@ class GeneralInfoView: DefaultView {
         emptyView.isHidden = false
         picker?.delegate = self
         
-        tagListView.addTags(["dress"]);
+        tags.append("dress")
+        tagListView.addTags(tags);
+        tagListView.delegate = self
     }
         
     @IBAction func onUploadImage(_ sender: Any) {
@@ -118,5 +119,13 @@ extension GeneralInfoView: UINavigationControllerDelegate, UIImagePickerControll
     // Helper function inserted by Swift 4.2 migrator.
     fileprivate func convertFromUIImagePickerControllerInfoKey(_ input: UIImagePickerController.InfoKey) -> String {
         return input.rawValue
+    }
+}
+extension GeneralInfoView: TagListViewDelegate {
+    func tagAddedPressed(_ title: String, sender: TagListView) {
+        tagListView.addTag(title)
+    }
+    func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        tagListView.removeTag(title)
     }
 }

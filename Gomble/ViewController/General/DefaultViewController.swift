@@ -77,7 +77,8 @@ class DefaultViewController: UIViewController {
     }
     func onBack(){
         navigationController?.popViewController(animated: true)
-        PathView.pathData.popLast()
+        let result = PathView.pathData.popLast()
+        print(String(describing: result))
     }
 }
 

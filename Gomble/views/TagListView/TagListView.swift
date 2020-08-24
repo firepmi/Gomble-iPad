@@ -11,6 +11,7 @@ import UIKit
 @objc public protocol TagListViewDelegate {
     @objc optional func tagPressed(_ title: String, tagView: TagView, sender: TagListView) -> Void
     @objc optional func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) -> Void
+    @objc optional func tagAddedPressed(_ title: String, sender: TagListView) -> Void
 }
 
 @IBDesignable
@@ -196,9 +197,15 @@ open class TagListView: UIView {
             }
         }
     }
+    @IBInspectable var editable:Bool = false {
+        didSet {
+            rearrangeViews()
+        }
+    }
     
     @IBOutlet open weak var delegate: TagListViewDelegate?
     
+    var editTagView: UITextField?
     open private(set) var tagViews: [TagView] = []
     private(set) var tagBackgroundViews: [UIView] = []
     private(set) var rowViews: [UIView] = []
@@ -222,6 +229,8 @@ open class TagListView: UIView {
     open override func layoutSubviews() {
         defer { rearrangeViews() }
         super.layoutSubviews()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(popupKeyboard))
+        addGestureRecognizer(tap)
     }
     
     private func rearrangeViews() {
@@ -277,6 +286,49 @@ open class TagListView: UIView {
             currentRowView.frame.size.width = currentRowWidth
             currentRowView.frame.size.height = max(tagViewHeight, currentRowView.frame.height)
         }
+        if editable {
+            editTagView = UITextField()
+            editTagView!.frame.size = CGSize(width: 120, height: tagViewHeight)
+            editTagView!.delegate = self
+            if currentRowTagCount == 0 || currentRowWidth + editTagView!.frame.width > frame.width {
+                currentRow += 1
+                currentRowWidth = 0
+                currentRowTagCount = 0
+                currentRowView = UIView()
+                currentRowView.frame.origin.y = CGFloat(currentRow - 1) * (tagViewHeight + marginY)
+                
+                rowViews.append(currentRowView)
+                addSubview(currentRowView)
+
+                editTagView!.frame.size.width = min(editTagView!.frame.size.width, frame.width)
+            }
+            
+            let tagBackgroundView = UIView(frame: editTagView!.bounds)
+            tagBackgroundView.frame.origin = CGPoint(x: currentRowWidth, y: 0)
+            tagBackgroundView.frame.size = editTagView!.bounds.size
+            tagBackgroundView.layer.shadowColor = shadowColor.cgColor
+            tagBackgroundView.layer.shadowPath = UIBezierPath(roundedRect: tagBackgroundView.bounds, cornerRadius: cornerRadius).cgPath
+            tagBackgroundView.layer.shadowOffset = shadowOffset
+            tagBackgroundView.layer.shadowOpacity = shadowOpacity
+            tagBackgroundView.layer.shadowRadius = shadowRadius
+            tagBackgroundView.addSubview(editTagView!)
+            currentRowView.addSubview(tagBackgroundView)
+            
+            currentRowTagCount += 1
+            currentRowWidth += editTagView!.frame.width + marginX
+            
+            switch alignment {
+            case .left:
+                currentRowView.frame.origin.x = 0
+            case .center:
+                currentRowView.frame.origin.x = (frame.width - (currentRowWidth - marginX)) / 2
+            case .right:
+                currentRowView.frame.origin.x = frame.width - (currentRowWidth - marginX)
+            }
+            currentRowView.frame.size.width = currentRowWidth
+            currentRowView.frame.size.height = max(tagViewHeight, currentRowView.frame.height)
+        }
+        
         rows = currentRow
         
         invalidateIntrinsicContentSize()
@@ -411,6 +463,19 @@ open class TagListView: UIView {
     @objc func removeButtonPressed(_ closeButton: CloseButton!) {
         if let tagView = closeButton.tagView {
             delegate?.tagRemoveButtonPressed?(tagView.currentTitle ?? "", tagView: tagView, sender: self)
+        }
+    }
+}
+extension TagListView: UITextFieldDelegate {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            delegate?.tagAddedPressed?(textField.text!, sender: self)
+        }
+        return true
+    }
+    @objc func popupKeyboard(){
+        if editable {
+            editTagView?.becomeFirstResponder()
         }
     }
 }

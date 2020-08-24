@@ -10,8 +10,7 @@ import UIKit
 import SwiftyJSON
 
 @IBDesignable
-class CollaborationView: DefaultView, UITableViewDelegate, UITableViewDataSource {
-            
+class CollaborationView: DefaultView {            
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var inviteTextField: RoundedTextField!
@@ -42,7 +41,8 @@ class CollaborationView: DefaultView, UITableViewDelegate, UITableViewDataSource
     @IBAction func onCopyLink(_ sender: Any) {
         
     }
-    
+}
+extension CollaborationView:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return contactsData.count
     }
