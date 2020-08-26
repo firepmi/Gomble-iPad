@@ -8,10 +8,13 @@
 
 import UIKit
 import SwiftyJSON
+import EFColorPicker
+
 @IBDesignable
 class MaterialColorsView: DefaultView {
     var delegate:UIViewController?
     @IBOutlet weak var tableView: UITableView!
+    var selectedColor = UIColor.red
     var colorData:[UIColor] = [.purple, .blue] {
             didSet {
                 tableView.reloadData()
@@ -42,6 +45,43 @@ class MaterialColorsView: DefaultView {
         tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
 //        colorData = Testdatabase.sketchData
+    }
+    @IBAction func onAddItem(_ sender: UIButton) {
+        let colorSelectionController = EFColorSelectionViewController()
+        let navCtrl = UINavigationController(rootViewController: colorSelectionController)
+        navCtrl.navigationBar.backgroundColor = UIColor.white
+        navCtrl.navigationBar.isTranslucent = false
+        navCtrl.modalPresentationStyle = UIModalPresentationStyle.popover
+        navCtrl.popoverPresentationController?.delegate = self
+        navCtrl.popoverPresentationController?.sourceView = sender
+        navCtrl.popoverPresentationController?.sourceRect = sender.bounds
+        navCtrl.preferredContentSize = colorSelectionController.view.systemLayoutSizeFitting(
+            UIView.layoutFittingCompressedSize
+        )
+
+        colorSelectionController.delegate = self
+        colorSelectionController.color = .red
+        colorSelectionController.setMode(mode: EFColorSelectionMode.all)
+
+//        if UIUserInterfaceSizeClass.compact == self.traitCollection.horizontalSizeClass {
+            let doneBtn: UIBarButtonItem = UIBarButtonItem(
+                title: NSLocalizedString("Done", comment: ""),
+                style: .done,
+                target: self,
+                action: #selector(ef_dismissViewController(sender:))
+            )
+            colorSelectionController.navigationItem.rightBarButtonItem = doneBtn
+//        }
+        delegate?.present(navCtrl, animated: true, completion: nil)
+    }
+    @objc func ef_dismissViewController(sender: UIBarButtonItem) {
+        delegate?.dismiss(animated: true, completion: {
+            self.colorData.append(self.selectedColor)
+        })        
+    }
+}
+extension MaterialColorsView: EFColorSelectionViewControllerDelegate, UIPopoverPresentationControllerDelegate {
+    func colorViewController(_ colorViewCntroller: EFColorSelectionViewController, didChangeColor color: UIColor) {  selectedColor = color
     }
 }
 extension MaterialColorsView:UITableViewDelegate, UITableViewDataSource {

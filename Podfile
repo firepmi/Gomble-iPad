@@ -9,7 +9,7 @@ target 'Gomble' do
 pod 'XLPagerTabStrip'
 pod 'SideMenu'
 pod 'ImageSlideshow'
-#pod 'TagListView'
+pod 'EFColorPicker'
 pod 'SwiftyJSON'
 pod 'iOSDropDown'
 pod 'ExpandableCell'

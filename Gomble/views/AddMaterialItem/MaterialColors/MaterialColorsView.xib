@@ -35,6 +35,9 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zoc-RS-FN2">
                             <rect key="frame" x="0.0" y="0.0" width="99.5" height="20"/>
+                            <connections>
+                                <action selector="onAddItem:" destination="-1" eventType="touchUpInside" id="2vA-Ae-CQ4"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

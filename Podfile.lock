@@ -1,5 +1,6 @@
 PODS:
   - AKImageCropperView (2.0.0)
+  - EFColorPicker (5.2.0)
   - ExpandableCell (1.3.0)
   - ImageSlideshow (1.9.1):
     - ImageSlideshow/Core (= 1.9.1)
@@ -11,6 +12,7 @@ PODS:
 
 DEPENDENCIES:
   - AKImageCropperView
+  - EFColorPicker
   - ExpandableCell
   - ImageSlideshow
   - iOSDropDown
@@ -21,6 +23,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AKImageCropperView
+    - EFColorPicker
     - ExpandableCell
     - ImageSlideshow
     - iOSDropDown
@@ -30,6 +33,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AKImageCropperView: 9c80fd45512daa69426161ad51c248655c1b5182
+  EFColorPicker: ac692380016b47ad0e61706a910fc1414214a760
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
@@ -37,6 +41,6 @@ SPEC CHECKSUMS:
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: f4cb899c143fd5d92e57464f30effc4b48ddc4a8
+PODFILE CHECKSUM: 4b756ef92b9c3d82fff54c2ec13fc606c87b45de
 
 COCOAPODS: 1.9.3
