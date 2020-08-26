@@ -1,60 +1,37 @@
 //
-//  NewTechpackDesignerViewController.swift
+//  AddMaterialItemViewController.swift
 //  Gomble
 //
-//  Created by mobileworld on 8/20/20.
+//  Created by mobileworld on 8/25/20.
 //  Copyright © 2020 Haley Huynh. All rights reserved.
 //
 
 import UIKit
 import ExpandableCell
+import SwiftyJSON
 
-
-class NewTechpackDesignerViewController: DefaultViewController {
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var previewButtonView: UIView!
-    @IBOutlet weak var tableView: ExpandableTableView!
-        
+class AddMaterialItemViewController: DefaultDialogViewController {
     let categoryCells = [
-        "collaboration_cell",
-         "stage_cell",
-         "general_info_cell",
-         "sketches_cell",
-         "materials_cell",
-         "measurements_cell",
-         "pattern_cell",
-         "factory_cell",
-         "price_cell",
+        "image_cell",
+        "general_info_cell",
+        "colors_cell"
     ]
     let categoryTitles = [
-        "Collaboration",
-        "Stage",
+        "Image",
         "General info",
-        "Sketches",
-        "Materials, accessories",
-        "Measurements",
-        "Pattern/ 3D Pattern",
-        "Factory",
-        "Price",
+        "Colors",
     ]
     var categoryHeights:[CGFloat] = [
-        425, //Collaboration
-        590, //Stage
-        650, //General info
-        280, //Sketches
-        280, //Material / accessories
-        160,
-        170,
-        180,
-        190,
-        200,
+        356, //Image
+        380, //Stage
+        300, //Colors
+        280, //Quantity
+        280, //Supplier /Vendor
     ]
+    @IBOutlet weak var tableView: ExpandableTableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        type = "designer"
-        titleLabel.text = "New techpack"
-        previewButtonView.roundCorners(corners: [.topLeft, .bottomLeft], radius: 13.5)
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -64,40 +41,28 @@ class NewTechpackDesignerViewController: DefaultViewController {
         tableView.autoReleaseDelegate = false
         tableView.tableFooterView = UIView(frame: CGRect.zero)
     }
-    override func viewDidAppear(_ animated: Bool) {
-        refreshView()
-    }
-    func refreshView() {
-        
-    }
-    
-    @IBAction func onPreview(_ sender: Any) {
-    }
+    @IBAction func onAddItem(_ sender: Any) {
+        var data = JSON()
+        data["title"].string = "Main fabric"
+        data["description"].string = "Fabric content: 100% cotten\nFabric weight: 160 - 180 GSM"
+        Testdatabase.materialData.append(data)
+        if (completion != nil) {
+            completion!()
+        }
+        dismiss(animated: true, completion: nil)
+    }    
 }
-
-extension NewTechpackDesignerViewController: ExpandableDelegate {
+extension AddMaterialItemViewController: ExpandableDelegate {
     func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCellsForRowAt indexPath: IndexPath) -> [UITableViewCell]? {
         let cell = tableView.dequeueReusableCell(withIdentifier: categoryCells[indexPath.row])
-        switch indexPath.row {
-        case 2:
-            let view = cell?.viewWithTag(100) as! GeneralInfoView
+        if indexPath.row == 0 {
+            let view = cell?.viewWithTag(100) as! AddItemImageSelectView
             view.delegate = self
-        case 3:
-            let view = cell?.viewWithTag(100) as! SketchesView
+        }
+        else if indexPath.row == 2 {
+            let view = cell?.viewWithTag(100) as! MaterialColorsView
             view.delegate = self
-            view.onHightChanged = { height in
-                self.categoryHeights[3] = height
-                self.tableView.close(at: IndexPath(row: 3, section: 0))
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    self.tableView.open(at: IndexPath(row: 3, section: 0))
-                }
-            }
-        case 4:
-            let view = cell?.viewWithTag(100) as! MaterialView
-            view.delegate = self
-        default:
-            break
-        }        
+        }
         
         cell?.selectionStyle = .none
         return [cell!]
@@ -154,5 +119,3 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
     }
 
 }
-
-

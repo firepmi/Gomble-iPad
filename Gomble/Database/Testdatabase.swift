@@ -13,6 +13,7 @@ class Testdatabase {
     public static var folders = [JSON]()
     public static var techpacks = [JSON]()
     public static var sketchData = [JSON]()
+    public static var materialData = [JSON]()
     public static let techPackData = [
         ["title":"Summer dress collection", "image":"test1.png"],
         ["title":"Elegant gray dress", "image":"test2.png"],

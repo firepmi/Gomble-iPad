@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="UTL-iZ-n21" customClass="PathViewCell" customModule="Gomble" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="168" height="124"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0VD-sb-C6g">
+                <rect key="frame" x="0.0" y="0.0" width="168" height="124"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view tag="100" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zx7-lJ-1nT" customClass="RoundedView" customModule="Gomble" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="168" height="124"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="16"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.68627450980392157" green="0.68627450980392157" blue="0.68627450980392157" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Zx7-lJ-1nT" firstAttribute="top" secondItem="0VD-sb-C6g" secondAttribute="top" id="0gJ-4j-264"/>
+                    <constraint firstAttribute="trailing" secondItem="Zx7-lJ-1nT" secondAttribute="trailing" id="E0c-2Z-M2e"/>
+                    <constraint firstItem="Zx7-lJ-1nT" firstAttribute="leading" secondItem="0VD-sb-C6g" secondAttribute="leading" id="l8U-Wd-kke"/>
+                    <constraint firstAttribute="bottom" secondItem="Zx7-lJ-1nT" secondAttribute="bottom" id="v78-xH-sye"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="168" height="124"/>
+            <point key="canvasLocation" x="291.304347826087" y="-41.517857142857139"/>
+        </collectionViewCell>
+    </objects>
+</document>

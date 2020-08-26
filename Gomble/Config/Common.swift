@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import ExpandableCell
 
 extension String {
     func fromBase64() -> String? {
@@ -86,5 +87,14 @@ extension UIView {
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         layer.mask = mask
+    }
+}
+class ExpandableInitiallyExpanded: ExpandableCell {
+    override func isSelectable() -> Bool {
+        return true
+    }
+    
+    override func isInitiallyExpanded() -> Bool {
+        return true
     }
 }

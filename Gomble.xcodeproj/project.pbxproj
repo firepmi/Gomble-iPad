@@ -136,6 +136,25 @@
 		FCF08F4D24F433FD0032A629 /* CloseButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F4A24F433FD0032A629 /* CloseButton.swift */; };
 		FCF08F4E24F433FD0032A629 /* TagListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F4B24F433FD0032A629 /* TagListView.swift */; };
 		FCF08F4F24F433FD0032A629 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F4C24F433FD0032A629 /* TagView.swift */; };
+		FCF08F5224F499E80032A629 /* MaterialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F5124F499E80032A629 /* MaterialView.swift */; };
+		FCF08F5424F49A010032A629 /* MaterialView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F5324F49A010032A629 /* MaterialView.xib */; };
+		FCF08F5624F49A3B0032A629 /* MaterialTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F5524F49A3B0032A629 /* MaterialTableViewCell.swift */; };
+		FCF08F5824F49A560032A629 /* MaterialTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F5724F49A560032A629 /* MaterialTableViewCell.xib */; };
+		FCF08F5A24F4A01E0032A629 /* bg_material.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F5924F4A01E0032A629 /* bg_material.png */; };
+		FCF08F5C24F4A13F0032A629 /* icon_import.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F5B24F4A13F0032A629 /* icon_import.png */; };
+		FCF08F5E24F4A3170032A629 /* icon_import_blue.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F5D24F4A3160032A629 /* icon_import_blue.png */; };
+		FCF08F6124F4B06A0032A629 /* CircleColorListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F6024F4B06A0032A629 /* CircleColorListView.swift */; };
+		FCF08F6724F4B1E10032A629 /* CircleColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F6624F4B1E10032A629 /* CircleColorCell.xib */; };
+		FCF08F6B24F4DA6E0032A629 /* AddItemImageSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F6A24F4DA6E0032A629 /* AddItemImageSelectView.swift */; };
+		FCF08F6D24F4DACE0032A629 /* AddItemImageSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F6C24F4DACE0032A629 /* AddItemImageSelectView.xib */; };
+		FCF08F6F24F588DE0032A629 /* AddMaterialItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F6E24F588DE0032A629 /* AddMaterialItemViewController.swift */; };
+		FCF08F7224F5AE550032A629 /* MaterialGeneralInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F7124F5AE550032A629 /* MaterialGeneralInfoView.swift */; };
+		FCF08F7424F5AE690032A629 /* MaterialGeneralInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F7324F5AE690032A629 /* MaterialGeneralInfoView.xib */; };
+		FCF08F7724F5B8470032A629 /* MaterialColorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F7624F5B8470032A629 /* MaterialColorsView.swift */; };
+		FCF08F7924F5B8850032A629 /* MaterialColorsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F7824F5B8850032A629 /* MaterialColorsView.xib */; };
+		FCF08F7B24F5C2160032A629 /* MaterialColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF08F7A24F5C2160032A629 /* MaterialColorCell.swift */; };
+		FCF08F7D24F5C2290032A629 /* MaterialColorCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F7C24F5C2290032A629 /* MaterialColorCell.xib */; };
+		FCF08F7F24F5C5CF0032A629 /* btn_color_picker.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F7E24F5C5CE0032A629 /* btn_color_picker.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +316,25 @@
 		FCF08F4A24F433FD0032A629 /* CloseButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloseButton.swift; sourceTree = "<group>"; };
 		FCF08F4B24F433FD0032A629 /* TagListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagListView.swift; sourceTree = "<group>"; };
 		FCF08F4C24F433FD0032A629 /* TagView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		FCF08F5124F499E80032A629 /* MaterialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialView.swift; sourceTree = "<group>"; };
+		FCF08F5324F49A010032A629 /* MaterialView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialView.xib; sourceTree = "<group>"; };
+		FCF08F5524F49A3B0032A629 /* MaterialTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialTableViewCell.swift; sourceTree = "<group>"; };
+		FCF08F5724F49A560032A629 /* MaterialTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialTableViewCell.xib; sourceTree = "<group>"; };
+		FCF08F5924F4A01E0032A629 /* bg_material.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_material.png; sourceTree = "<group>"; };
+		FCF08F5B24F4A13F0032A629 /* icon_import.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_import.png; sourceTree = "<group>"; };
+		FCF08F5D24F4A3160032A629 /* icon_import_blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_import_blue.png; sourceTree = "<group>"; };
+		FCF08F6024F4B06A0032A629 /* CircleColorListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleColorListView.swift; sourceTree = "<group>"; };
+		FCF08F6624F4B1E10032A629 /* CircleColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleColorCell.xib; sourceTree = "<group>"; };
+		FCF08F6A24F4DA6E0032A629 /* AddItemImageSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemImageSelectView.swift; sourceTree = "<group>"; };
+		FCF08F6C24F4DACE0032A629 /* AddItemImageSelectView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddItemImageSelectView.xib; sourceTree = "<group>"; };
+		FCF08F6E24F588DE0032A629 /* AddMaterialItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMaterialItemViewController.swift; sourceTree = "<group>"; };
+		FCF08F7124F5AE550032A629 /* MaterialGeneralInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialGeneralInfoView.swift; sourceTree = "<group>"; };
+		FCF08F7324F5AE690032A629 /* MaterialGeneralInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialGeneralInfoView.xib; sourceTree = "<group>"; };
+		FCF08F7624F5B8470032A629 /* MaterialColorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialColorsView.swift; sourceTree = "<group>"; };
+		FCF08F7824F5B8850032A629 /* MaterialColorsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialColorsView.xib; sourceTree = "<group>"; };
+		FCF08F7A24F5C2160032A629 /* MaterialColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialColorCell.swift; sourceTree = "<group>"; };
+		FCF08F7C24F5C2290032A629 /* MaterialColorCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialColorCell.xib; sourceTree = "<group>"; };
+		FCF08F7E24F5C5CE0032A629 /* btn_color_picker.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = btn_color_picker.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -371,6 +409,8 @@
 		FC12066424E5D47600E5F304 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				FCF08F6824F4D9ED0032A629 /* AddMaterialItem */,
+				FCF08F5F24F4B0260032A629 /* CircleColorListView */,
 				FCF08F4924F433EC0032A629 /* TagListView */,
 				FCB07B0724EF7F7400A2E5F1 /* techpack */,
 				FC44BFB824E71302008CD233 /* Header */,
@@ -443,6 +483,10 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FCF08F7E24F5C5CE0032A629 /* btn_color_picker.png */,
+				FCF08F5D24F4A3160032A629 /* icon_import_blue.png */,
+				FCF08F5B24F4A13F0032A629 /* icon_import.png */,
+				FCF08F5924F4A01E0032A629 /* bg_material.png */,
 				FCF08F3A24F4103B0032A629 /* bg_sketches.png */,
 				FCF08F2D24F3F29C0032A629 /* icon_delete.png */,
 				FCF08F2E24F3F29C0032A629 /* icon_edit.png */,
@@ -530,6 +574,7 @@
 				FC50826624EEE9FE0034D032 /* DesignerTechpacksViewController.swift */,
 				FC50826A24EEF7070034D032 /* NewTechpackDesignerViewController.swift */,
 				FCF08F4224F432340032A629 /* AddSketchDialogViewController.swift */,
+				FCF08F6E24F588DE0032A629 /* AddMaterialItemViewController.swift */,
 			);
 			path = Designer;
 			sourceTree = "<group>";
@@ -546,7 +591,8 @@
 		FCB07B0724EF7F7400A2E5F1 /* techpack */ = {
 			isa = PBXGroup;
 			children = (
-				FCF08F3324F406410032A629 /* sketches */,
+				FCF08F5024F499A10032A629 /* Material */,
+				FCF08F3324F406410032A629 /* Sketches */,
 				FCB07B2424F05A0700A2E5F1 /* GeneralInfo */,
 				FCB07B1724F0109500A2E5F1 /* Stage */,
 				FCB07B1624F0108000A2E5F1 /* Collaboration */,
@@ -653,7 +699,7 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		FCF08F3324F406410032A629 /* sketches */ = {
+		FCF08F3324F406410032A629 /* Sketches */ = {
 			isa = PBXGroup;
 			children = (
 				FCF08F3424F406D00032A629 /* SketchesView.swift */,
@@ -661,7 +707,7 @@
 				FCF08F3C24F41FCE0032A629 /* SketchesTableViewCell.swift */,
 				FCF08F3E24F41FE80032A629 /* SketchesTableViewCell.xib */,
 			);
-			path = sketches;
+			path = Sketches;
 			sourceTree = "<group>";
 		};
 		FCF08F4924F433EC0032A629 /* TagListView */ = {
@@ -672,6 +718,65 @@
 				FCF08F4C24F433FD0032A629 /* TagView.swift */,
 			);
 			path = TagListView;
+			sourceTree = "<group>";
+		};
+		FCF08F5024F499A10032A629 /* Material */ = {
+			isa = PBXGroup;
+			children = (
+				FCF08F5124F499E80032A629 /* MaterialView.swift */,
+				FCF08F5324F49A010032A629 /* MaterialView.xib */,
+				FCF08F5524F49A3B0032A629 /* MaterialTableViewCell.swift */,
+				FCF08F5724F49A560032A629 /* MaterialTableViewCell.xib */,
+			);
+			path = Material;
+			sourceTree = "<group>";
+		};
+		FCF08F5F24F4B0260032A629 /* CircleColorListView */ = {
+			isa = PBXGroup;
+			children = (
+				FCF08F6024F4B06A0032A629 /* CircleColorListView.swift */,
+				FCF08F6624F4B1E10032A629 /* CircleColorCell.xib */,
+			);
+			path = CircleColorListView;
+			sourceTree = "<group>";
+		};
+		FCF08F6824F4D9ED0032A629 /* AddMaterialItem */ = {
+			isa = PBXGroup;
+			children = (
+				FCF08F7524F5B7760032A629 /* MaterialColors */,
+				FCF08F7024F5AE120032A629 /* MaterialGeneralInfo */,
+				FCF08F6924F4DA030032A629 /* addItemImage */,
+			);
+			path = AddMaterialItem;
+			sourceTree = "<group>";
+		};
+		FCF08F6924F4DA030032A629 /* addItemImage */ = {
+			isa = PBXGroup;
+			children = (
+				FCF08F6A24F4DA6E0032A629 /* AddItemImageSelectView.swift */,
+				FCF08F6C24F4DACE0032A629 /* AddItemImageSelectView.xib */,
+			);
+			path = addItemImage;
+			sourceTree = "<group>";
+		};
+		FCF08F7024F5AE120032A629 /* MaterialGeneralInfo */ = {
+			isa = PBXGroup;
+			children = (
+				FCF08F7124F5AE550032A629 /* MaterialGeneralInfoView.swift */,
+				FCF08F7324F5AE690032A629 /* MaterialGeneralInfoView.xib */,
+			);
+			path = MaterialGeneralInfo;
+			sourceTree = "<group>";
+		};
+		FCF08F7524F5B7760032A629 /* MaterialColors */ = {
+			isa = PBXGroup;
+			children = (
+				FCF08F7624F5B8470032A629 /* MaterialColorsView.swift */,
+				FCF08F7824F5B8850032A629 /* MaterialColorsView.xib */,
+				FCF08F7A24F5C2160032A629 /* MaterialColorCell.swift */,
+				FCF08F7C24F5C2290032A629 /* MaterialColorCell.xib */,
+			);
+			path = MaterialColors;
 			sourceTree = "<group>";
 		};
 		FCF374C924E6CFC10035B84D /* GetStarted */ = {
@@ -807,6 +912,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCF08F7424F5AE690032A629 /* MaterialGeneralInfoView.xib in Resources */,
 				FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */,
 				FC97D4F124ED74BB00E30158 /* icon_add.png in Resources */,
 				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
@@ -815,11 +921,14 @@
 				FC50826324EEBDDC0034D032 /* icon_option.png in Resources */,
 				FCF08F2F24F3F29C0032A629 /* icon_delete.png in Resources */,
 				FC67EFDC24E624C500767A4F /* img_customer.png in Resources */,
+				FCF08F7F24F5C5CF0032A629 /* btn_color_picker.png in Resources */,
 				FC803B4324E97D4E009D470D /* icon_dropdown.png in Resources */,
 				FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
+				FCF08F7924F5B8850032A629 /* MaterialColorsView.xib in Resources */,
 				FCF08F4124F421DF0032A629 /* test_sketch.png in Resources */,
 				FCF08F3724F406E90032A629 /* SketchesView.xib in Resources */,
+				FCF08F5C24F4A13F0032A629 /* icon_import.png in Resources */,
 				FC803B4424E97D4E009D470D /* icon_search.png in Resources */,
 				FC4E968124F3CBEC00EA6221 /* icon_add_grey.png in Resources */,
 				FCB07B1E24F0212200A2E5F1 /* icon_radio_off_grey.png in Resources */,
@@ -837,6 +946,7 @@
 				FCF08F3B24F4103B0032A629 /* bg_sketches.png in Resources */,
 				FCB07B0B24EF82B700A2E5F1 /* CollaborationView.xib in Resources */,
 				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
+				FCF08F6724F4B1E10032A629 /* CircleColorCell.xib in Resources */,
 				FC44BFC424E71DDB008CD233 /* icon_menu.png in Resources */,
 				FC803B4F24E99032009D470D /* test2.png in Resources */,
 				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
@@ -849,7 +959,9 @@
 				FCB07B2324F03EEE00A2E5F1 /* icon_calendar.png in Resources */,
 				FC4E968224F3CBEC00EA6221 /* icon_add_dark_grey.png in Resources */,
 				FC43A8F724EC5A5C005AF9BF /* icon_check_circle.png in Resources */,
+				FCF08F7D24F5C2290032A629 /* MaterialColorCell.xib in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
+				FCF08F5E24F4A3170032A629 /* icon_import_blue.png in Resources */,
 				FCB07B2624F05A3400A2E5F1 /* GeneralInfoView.xib in Resources */,
 				FC803B5C24EA2677009D470D /* icon_trash.png in Resources */,
 				FC803B4E24E99032009D470D /* test5.png in Resources */,
@@ -857,11 +969,13 @@
 				FC803B3C24E92927009D470D /* PathView.xib in Resources */,
 				FC64A5B224EE031300E2AA70 /* icon_camera_grey.png in Resources */,
 				FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */,
+				FCF08F5824F49A560032A629 /* MaterialTableViewCell.xib in Resources */,
 				FC44BFB624E7066B008CD233 /* btn_close.png in Resources */,
 				FC5B375124E589B200216DBD /* DMSans-Bold.ttf in Resources */,
 				FC44BFC324E71DDB008CD233 /* icon_notificationl.png in Resources */,
 				FC97D4F624ED94B500E30158 /* img_empty_folder.png in Resources */,
 				FC44BFC224E71DDB008CD233 /* icon_home.png in Resources */,
+				FCF08F5A24F4A01E0032A629 /* bg_material.png in Resources */,
 				FCB07B2124F024AB00A2E5F1 /* icon_flag_grey.png in Resources */,
 				FC50826924EEF4710034D032 /* img_empty_techpack.png in Resources */,
 				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
@@ -875,6 +989,8 @@
 				FC803B5124E99078009D470D /* icon_flag_blue.png in Resources */,
 				FC803B5524EA2325009D470D /* icon_back_grey.png in Resources */,
 				FCB07B1524EFCF7600A2E5F1 /* icon_added.png in Resources */,
+				FCF08F5424F49A010032A629 /* MaterialView.xib in Resources */,
+				FCF08F6D24F4DACE0032A629 /* AddItemImageSelectView.xib in Resources */,
 				FC4CB6F924EB2A0800FDDEC7 /* icon_full_screen.png in Resources */,
 				FC803B4B24E99032009D470D /* test3.png in Resources */,
 				FC803B5D24EA2677009D470D /* icon_camera.png in Resources */,
@@ -1015,8 +1131,11 @@
 				FCF08F3224F3F7EC0032A629 /* CropperViewController.swift in Sources */,
 				FCF08F4D24F433FD0032A629 /* CloseButton.swift in Sources */,
 				FC11673324EE790900AB6814 /* Testdatabase.swift in Sources */,
+				FCF08F7724F5B8470032A629 /* MaterialColorsView.swift in Sources */,
 				FC64A5B024EDCF4800E2AA70 /* RoundedTextView.swift in Sources */,
 				FC4CB70824EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift in Sources */,
+				FCF08F6F24F588DE0032A629 /* AddMaterialItemViewController.swift in Sources */,
+				FCF08F6124F4B06A0032A629 /* CircleColorListView.swift in Sources */,
 				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
 				FC12065924E5AE5B00E5F304 /* Common.swift in Sources */,
 				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
@@ -1026,6 +1145,7 @@
 				FC803B5324EA1FC7009D470D /* CustomerProfileViewController.swift in Sources */,
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
 				FC50826B24EEF7070034D032 /* NewTechpackDesignerViewController.swift in Sources */,
+				FCF08F7224F5AE550032A629 /* MaterialGeneralInfoView.swift in Sources */,
 				FC97D4F424ED7AF200E30158 /* DesignerMyFoldersViewController.swift in Sources */,
 				FCB07B2824F05A8400A2E5F1 /* GeneralInfoView.swift in Sources */,
 				FC97D4FC24EDA95500E30158 /* CompleteDesignerProfileViewController.swift in Sources */,
@@ -1040,9 +1160,13 @@
 				FC803B3E24E933C0009D470D /* PathViewCell.swift in Sources */,
 				FC4CB6F724EB18CC00FDDEC7 /* CustomerTechpackPreviewViewController.swift in Sources */,
 				FC44BFB424E6F603008CD233 /* CustomerSideMenuViewController.swift in Sources */,
+				FCF08F5624F49A3B0032A629 /* MaterialTableViewCell.swift in Sources */,
+				FCF08F5224F499E80032A629 /* MaterialView.swift in Sources */,
 				FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */,
+				FCF08F6B24F4DA6E0032A629 /* AddItemImageSelectView.swift in Sources */,
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
 				FCB07B1924F0114500A2E5F1 /* StageView.swift in Sources */,
+				FCF08F7B24F5C2160032A629 /* MaterialColorCell.swift in Sources */,
 				FCB07B0924EF828D00A2E5F1 /* CollaborationView.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,
