@@ -25,6 +25,11 @@
 		FC12066624E5DADA00E5F304 /* bg_header.png in Resources */ = {isa = PBXBuildFile; fileRef = FC12066524E5DADA00E5F304 /* bg_header.png */; };
 		FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */; };
 		FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */; };
+		FC3F481A24F8353300942819 /* ReadyToWearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F481924F8353300942819 /* ReadyToWearView.swift */; };
+		FC3F481C24F8357C00942819 /* ReadyToWearView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F481B24F8357C00942819 /* ReadyToWearView.xib */; };
+		FC3F481E24F835B400942819 /* ReadyToWearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F481D24F835B300942819 /* ReadyToWearCell.swift */; };
+		FC3F482024F835C500942819 /* ReadyToWearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F481F24F835C500942819 /* ReadyToWearCell.xib */; };
+		FC3F482224F8412100942819 /* AddReadyToWearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F482124F8412100942819 /* AddReadyToWearViewController.swift */; };
 		FC43A8F424EC46B8005AF9BF /* MaterialItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC43A8F224EC46B8005AF9BF /* MaterialItemCell.xib */; };
 		FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43A8F324EC46B8005AF9BF /* MaterialItemCollectionView.swift */; };
 		FC43A8F724EC5A5C005AF9BF /* icon_check_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = FC43A8F624EC5A5C005AF9BF /* icon_check_circle.png */; };
@@ -140,6 +145,8 @@
 		FCC21FB124E2542600D90C32 /* GombleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FB024E2542600D90C32 /* GombleUITests.swift */; };
 		FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */; };
 		FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */; };
+		FCE8EE8E24F7F57200939AAF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8EE8D24F7F57200939AAF /* PriceView.swift */; };
+		FCE8EE9024F7F57E00939AAF /* PriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE8EE8F24F7F57E00939AAF /* PriceView.xib */; };
 		FCF08F2C24F3E73B0032A629 /* icon_save.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F2B24F3E73B0032A629 /* icon_save.png */; };
 		FCF08F2F24F3F29C0032A629 /* icon_delete.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F2D24F3F29C0032A629 /* icon_delete.png */; };
 		FCF08F3024F3F29C0032A629 /* icon_edit.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F2E24F3F29C0032A629 /* icon_edit.png */; };
@@ -218,6 +225,11 @@
 		FC12066524E5DADA00E5F304 /* bg_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_header.png; sourceTree = "<group>"; };
 		FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
 		FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		FC3F481924F8353300942819 /* ReadyToWearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToWearView.swift; sourceTree = "<group>"; };
+		FC3F481B24F8357C00942819 /* ReadyToWearView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadyToWearView.xib; sourceTree = "<group>"; };
+		FC3F481D24F835B300942819 /* ReadyToWearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToWearCell.swift; sourceTree = "<group>"; };
+		FC3F481F24F835C500942819 /* ReadyToWearCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadyToWearCell.xib; sourceTree = "<group>"; };
+		FC3F482124F8412100942819 /* AddReadyToWearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReadyToWearViewController.swift; sourceTree = "<group>"; };
 		FC43A8F224EC46B8005AF9BF /* MaterialItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaterialItemCell.xib; sourceTree = "<group>"; };
 		FC43A8F324EC46B8005AF9BF /* MaterialItemCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialItemCollectionView.swift; sourceTree = "<group>"; };
 		FC43A8F624EC5A5C005AF9BF /* icon_check_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_circle.png; sourceTree = "<group>"; };
@@ -339,6 +351,8 @@
 		FCC21FB224E2542600D90C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FCE8EE8D24F7F57200939AAF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
+		FCE8EE8F24F7F57E00939AAF /* PriceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceView.xib; sourceTree = "<group>"; };
 		FCF08F2B24F3E73B0032A629 /* icon_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_save.png; sourceTree = "<group>"; };
 		FCF08F2D24F3F29C0032A629 /* icon_delete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_delete.png; sourceTree = "<group>"; };
 		FCF08F2E24F3F29C0032A629 /* icon_edit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_edit.png; sourceTree = "<group>"; };
@@ -450,12 +464,23 @@
 				FCF08F6824F4D9ED0032A629 /* AddMaterialItem */,
 				FCF08F5F24F4B0260032A629 /* CircleColorListView */,
 				FCF08F4924F433EC0032A629 /* TagListView */,
-				FCB07B0724EF7F7400A2E5F1 /* techpack */,
+				FCB07B0724EF7F7400A2E5F1 /* Techpack */,
 				FC44BFB824E71302008CD233 /* Header */,
 				FC44BFB724E712F0008CD233 /* Rounded */,
 				FCF08F3824F407AB0032A629 /* DefaultView.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		FC3F481824F8345500942819 /* ReadyToWear */ = {
+			isa = PBXGroup;
+			children = (
+				FC3F481924F8353300942819 /* ReadyToWearView.swift */,
+				FC3F481B24F8357C00942819 /* ReadyToWearView.xib */,
+				FC3F481D24F835B300942819 /* ReadyToWearCell.swift */,
+				FC3F481F24F835C500942819 /* ReadyToWearCell.xib */,
+			);
+			path = ReadyToWear;
 			sourceTree = "<group>";
 		};
 		FC43A8F124EC4681005AF9BF /* MaterialItemCollectionView */ = {
@@ -667,6 +692,7 @@
 				FCF08F6E24F588DE0032A629 /* AddMaterialItemViewController.swift */,
 				FC69E00324F73DD400351D2A /* AddMeasurementViewController.swift */,
 				FC69E00E24F7618F00351D2A /* AddPatternViewController.swift */,
+				FC3F482124F8412100942819 /* AddReadyToWearViewController.swift */,
 			);
 			path = Designer;
 			sourceTree = "<group>";
@@ -680,9 +706,11 @@
 			path = General;
 			sourceTree = "<group>";
 		};
-		FCB07B0724EF7F7400A2E5F1 /* techpack */ = {
+		FCB07B0724EF7F7400A2E5F1 /* Techpack */ = {
 			isa = PBXGroup;
 			children = (
+				FC3F481824F8345500942819 /* ReadyToWear */,
+				FCE8EE8C24F7F54B00939AAF /* Price */,
 				FC69E01224F7BAE000351D2A /* Factory */,
 				FC69E00524F7576A00351D2A /* Pattern */,
 				FC69DFF824F6C5C900351D2A /* Measurements */,
@@ -692,7 +720,7 @@
 				FCB07B1724F0109500A2E5F1 /* Stage */,
 				FCB07B1624F0108000A2E5F1 /* Collaboration */,
 			);
-			path = techpack;
+			path = Techpack;
 			sourceTree = "<group>";
 		};
 		FCB07B1624F0108000A2E5F1 /* Collaboration */ = {
@@ -792,6 +820,15 @@
 				FCF374C924E6CFC10035B84D /* GetStarted */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		FCE8EE8C24F7F54B00939AAF /* Price */ = {
+			isa = PBXGroup;
+			children = (
+				FCE8EE8D24F7F57200939AAF /* PriceView.swift */,
+				FCE8EE8F24F7F57E00939AAF /* PriceView.xib */,
+			);
+			path = Price;
 			sourceTree = "<group>";
 		};
 		FCF08F3324F406410032A629 /* Sketches */ = {
@@ -1013,12 +1050,14 @@
 				FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */,
 				FC69DFF524F68EF100351D2A /* MaterialSupplierView.xib in Resources */,
 				FC97D4F124ED74BB00E30158 /* icon_add.png in Resources */,
+				FCE8EE9024F7F57E00939AAF /* PriceView.xib in Resources */,
 				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
 				FC803B4D24E99032009D470D /* test4.png in Resources */,
 				FC97D4F824ED967200E30158 /* icon_add_white.png in Resources */,
 				FC50826324EEBDDC0034D032 /* icon_option.png in Resources */,
 				FCF08F2F24F3F29C0032A629 /* icon_delete.png in Resources */,
 				FC67EFDC24E624C500767A4F /* img_customer.png in Resources */,
+				FC3F482024F835C500942819 /* ReadyToWearCell.xib in Resources */,
 				FCF08F7F24F5C5CF0032A629 /* btn_color_picker.png in Resources */,
 				FC803B4324E97D4E009D470D /* icon_dropdown.png in Resources */,
 				FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */,
@@ -1081,6 +1120,7 @@
 				FC97D4F624ED94B500E30158 /* img_empty_folder.png in Resources */,
 				FC44BFC224E71DDB008CD233 /* icon_home.png in Resources */,
 				FCF08F5A24F4A01E0032A629 /* bg_material.png in Resources */,
+				FC3F481C24F8357C00942819 /* ReadyToWearView.xib in Resources */,
 				FCB07B2124F024AB00A2E5F1 /* icon_flag_grey.png in Resources */,
 				FC50826924EEF4710034D032 /* img_empty_techpack.png in Resources */,
 				FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */,
@@ -1279,10 +1319,13 @@
 				FCF08F5224F499E80032A629 /* MaterialView.swift in Sources */,
 				FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */,
 				FCF08F6B24F4DA6E0032A629 /* AddItemImageSelectView.swift in Sources */,
+				FC3F481A24F8353300942819 /* ReadyToWearView.swift in Sources */,
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
 				FCB07B1924F0114500A2E5F1 /* StageView.swift in Sources */,
 				FCF08F7B24F5C2160032A629 /* MaterialColorCell.swift in Sources */,
 				FCB07B0924EF828D00A2E5F1 /* CollaborationView.swift in Sources */,
+				FC3F481E24F835B400942819 /* ReadyToWearCell.swift in Sources */,
+				FC3F482224F8412100942819 /* AddReadyToWearViewController.swift in Sources */,
 				FC12065B24E5B3AA00E5F304 /* ForgotPasswordViewController.swift in Sources */,
 				FC44BFB224E6F007008CD233 /* CustomerHomeViewController.swift in Sources */,
 				FC803B3A24E92915009D470D /* PathView.swift in Sources */,
@@ -1293,6 +1336,7 @@
 				FC12066324E5D43100E5F304 /* RoundedImageView.swift in Sources */,
 				FC803B6324EA496C009D470D /* DefaultViewController.swift in Sources */,
 				FC12065424E5904300E5F304 /* RoundedTextField.swift in Sources */,
+				FCE8EE8E24F7F57200939AAF /* PriceView.swift in Sources */,
 				FC4CB70424EBDA0F00FDDEC7 /* CustomerTechpackGeneralInfoViewController.swift in Sources */,
 				FC97D4FA24ED987E00E30158 /* DesignerSideMenuViewController.swift in Sources */,
 				FC12065724E5A60000E5F304 /* Globals.swift in Sources */,

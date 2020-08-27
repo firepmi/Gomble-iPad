@@ -25,6 +25,7 @@ class NewTechpackDesignerViewController: DefaultViewController {
          "pattern_cell",
          "factory_cell",
          "price_cell",
+         "ready_to_wear_cell"
     ]
     let categoryTitles = [
         "Collaboration",
@@ -36,6 +37,7 @@ class NewTechpackDesignerViewController: DefaultViewController {
         "Pattern/ 3D Pattern",
         "Factory",
         "Price",
+        "Ready to wear product"
     ]
     var categoryHeights:[CGFloat] = [
         425, //Collaboration
@@ -46,8 +48,8 @@ class NewTechpackDesignerViewController: DefaultViewController {
         432, //Measurements
         280, //Pattern
         330, //Factory
-        190,
-        200,
+        330, //Price
+        330, //Ready to wear product
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,6 +122,16 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
                 self.tableView.close(at: IndexPath(row: 6, section: 0))
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.tableView.open(at: IndexPath(row: 6, section: 0))
+                }
+            }
+        case 9:
+            let view = cell?.viewWithTag(100) as! ReadyToWearView
+            view.delegate = self
+            view.onHightChanged = { height in
+                self.categoryHeights[9] = height
+                self.tableView.close(at: IndexPath(row: 9, section: 0))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.tableView.open(at: IndexPath(row: 9, section: 0))
                 }
             }
         default:

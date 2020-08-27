@@ -8,8 +8,6 @@
 
 import UIKit
 
-import UIKit
-
 class PatternCell: UITableViewCell {
     
     @IBOutlet weak var patternImageView: UIImageView!
