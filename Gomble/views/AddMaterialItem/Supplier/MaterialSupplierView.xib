@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="DMSans-Medium.ttf">
+            <string>DMSans-Medium</string>
+        </array>
+        <array key="DMSans-Regular.ttf">
+            <string>DMSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="831" height="457"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cOE-5q-eiM" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
+                    <rect key="frame" x="24" y="114.5" width="379.5" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="yoR-wy-yhM"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.84313725490000002" green="0.88235294119999996" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3i0-PF-ki1">
+                    <rect key="frame" x="24" y="170.5" width="77" height="18.5"/>
+                    <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                    <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BYE-6h-LIb" customClass="RoundedTextView" customModule="Gomble" customModuleProvider="target">
+                    <rect key="frame" x="24" y="193" width="783" height="99"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="99" id="022-sq-8KH"/>
+                    </constraints>
+                    <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.85098039219999999" green="0.87843137250000003" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max 500 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Br-bH-1Ze">
+                    <rect key="frame" x="672.5" y="296" width="134.5" height="18.5"/>
+                    <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                    <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXd-VO-7NH">
+                    <rect key="frame" x="24" y="92" width="29" height="18.5"/>
+                    <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                    <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ICJ-JP-bKo" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
+                    <rect key="frame" x="427.5" y="114.5" width="379.5" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="bWl-1o-fID"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.84313725490000002" green="0.88235294119999996" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Placement" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vhb-wz-8LT">
+                    <rect key="frame" x="427.5" y="92" width="71" height="18.5"/>
+                    <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                    <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Sew my dress factory" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhj-Ms-YIb" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
+                    <rect key="frame" x="24" y="36" width="783" height="40"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="aqa-w1-tJc"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="leftPadding">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="rightPadding">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" red="0.84313725490000002" green="0.88235294119999996" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textField>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Factory Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v4I-Qr-8jR">
+                    <rect key="frame" x="24" y="16" width="92.5" height="16"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="16" id="zht-hc-MlO"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
+                    <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="Vhb-wz-8LT" firstAttribute="top" secondItem="rXd-VO-7NH" secondAttribute="top" id="2dp-yZ-BKA"/>
+                <constraint firstItem="rXd-VO-7NH" firstAttribute="leading" secondItem="cOE-5q-eiM" secondAttribute="leading" id="4yI-Be-mcp"/>
+                <constraint firstItem="BYE-6h-LIb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="7K3-Q7-bAc"/>
+                <constraint firstItem="Vhb-wz-8LT" firstAttribute="leading" secondItem="ICJ-JP-bKo" secondAttribute="leading" id="870-B6-yS3"/>
+                <constraint firstItem="ICJ-JP-bKo" firstAttribute="top" secondItem="Vhb-wz-8LT" secondAttribute="bottom" constant="4" id="9ZO-be-eIY"/>
+                <constraint firstItem="BYE-6h-LIb" firstAttribute="top" secondItem="3i0-PF-ki1" secondAttribute="bottom" constant="4" id="9ox-d5-0Pb"/>
+                <constraint firstItem="4Br-bH-1Ze" firstAttribute="trailing" secondItem="BYE-6h-LIb" secondAttribute="trailing" id="HGD-p9-jXe"/>
+                <constraint firstItem="v4I-Qr-8jR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="LJ0-Ml-Sfd"/>
+                <constraint firstItem="cOE-5q-eiM" firstAttribute="top" secondItem="rXd-VO-7NH" secondAttribute="bottom" constant="4" id="Lui-Ck-HSE"/>
+                <constraint firstItem="fhj-Ms-YIb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="NMh-3k-HIq"/>
+                <constraint firstItem="v4I-Qr-8jR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="PRW-or-zAE"/>
+                <constraint firstAttribute="trailing" secondItem="ICJ-JP-bKo" secondAttribute="trailing" constant="24" id="PaD-2h-f5n"/>
+                <constraint firstItem="v4I-Qr-8jR" firstAttribute="leading" secondItem="fhj-Ms-YIb" secondAttribute="leading" id="VO8-w2-l54"/>
+                <constraint firstItem="4Br-bH-1Ze" firstAttribute="top" secondItem="BYE-6h-LIb" secondAttribute="bottom" constant="4" id="XUc-3o-spj"/>
+                <constraint firstItem="fhj-Ms-YIb" firstAttribute="top" secondItem="v4I-Qr-8jR" secondAttribute="bottom" constant="4" id="ZWp-fX-vtq"/>
+                <constraint firstItem="Vhb-wz-8LT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="12" id="gem-oW-NiF"/>
+                <constraint firstItem="3i0-PF-ki1" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="hpk-lT-4EB"/>
+                <constraint firstItem="cOE-5q-eiM" firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="centerX" constant="-12" id="mFc-Eu-PoF"/>
+                <constraint firstItem="rXd-VO-7NH" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="nKs-cC-ci4"/>
+                <constraint firstItem="rXd-VO-7NH" firstAttribute="top" secondItem="fhj-Ms-YIb" secondAttribute="bottom" constant="16" id="rcB-pr-h9r"/>
+                <constraint firstItem="BYE-6h-LIb" firstAttribute="leading" secondItem="3i0-PF-ki1" secondAttribute="leading" id="vlh-6u-USw"/>
+                <constraint firstItem="3i0-PF-ki1" firstAttribute="top" secondItem="cOE-5q-eiM" secondAttribute="bottom" constant="16" id="vqI-GJ-nem"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="434.05797101449281" y="-55.245535714285715"/>
+        </view>
+    </objects>
+</document>

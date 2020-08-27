@@ -189,7 +189,7 @@ open class TagListView: UIView {
         }
     }
     
-    @objc open dynamic var textFont: UIFont = .systemFont(ofSize: 12) {
+    var textFont: UIFont = .systemFont(ofSize: 12) {
         didSet {
             defer { rearrangeViews() }
             tagViews.forEach {
@@ -202,7 +202,11 @@ open class TagListView: UIView {
             rearrangeViews()
         }
     }
-    
+    @IBInspectable var fontSize:CGFloat = 12 {
+        didSet {
+            textFont = .systemFont(ofSize: fontSize)
+        }
+    }
     @IBOutlet open weak var delegate: TagListViewDelegate?
     
     var editTagView: UITextField?

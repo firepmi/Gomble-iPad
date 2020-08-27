@@ -9,7 +9,7 @@
 import UIKit
 @IBDesignable
 class CircleColorListView: UIView {
-    var identifier = "pathViewCell"
+    var identifier = "CircleColorCell"
     @IBInspectable var radius: CGFloat = 8 {
         didSet {
             collectionView.reloadData()
@@ -22,12 +22,11 @@ class CircleColorListView: UIView {
         cv.translatesAutoresizingMaskIntoConstraints = true
         cv.delegate = self
         cv.dataSource = self
-        cv.register(UINib(nibName: "PathViewCell", bundle: nil), forCellWithReuseIdentifier: identifier)
+        cv.register(UINib(nibName: "CircleColorCell", bundle: nil), forCellWithReuseIdentifier: identifier)
         cv.backgroundColor = UIColor.clear
         cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = UIColor.clear
         let flowLayout = cv.collectionViewLayout as! UICollectionViewFlowLayout
-        flowLayout.scrollDirection = .horizontal
+        flowLayout.scrollDirection = .vertical
         
         return cv
     }()
@@ -35,6 +34,8 @@ class CircleColorListView: UIView {
     override var bounds: CGRect {
         didSet {
             collectionView.frame = bounds
+//            backgroundColor = .clear
+            addSubview(collectionView)
         }
     }
     required init?(coder aDecoder: NSCoder) {

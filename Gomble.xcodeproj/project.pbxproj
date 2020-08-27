@@ -68,6 +68,25 @@
 		FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFD924E624C500767A4F /* img_fashion_designer.png */; };
 		FC67EFDC24E624C500767A4F /* img_customer.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDA24E624C500767A4F /* img_customer.png */; };
 		FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */ = {isa = PBXBuildFile; fileRef = FC67EFDD24E6284E00767A4F /* icon_back_white.png */; };
+		FC69DFEE24F6843400351D2A /* MaterialQuantityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DFED24F6843400351D2A /* MaterialQuantityView.swift */; };
+		FC69DFF024F6845700351D2A /* MaterialQuantityView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69DFEF24F6845700351D2A /* MaterialQuantityView.xib */; };
+		FC69DFF324F68ED100351D2A /* MaterialSupplierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DFF224F68ED100351D2A /* MaterialSupplierView.swift */; };
+		FC69DFF524F68EF100351D2A /* MaterialSupplierView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69DFF424F68EF100351D2A /* MaterialSupplierView.xib */; };
+		FC69DFF724F6AA2800351D2A /* icon_annotation.png in Resources */ = {isa = PBXBuildFile; fileRef = FC69DFF624F6AA2700351D2A /* icon_annotation.png */; };
+		FC69DFFA24F6C5F300351D2A /* MeasurementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DFF924F6C5F300351D2A /* MeasurementsView.swift */; };
+		FC69DFFC24F6C68600351D2A /* MeasurementsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69DFFB24F6C68600351D2A /* MeasurementsView.xib */; };
+		FC69DFFE24F6C8B200351D2A /* MeasurementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69DFFD24F6C8B200351D2A /* MeasurementCell.swift */; };
+		FC69E00024F6C8BD00351D2A /* MeasurementCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69DFFF24F6C8BD00351D2A /* MeasurementCell.xib */; };
+		FC69E00224F70DEF00351D2A /* test_measurement.png in Resources */ = {isa = PBXBuildFile; fileRef = FC69E00124F70DEF00351D2A /* test_measurement.png */; };
+		FC69E00424F73DD400351D2A /* AddMeasurementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69E00324F73DD400351D2A /* AddMeasurementViewController.swift */; };
+		FC69E00724F7578500351D2A /* PatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69E00624F7578500351D2A /* PatternView.swift */; };
+		FC69E00924F7582600351D2A /* PatternView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69E00824F7582600351D2A /* PatternView.xib */; };
+		FC69E00B24F7590100351D2A /* PatternCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69E00A24F7590100351D2A /* PatternCell.swift */; };
+		FC69E00D24F7591300351D2A /* PatternCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69E00C24F7591300351D2A /* PatternCell.xib */; };
+		FC69E00F24F7618F00351D2A /* AddPatternViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69E00E24F7618F00351D2A /* AddPatternViewController.swift */; };
+		FC69E01124F7B53400351D2A /* test_pattern.png in Resources */ = {isa = PBXBuildFile; fileRef = FC69E01024F7B53400351D2A /* test_pattern.png */; };
+		FC69E01424F7BB5500351D2A /* FactoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC69E01324F7BB5500351D2A /* FactoryView.swift */; };
+		FC69E01624F7BB9400351D2A /* FactoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC69E01524F7BB9400351D2A /* FactoryView.xib */; };
 		FC803B3824E76431009D470D /* profile-anonymous.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FC803B3724E76431009D470D /* profile-anonymous.jpg */; };
 		FC803B3A24E92915009D470D /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC803B3924E92915009D470D /* PathView.swift */; };
 		FC803B3C24E92927009D470D /* PathView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC803B3B24E92927009D470D /* PathView.xib */; };
@@ -242,6 +261,25 @@
 		FC67EFD924E624C500767A4F /* img_fashion_designer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_fashion_designer.png; sourceTree = "<group>"; };
 		FC67EFDA24E624C500767A4F /* img_customer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = img_customer.png; sourceTree = "<group>"; };
 		FC67EFDD24E6284E00767A4F /* icon_back_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_back_white.png; sourceTree = "<group>"; };
+		FC69DFED24F6843400351D2A /* MaterialQuantityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialQuantityView.swift; sourceTree = "<group>"; };
+		FC69DFEF24F6845700351D2A /* MaterialQuantityView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialQuantityView.xib; sourceTree = "<group>"; };
+		FC69DFF224F68ED100351D2A /* MaterialSupplierView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterialSupplierView.swift; sourceTree = "<group>"; };
+		FC69DFF424F68EF100351D2A /* MaterialSupplierView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MaterialSupplierView.xib; sourceTree = "<group>"; };
+		FC69DFF624F6AA2700351D2A /* icon_annotation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_annotation.png; sourceTree = "<group>"; };
+		FC69DFF924F6C5F300351D2A /* MeasurementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementsView.swift; sourceTree = "<group>"; };
+		FC69DFFB24F6C68600351D2A /* MeasurementsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementsView.xib; sourceTree = "<group>"; };
+		FC69DFFD24F6C8B200351D2A /* MeasurementCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeasurementCell.swift; sourceTree = "<group>"; };
+		FC69DFFF24F6C8BD00351D2A /* MeasurementCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MeasurementCell.xib; sourceTree = "<group>"; };
+		FC69E00124F70DEF00351D2A /* test_measurement.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_measurement.png; sourceTree = "<group>"; };
+		FC69E00324F73DD400351D2A /* AddMeasurementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMeasurementViewController.swift; sourceTree = "<group>"; };
+		FC69E00624F7578500351D2A /* PatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternView.swift; sourceTree = "<group>"; };
+		FC69E00824F7582600351D2A /* PatternView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatternView.xib; sourceTree = "<group>"; };
+		FC69E00A24F7590100351D2A /* PatternCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternCell.swift; sourceTree = "<group>"; };
+		FC69E00C24F7591300351D2A /* PatternCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PatternCell.xib; sourceTree = "<group>"; };
+		FC69E00E24F7618F00351D2A /* AddPatternViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPatternViewController.swift; sourceTree = "<group>"; };
+		FC69E01024F7B53400351D2A /* test_pattern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_pattern.png; sourceTree = "<group>"; };
+		FC69E01324F7BB5500351D2A /* FactoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactoryView.swift; sourceTree = "<group>"; };
+		FC69E01524F7BB9400351D2A /* FactoryView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FactoryView.xib; sourceTree = "<group>"; };
 		FC803B3724E76431009D470D /* profile-anonymous.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "profile-anonymous.jpg"; sourceTree = "<group>"; };
 		FC803B3924E92915009D470D /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
 		FC803B3B24E92927009D470D /* PathView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PathView.xib; sourceTree = "<group>"; };
@@ -483,6 +521,7 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC69DFF624F6AA2700351D2A /* icon_annotation.png */,
 				FCF08F7E24F5C5CE0032A629 /* btn_color_picker.png */,
 				FCF08F5D24F4A3160032A629 /* icon_import_blue.png */,
 				FCF08F5B24F4A13F0032A629 /* icon_import.png */,
@@ -549,9 +588,60 @@
 			path = fonts;
 			sourceTree = "<group>";
 		};
+		FC69DFEC24F683FE00351D2A /* MaterialQuantity */ = {
+			isa = PBXGroup;
+			children = (
+				FC69DFED24F6843400351D2A /* MaterialQuantityView.swift */,
+				FC69DFEF24F6845700351D2A /* MaterialQuantityView.xib */,
+			);
+			path = MaterialQuantity;
+			sourceTree = "<group>";
+		};
+		FC69DFF124F68E7F00351D2A /* Supplier */ = {
+			isa = PBXGroup;
+			children = (
+				FC69DFF224F68ED100351D2A /* MaterialSupplierView.swift */,
+				FC69DFF424F68EF100351D2A /* MaterialSupplierView.xib */,
+			);
+			path = Supplier;
+			sourceTree = "<group>";
+		};
+		FC69DFF824F6C5C900351D2A /* Measurements */ = {
+			isa = PBXGroup;
+			children = (
+				FC69DFF924F6C5F300351D2A /* MeasurementsView.swift */,
+				FC69DFFB24F6C68600351D2A /* MeasurementsView.xib */,
+				FC69DFFD24F6C8B200351D2A /* MeasurementCell.swift */,
+				FC69DFFF24F6C8BD00351D2A /* MeasurementCell.xib */,
+			);
+			path = Measurements;
+			sourceTree = "<group>";
+		};
+		FC69E00524F7576A00351D2A /* Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				FC69E00624F7578500351D2A /* PatternView.swift */,
+				FC69E00824F7582600351D2A /* PatternView.xib */,
+				FC69E00A24F7590100351D2A /* PatternCell.swift */,
+				FC69E00C24F7591300351D2A /* PatternCell.xib */,
+			);
+			path = Pattern;
+			sourceTree = "<group>";
+		};
+		FC69E01224F7BAE000351D2A /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				FC69E01324F7BB5500351D2A /* FactoryView.swift */,
+				FC69E01524F7BB9400351D2A /* FactoryView.xib */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
 		FC803B4524E9885E009D470D /* test assets */ = {
 			isa = PBXGroup;
 			children = (
+				FC69E01024F7B53400351D2A /* test_pattern.png */,
+				FC69E00124F70DEF00351D2A /* test_measurement.png */,
 				FCF08F4024F421DF0032A629 /* test_sketch.png */,
 				FC43A8F824EC5A64005AF9BF /* test_material.png */,
 				FC803B4724E99031009D470D /* test1.png */,
@@ -575,6 +665,8 @@
 				FC50826A24EEF7070034D032 /* NewTechpackDesignerViewController.swift */,
 				FCF08F4224F432340032A629 /* AddSketchDialogViewController.swift */,
 				FCF08F6E24F588DE0032A629 /* AddMaterialItemViewController.swift */,
+				FC69E00324F73DD400351D2A /* AddMeasurementViewController.swift */,
+				FC69E00E24F7618F00351D2A /* AddPatternViewController.swift */,
 			);
 			path = Designer;
 			sourceTree = "<group>";
@@ -591,6 +683,9 @@
 		FCB07B0724EF7F7400A2E5F1 /* techpack */ = {
 			isa = PBXGroup;
 			children = (
+				FC69E01224F7BAE000351D2A /* Factory */,
+				FC69E00524F7576A00351D2A /* Pattern */,
+				FC69DFF824F6C5C900351D2A /* Measurements */,
 				FCF08F5024F499A10032A629 /* Material */,
 				FCF08F3324F406410032A629 /* Sketches */,
 				FCB07B2424F05A0700A2E5F1 /* GeneralInfo */,
@@ -743,6 +838,8 @@
 		FCF08F6824F4D9ED0032A629 /* AddMaterialItem */ = {
 			isa = PBXGroup;
 			children = (
+				FC69DFF124F68E7F00351D2A /* Supplier */,
+				FC69DFEC24F683FE00351D2A /* MaterialQuantity */,
 				FCF08F7524F5B7760032A629 /* MaterialColors */,
 				FCF08F7024F5AE120032A629 /* MaterialGeneralInfo */,
 				FCF08F6924F4DA030032A629 /* addItemImage */,
@@ -914,6 +1011,7 @@
 			files = (
 				FCF08F7424F5AE690032A629 /* MaterialGeneralInfoView.xib in Resources */,
 				FCC21F9B24E2542300D90C32 /* LaunchScreen.storyboard in Resources */,
+				FC69DFF524F68EF100351D2A /* MaterialSupplierView.xib in Resources */,
 				FC97D4F124ED74BB00E30158 /* icon_add.png in Resources */,
 				FC5B375024E589B200216DBD /* DMSans-Regular.ttf in Resources */,
 				FC803B4D24E99032009D470D /* test4.png in Resources */,
@@ -930,6 +1028,7 @@
 				FCF08F3724F406E90032A629 /* SketchesView.xib in Resources */,
 				FCF08F5C24F4A13F0032A629 /* icon_import.png in Resources */,
 				FC803B4424E97D4E009D470D /* icon_search.png in Resources */,
+				FC69E00924F7582600351D2A /* PatternView.xib in Resources */,
 				FC4E968124F3CBEC00EA6221 /* icon_add_grey.png in Resources */,
 				FCB07B1E24F0212200A2E5F1 /* icon_radio_off_grey.png in Resources */,
 				FCF08F3024F3F29C0032A629 /* icon_edit.png in Resources */,
@@ -938,11 +1037,16 @@
 				FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */,
 				FC803B5F24EA2677009D470D /* test_profile.png in Resources */,
 				FC43A8F924EC5A64005AF9BF /* test_material.png in Resources */,
+				FC69DFF024F6845700351D2A /* MaterialQuantityView.xib in Resources */,
 				FC43A8F424EC46B8005AF9BF /* MaterialItemCell.xib in Resources */,
 				FC803B4C24E99032009D470D /* test1.png in Resources */,
 				FCB07B1F24F0212200A2E5F1 /* icon_radio_on_grey.png in Resources */,
+				FC69E01124F7B53400351D2A /* test_pattern.png in Resources */,
+				FC69DFF724F6AA2800351D2A /* icon_annotation.png in Resources */,
 				FC67EFDB24E624C500767A4F /* img_fashion_designer.png in Resources */,
+				FC69DFFC24F6C68600351D2A /* MeasurementsView.xib in Resources */,
 				FC12065D24E5B5A100E5F304 /* icon_back.png in Resources */,
+				FC69E00224F70DEF00351D2A /* test_measurement.png in Resources */,
 				FCF08F3B24F4103B0032A629 /* bg_sketches.png in Resources */,
 				FCB07B0B24EF82B700A2E5F1 /* CollaborationView.xib in Resources */,
 				FC5B374924E5849B00216DBD /* icon_check_off.png in Resources */,
@@ -959,6 +1063,7 @@
 				FCB07B2324F03EEE00A2E5F1 /* icon_calendar.png in Resources */,
 				FC4E968224F3CBEC00EA6221 /* icon_add_dark_grey.png in Resources */,
 				FC43A8F724EC5A5C005AF9BF /* icon_check_circle.png in Resources */,
+				FC69E01624F7BB9400351D2A /* FactoryView.xib in Resources */,
 				FCF08F7D24F5C2290032A629 /* MaterialColorCell.xib in Resources */,
 				FCC21F9624E253F900D90C32 /* Main.storyboard in Resources */,
 				FCF08F5E24F4A3170032A629 /* icon_import_blue.png in Resources */,
@@ -982,6 +1087,7 @@
 				FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */,
 				FC67EFDE24E6284F00767A4F /* icon_back_white.png in Resources */,
 				FCF08F3F24F41FE80032A629 /* SketchesTableViewCell.xib in Resources */,
+				FC69E00024F6C8BD00351D2A /* MeasurementCell.xib in Resources */,
 				FCB07B0F24EFC8F000A2E5F1 /* icon_email.png in Resources */,
 				FC803B5E24EA2677009D470D /* icon_radio_on.png in Resources */,
 				FCF08F2C24F3E73B0032A629 /* icon_save.png in Resources */,
@@ -994,6 +1100,7 @@
 				FC4CB6F924EB2A0800FDDEC7 /* icon_full_screen.png in Resources */,
 				FC803B4B24E99032009D470D /* test3.png in Resources */,
 				FC803B5D24EA2677009D470D /* icon_camera.png in Resources */,
+				FC69E00D24F7591300351D2A /* PatternCell.xib in Resources */,
 				FC4CB6FC24EB2E9900FDDEC7 /* icon_next.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1132,22 +1239,30 @@
 				FCF08F4D24F433FD0032A629 /* CloseButton.swift in Sources */,
 				FC11673324EE790900AB6814 /* Testdatabase.swift in Sources */,
 				FCF08F7724F5B8470032A629 /* MaterialColorsView.swift in Sources */,
+				FC69DFFA24F6C5F300351D2A /* MeasurementsView.swift in Sources */,
+				FC69E00F24F7618F00351D2A /* AddPatternViewController.swift in Sources */,
+				FC69E00724F7578500351D2A /* PatternView.swift in Sources */,
 				FC64A5B024EDCF4800E2AA70 /* RoundedTextView.swift in Sources */,
 				FC4CB70824EBDDE800FDDEC7 /* CustomerTechpackMeasurementsViewController.swift in Sources */,
 				FCF08F6F24F588DE0032A629 /* AddMaterialItemViewController.swift in Sources */,
 				FCF08F6124F4B06A0032A629 /* CircleColorListView.swift in Sources */,
 				FCC21F8F24E253F900D90C32 /* AppDelegate.swift in Sources */,
+				FC69DFF324F68ED100351D2A /* MaterialSupplierView.swift in Sources */,
 				FC12065924E5AE5B00E5F304 /* Common.swift in Sources */,
+				FC69E00B24F7590100351D2A /* PatternCell.swift in Sources */,
 				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
 				FC4CB70A24EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift in Sources */,
 				FC4CB70624EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift in Sources */,
 				FC803B6124EA283B009D470D /* RoundedLabel.swift in Sources */,
 				FC803B5324EA1FC7009D470D /* CustomerProfileViewController.swift in Sources */,
+				FC69E01424F7BB5500351D2A /* FactoryView.swift in Sources */,
 				FC12065124E58F9500E5F304 /* RoundedButton.swift in Sources */,
 				FC50826B24EEF7070034D032 /* NewTechpackDesignerViewController.swift in Sources */,
 				FCF08F7224F5AE550032A629 /* MaterialGeneralInfoView.swift in Sources */,
 				FC97D4F424ED7AF200E30158 /* DesignerMyFoldersViewController.swift in Sources */,
+				FC69E00424F73DD400351D2A /* AddMeasurementViewController.swift in Sources */,
 				FCB07B2824F05A8400A2E5F1 /* GeneralInfoView.swift in Sources */,
+				FC69DFEE24F6843400351D2A /* MaterialQuantityView.swift in Sources */,
 				FC97D4FC24EDA95500E30158 /* CompleteDesignerProfileViewController.swift in Sources */,
 				FCF08F4E24F433FD0032A629 /* TagListView.swift in Sources */,
 				FCF08F3524F406D00032A629 /* SketchesView.swift in Sources */,
@@ -1173,6 +1288,7 @@
 				FC803B3A24E92915009D470D /* PathView.swift in Sources */,
 				FC12065F24E5B98600E5F304 /* CreateNewPasswordViewController.swift in Sources */,
 				FC50826724EEE9FE0034D032 /* DesignerTechpacksViewController.swift in Sources */,
+				FC69DFFE24F6C8B200351D2A /* MeasurementCell.swift in Sources */,
 				FC50826524EED3DE0034D032 /* DefaultDialogViewController.swift in Sources */,
 				FC12066324E5D43100E5F304 /* RoundedImageView.swift in Sources */,
 				FC803B6324EA496C009D470D /* DefaultViewController.swift in Sources */,

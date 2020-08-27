@@ -43,9 +43,9 @@ class NewTechpackDesignerViewController: DefaultViewController {
         650, //General info
         280, //Sketches
         280, //Material / accessories
-        160,
-        170,
-        180,
+        432, //Measurements
+        280, //Pattern
+        330, //Factory
         190,
         200,
     ]
@@ -95,6 +95,33 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
         case 4:
             let view = cell?.viewWithTag(100) as! MaterialView
             view.delegate = self
+            view.onHightChanged = { height in
+                self.categoryHeights[4] = height
+                self.tableView.close(at: IndexPath(row: 4, section: 0))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.tableView.open(at: IndexPath(row: 4, section: 0))
+                }
+            }
+        case 5:
+            let view = cell?.viewWithTag(100) as! MeasurementsView
+            view.delegate = self
+            view.onHightChanged = { height in
+                self.categoryHeights[5] = height
+                self.tableView.close(at: IndexPath(row: 5, section: 0))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.tableView.open(at: IndexPath(row: 5, section: 0))
+                }
+            }
+        case 6:
+            let view = cell?.viewWithTag(100) as! PatternView
+            view.delegate = self
+            view.onHightChanged = { height in
+                self.categoryHeights[6] = height
+                self.tableView.close(at: IndexPath(row: 6, section: 0))
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                    self.tableView.open(at: IndexPath(row: 6, section: 0))
+                }
+            }
         default:
             break
         }        

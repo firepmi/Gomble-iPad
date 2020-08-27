@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="153" id="Ht8-6I-Paz" customClass="PatternCell" customModule="Gomble" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="623" height="153"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ht8-6I-Paz" id="qSK-R7-FIc">
+                <rect key="frame" x="0.0" y="0.0" width="623" height="153"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="101" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Front" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-K1-amO">
+                        <rect key="frame" x="186" y="13.5" width="39" height="22"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="22" id="Q70-Ot-34O"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="102" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="blablablablablablablalbalblabla" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a03-dm-g9U">
+                        <rect key="frame" x="186" y="43.5" width="357" height="104.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.42352941179999998" green="0.46274509800000002" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="83z-i0-ir1">
+                        <rect key="frame" x="567" y="24" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="7Ka-fo-lH8"/>
+                            <constraint firstAttribute="height" constant="32" id="Sex-tP-oeQ"/>
+                        </constraints>
+                        <state key="normal" image="icon_edit.png"/>
+                        <connections>
+                            <action selector="onEditClicked:" destination="Ht8-6I-Paz" eventType="touchUpInside" id="Txr-K3-6do"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fOd-DH-AHw">
+                        <rect key="frame" x="567" y="72" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="ftG-aU-Kk8"/>
+                            <constraint firstAttribute="height" constant="32" id="t7u-Q0-0GL"/>
+                        </constraints>
+                        <state key="normal" image="icon_delete.png"/>
+                        <connections>
+                            <action selector="onDeleteClicked:" destination="Ht8-6I-Paz" eventType="touchUpInside" id="gID-ny-uaa"/>
+                        </connections>
+                    </button>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="100" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="test_pattern.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZC5-ge-B8h">
+                        <rect key="frame" x="24" y="13.5" width="138" height="126"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="138" id="5Ep-aQ-Bx6"/>
+                            <constraint firstAttribute="height" constant="126" id="Os4-m5-eZt"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
+                <constraints>
+                    <constraint firstItem="fOd-DH-AHw" firstAttribute="leading" secondItem="83z-i0-ir1" secondAttribute="leading" id="40d-SN-zHA"/>
+                    <constraint firstItem="83z-i0-ir1" firstAttribute="leading" secondItem="a03-dm-g9U" secondAttribute="trailing" constant="24" id="BoV-pj-SK2"/>
+                    <constraint firstItem="fOd-DH-AHw" firstAttribute="top" secondItem="83z-i0-ir1" secondAttribute="bottom" constant="16" id="G2P-GE-Zrh"/>
+                    <constraint firstItem="a03-dm-g9U" firstAttribute="leading" secondItem="GdT-K1-amO" secondAttribute="leading" id="GA3-9W-BzE"/>
+                    <constraint firstAttribute="bottom" secondItem="a03-dm-g9U" secondAttribute="bottom" constant="5" id="I3q-xd-ncf"/>
+                    <constraint firstItem="ZC5-ge-B8h" firstAttribute="leading" secondItem="qSK-R7-FIc" secondAttribute="leading" constant="24" id="MFp-VS-2aK"/>
+                    <constraint firstAttribute="trailing" secondItem="83z-i0-ir1" secondAttribute="trailing" constant="24" id="NrF-9h-RIV"/>
+                    <constraint firstItem="GdT-K1-amO" firstAttribute="leading" secondItem="ZC5-ge-B8h" secondAttribute="trailing" constant="24" id="Oc2-Nj-l2Z"/>
+                    <constraint firstItem="83z-i0-ir1" firstAttribute="top" secondItem="qSK-R7-FIc" secondAttribute="top" constant="24" id="Ptd-zm-wAI"/>
+                    <constraint firstItem="ZC5-ge-B8h" firstAttribute="centerY" secondItem="qSK-R7-FIc" secondAttribute="centerY" id="dBH-BF-Ul5"/>
+                    <constraint firstItem="GdT-K1-amO" firstAttribute="top" secondItem="ZC5-ge-B8h" secondAttribute="top" id="hqm-ya-j0b"/>
+                    <constraint firstItem="a03-dm-g9U" firstAttribute="top" secondItem="GdT-K1-amO" secondAttribute="bottom" constant="8" id="wHB-XD-qdZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="descriptionLabel" destination="a03-dm-g9U" id="J1l-rz-55v"/>
+                <outlet property="patternImageView" destination="ZC5-ge-B8h" id="QcW-jp-aab"/>
+                <outlet property="titleLabel" destination="GdT-K1-amO" id="57k-Oo-9lI"/>
+            </connections>
+            <point key="canvasLocation" x="202.17391304347828" y="18.415178571428569"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_delete.png" width="28" height="28"/>
+        <image name="icon_edit.png" width="28" height="28"/>
+        <image name="test_pattern.png" width="138" height="126"/>
+    </resources>
+</document>

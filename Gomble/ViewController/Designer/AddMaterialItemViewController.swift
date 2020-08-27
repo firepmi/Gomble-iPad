@@ -14,19 +14,23 @@ class AddMaterialItemViewController: DefaultDialogViewController {
     let categoryCells = [
         "image_cell",
         "general_info_cell",
-        "colors_cell"
+        "colors_cell",
+        "quantity_cell",
+        "supplier_cell"
     ]
     let categoryTitles = [
         "Image",
         "General info",
         "Colors",
+        "Quantity",
+        "Supplier/Vendor"
     ]
     var categoryHeights:[CGFloat] = [
         356, //Image
         380, //Stage
         300, //Colors
-        280, //Quantity
-        280, //Supplier /Vendor
+        200, //Quantity
+        330, //Supplier /Vendor
     ]
     @IBOutlet weak var tableView: ExpandableTableView!
     override func viewDidLoad() {
