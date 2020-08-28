@@ -25,11 +25,13 @@
 		FC12066624E5DADA00E5F304 /* bg_header.png in Resources */ = {isa = PBXBuildFile; fileRef = FC12066524E5DADA00E5F304 /* bg_header.png */; };
 		FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */; };
 		FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */; };
+		FC3574BF24F857290067D9A3 /* SelectSizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */; };
 		FC3F481A24F8353300942819 /* ReadyToWearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F481924F8353300942819 /* ReadyToWearView.swift */; };
 		FC3F481C24F8357C00942819 /* ReadyToWearView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F481B24F8357C00942819 /* ReadyToWearView.xib */; };
 		FC3F481E24F835B400942819 /* ReadyToWearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F481D24F835B300942819 /* ReadyToWearCell.swift */; };
 		FC3F482024F835C500942819 /* ReadyToWearCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F481F24F835C500942819 /* ReadyToWearCell.xib */; };
 		FC3F482224F8412100942819 /* AddReadyToWearViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F482124F8412100942819 /* AddReadyToWearViewController.swift */; };
+		FC3F482424F84EC900942819 /* icon_add_big.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3F482324F84EC900942819 /* icon_add_big.png */; };
 		FC43A8F424EC46B8005AF9BF /* MaterialItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC43A8F224EC46B8005AF9BF /* MaterialItemCell.xib */; };
 		FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC43A8F324EC46B8005AF9BF /* MaterialItemCollectionView.swift */; };
 		FC43A8F724EC5A5C005AF9BF /* icon_check_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = FC43A8F624EC5A5C005AF9BF /* icon_check_circle.png */; };
@@ -225,11 +227,13 @@
 		FC12066524E5DADA00E5F304 /* bg_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_header.png; sourceTree = "<group>"; };
 		FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
 		FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSizesViewController.swift; sourceTree = "<group>"; };
 		FC3F481924F8353300942819 /* ReadyToWearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToWearView.swift; sourceTree = "<group>"; };
 		FC3F481B24F8357C00942819 /* ReadyToWearView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadyToWearView.xib; sourceTree = "<group>"; };
 		FC3F481D24F835B300942819 /* ReadyToWearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToWearCell.swift; sourceTree = "<group>"; };
 		FC3F481F24F835C500942819 /* ReadyToWearCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadyToWearCell.xib; sourceTree = "<group>"; };
 		FC3F482124F8412100942819 /* AddReadyToWearViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReadyToWearViewController.swift; sourceTree = "<group>"; };
+		FC3F482324F84EC900942819 /* icon_add_big.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_add_big.png; sourceTree = "<group>"; };
 		FC43A8F224EC46B8005AF9BF /* MaterialItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MaterialItemCell.xib; sourceTree = "<group>"; };
 		FC43A8F324EC46B8005AF9BF /* MaterialItemCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaterialItemCollectionView.swift; sourceTree = "<group>"; };
 		FC43A8F624EC5A5C005AF9BF /* icon_check_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_check_circle.png; sourceTree = "<group>"; };
@@ -546,6 +550,7 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC3F482324F84EC900942819 /* icon_add_big.png */,
 				FC69DFF624F6AA2700351D2A /* icon_annotation.png */,
 				FCF08F7E24F5C5CE0032A629 /* btn_color_picker.png */,
 				FCF08F5D24F4A3160032A629 /* icon_import_blue.png */,
@@ -693,6 +698,7 @@
 				FC69E00324F73DD400351D2A /* AddMeasurementViewController.swift */,
 				FC69E00E24F7618F00351D2A /* AddPatternViewController.swift */,
 				FC3F482124F8412100942819 /* AddReadyToWearViewController.swift */,
+				FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */,
 			);
 			path = Designer;
 			sourceTree = "<group>";
@@ -1071,6 +1077,7 @@
 				FC4E968124F3CBEC00EA6221 /* icon_add_grey.png in Resources */,
 				FCB07B1E24F0212200A2E5F1 /* icon_radio_off_grey.png in Resources */,
 				FCF08F3024F3F29C0032A629 /* icon_edit.png in Resources */,
+				FC3F482424F84EC900942819 /* icon_add_big.png in Resources */,
 				FCB07B0D24EF8F6B00A2E5F1 /* icon_link.png in Resources */,
 				FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */,
 				FC44BFC124E71DDB008CD233 /* icon_settings.png in Resources */,
@@ -1320,6 +1327,7 @@
 				FC43A8F524EC46B8005AF9BF /* MaterialItemCollectionView.swift in Sources */,
 				FCF08F6B24F4DA6E0032A629 /* AddItemImageSelectView.swift in Sources */,
 				FC3F481A24F8353300942819 /* ReadyToWearView.swift in Sources */,
+				FC3574BF24F857290067D9A3 /* SelectSizesViewController.swift in Sources */,
 				FC44BFBA24E71345008CD233 /* CustomHeaderView.swift in Sources */,
 				FCB07B1924F0114500A2E5F1 /* StageView.swift in Sources */,
 				FCF08F7B24F5C2160032A629 /* MaterialColorCell.swift in Sources */,

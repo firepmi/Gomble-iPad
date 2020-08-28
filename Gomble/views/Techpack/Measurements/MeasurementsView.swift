@@ -18,6 +18,7 @@ class MeasurementsView: DefaultView {
     @IBOutlet weak var dataView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var tagListViewWidth: NSLayoutConstraint!
     var unit = "cemti"
     var delegate:DefaultViewController?
     var viewHeight:CGFloat = 432
@@ -52,7 +53,17 @@ class MeasurementsView: DefaultView {
     override func initView() {
         tableView.register(UINib(nibName: "MeasurementCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        tagListView.addTags(["XS","S","M","L",])
+        
+        if Testdatabase.sizeRangeData.count == 0 {
+            Testdatabase.sizeRangeData.arrayObject = ["XS","S","M","L",]
+        }
+        tagListView.removeAllTags()
+        for tag in Testdatabase.sizeRangeData.arrayValue {
+            self.tagListView.addTag(tag.stringValue)
+        }
+        tagListViewWidth.constant = tagListView.tagViewWidth
+        tagListView.layoutIfNeeded()
+        tagListView.delegate = self
         measurementData = Testdatabase.measurementData
     }
     @IBAction func onInches(_ sender: Any) {
@@ -69,6 +80,17 @@ class MeasurementsView: DefaultView {
     @IBAction func onAddMeasurement(_ sender: Any) {
         delegate?.openDialog(id: "add_measurement", completion: {
             self.measurementData = Testdatabase.measurementData
+        })
+    }
+    @IBAction func onAddSizeRange(_ sender: Any) {
+        delegate?.openDialog(id: "select_sizes", completion: {
+            self.tagListView.removeAllTags()
+            for tag in Testdatabase.sizeRangeData.arrayValue {
+                self.tagListView.addTag(tag.stringValue)
+            }
+            self.tagListViewWidth.constant = self.tagListView.tagViewWidth
+            self.tagListView.layoutIfNeeded()
+            self.tagListView.delegate = self
         })
     }
 }
@@ -93,5 +115,21 @@ extension MeasurementsView:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
+}
+extension MeasurementsView: TagListViewDelegate {
+    func tagAddedPressed(_ title: String, sender: TagListView) {
+        tagListView.addTag(title)
+    }
+    func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        tagListView.removeTag(title)
+        tagListViewWidth.constant = tagListView.tagViewWidth
+        tagListView.layoutIfNeeded()
+        Testdatabase.sizeRangeData.arrayObject = Testdatabase.sizeRangeData.arrayValue.filter{ $0.stringValue != title}
+    }
+    func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
+        tagListView.removeTag(title)
+        tagListViewWidth.constant = tagListView.tagViewWidth
+        tagListView.layoutIfNeeded()
+        Testdatabase.sizeRangeData.arrayObject = Testdatabase.sizeRangeData.arrayValue.filter{ $0.stringValue != title}
+    }
 }

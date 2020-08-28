@@ -214,6 +214,7 @@ open class TagListView: UIView {
     private(set) var tagBackgroundViews: [UIView] = []
     private(set) var rowViews: [UIView] = []
     private(set) var tagViewHeight: CGFloat = 0
+    var tagViewWidth:CGFloat = 0
     private(set) var rows = 0 {
         didSet {
             invalidateIntrinsicContentSize()
@@ -248,6 +249,7 @@ open class TagListView: UIView {
         var currentRowView: UIView!
         var currentRowTagCount = 0
         var currentRowWidth: CGFloat = 0
+        tagViewWidth = 0
         for (index, tagView) in tagViews.enumerated() {
             tagView.frame.size = tagView.intrinsicContentSize
             tagViewHeight = tagView.frame.height
@@ -278,7 +280,7 @@ open class TagListView: UIView {
             
             currentRowTagCount += 1
             currentRowWidth += tagView.frame.width + marginX
-            
+            tagViewWidth += tagView.frame.width + marginX
             switch alignment {
             case .left:
                 currentRowView.frame.origin.x = 0
@@ -320,6 +322,7 @@ open class TagListView: UIView {
             
             currentRowTagCount += 1
             currentRowWidth += editTagView!.frame.width + marginX
+            tagViewWidth += editTagView!.frame.width + marginX
             
             switch alignment {
             case .left:

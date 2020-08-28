@@ -15,9 +15,11 @@ class AddMeasurementViewController: DefaultDialogViewController {
     
     @IBOutlet weak var titleTextField: RoundedTextField!
     @IBOutlet weak var descriptionTextView: RoundedTextView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     let picker:UIImagePickerController?=UIImagePickerController()
     
+    var tags = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -26,6 +28,10 @@ class AddMeasurementViewController: DefaultDialogViewController {
         view.addGestureRecognizer(tap)
         
         picker?.delegate = self
+        
+        for tag in Testdatabase.sizeRangeData.arrayValue {
+            tags.append(tag.stringValue)
+        }
     }
     
     @IBAction func onAddPhoto(_ sender: Any) {
@@ -149,3 +155,24 @@ extension AddMeasurementViewController: UINavigationControllerDelegate, UIImageP
     }
 }
 
+extension AddMeasurementViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return tags.count;
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "size_cell", for: indexPath as IndexPath)
+
+        let title = cell.viewWithTag(100) as! UILabel
+        title.text = tags[indexPath.row]
+        
+        return cell;
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 91,height: 61)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 8, bottom: 0, right: 8)
+    }
+}

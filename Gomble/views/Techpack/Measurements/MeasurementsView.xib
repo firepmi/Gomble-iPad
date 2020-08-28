@@ -16,6 +16,7 @@
                 <outlet property="tableView" destination="dbX-jp-8Pj" id="kxH-Rt-kG0"/>
                 <outlet property="tableViewHeight" destination="X90-6n-Wez" id="UKC-sT-1h8"/>
                 <outlet property="tagListView" destination="mRC-nM-Uvf" id="cZQ-Tz-Bpn"/>
+                <outlet property="tagListViewWidth" destination="LUK-tt-YNP" id="PGH-11-vx8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -253,9 +254,10 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRC-nM-Uvf" customClass="TagListView" customModule="Gomble" customModuleProvider="target">
-                    <rect key="frame" x="24" y="45" width="824" height="40"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <rect key="frame" x="24" y="45" width="500" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="width" constant="500" id="LUK-tt-YNP"/>
                         <constraint firstAttribute="height" constant="40" id="Zpy-i2-ykc"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
@@ -315,13 +317,23 @@
                         <action selector="onCentimeter:" destination="-1" eventType="touchUpInside" id="TU3-8u-d0E"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKN-lU-3on">
+                    <rect key="frame" x="531" y="45" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="cov-9Q-LlC"/>
+                        <constraint firstAttribute="height" constant="40" id="ksv-jd-kCc"/>
+                    </constraints>
+                    <state key="normal" image="icon_add_big.png"/>
+                    <connections>
+                        <action selector="onAddSizeRange:" destination="-1" eventType="touchUpInside" id="GYy-Uv-7Ia"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.96078431369999995" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
             <constraints>
                 <constraint firstItem="av3-Xz-qZA" firstAttribute="trailing" secondItem="3a6-hz-dbZ" secondAttribute="trailing" id="1Ey-oz-Vlm"/>
                 <constraint firstItem="8v4-Kp-v0J" firstAttribute="top" secondItem="mRC-nM-Uvf" secondAttribute="bottom" constant="24" id="27S-Zr-qFY"/>
                 <constraint firstItem="hQR-y5-jZG" firstAttribute="leading" secondItem="C10-HM-94s" secondAttribute="leading" constant="24" id="3gC-Bi-do8"/>
-                <constraint firstItem="mRC-nM-Uvf" firstAttribute="centerX" secondItem="C10-HM-94s" secondAttribute="centerX" id="3ix-96-U1t"/>
                 <constraint firstItem="hQR-y5-jZG" firstAttribute="centerX" secondItem="C10-HM-94s" secondAttribute="centerX" id="6bG-ig-YSf"/>
                 <constraint firstItem="y8S-Nw-jwO" firstAttribute="leading" secondItem="C10-HM-94s" secondAttribute="leading" constant="24" id="7Xz-lA-AKP"/>
                 <constraint firstItem="mRC-nM-Uvf" firstAttribute="leading" secondItem="y8S-Nw-jwO" secondAttribute="leading" id="Fuv-Zr-Dxv"/>
@@ -332,7 +344,9 @@
                 <constraint firstItem="hQR-y5-jZG" firstAttribute="top" secondItem="Tz2-6D-wI7" secondAttribute="bottom" constant="26" id="Tv8-BO-LPb"/>
                 <constraint firstItem="3a6-hz-dbZ" firstAttribute="leading" secondItem="FoP-JN-TcQ" secondAttribute="trailing" constant="8" id="XB2-i7-ZSQ"/>
                 <constraint firstItem="8v4-Kp-v0J" firstAttribute="leading" secondItem="C10-HM-94s" secondAttribute="leading" constant="24" id="YFU-XJ-rVD"/>
+                <constraint firstItem="GKN-lU-3on" firstAttribute="centerY" secondItem="mRC-nM-Uvf" secondAttribute="centerY" id="YmY-SM-91o"/>
                 <constraint firstItem="av3-Xz-qZA" firstAttribute="bottom" secondItem="FoP-JN-TcQ" secondAttribute="bottom" id="Zdn-3i-shy"/>
+                <constraint firstItem="GKN-lU-3on" firstAttribute="leading" secondItem="mRC-nM-Uvf" secondAttribute="trailing" constant="7" id="ccF-cD-Rfm"/>
                 <constraint firstItem="Pep-Pk-PcR" firstAttribute="top" secondItem="C10-HM-94s" secondAttribute="top" constant="200" id="dCS-PD-8mD"/>
                 <constraint firstItem="av3-Xz-qZA" firstAttribute="leading" secondItem="FoP-JN-TcQ" secondAttribute="leading" id="dHR-ec-NDX"/>
                 <constraint firstItem="p0Y-Es-25c" firstAttribute="top" secondItem="c4j-R7-7eX" secondAttribute="top" id="fY1-7l-q1T"/>
@@ -356,6 +370,7 @@
     <resources>
         <image name="bg_header.png" width="768" height="297"/>
         <image name="icon_add.png" width="16" height="16"/>
+        <image name="icon_add_big.png" width="40" height="40"/>
         <image name="icon_add_dark_grey.png" width="20" height="20"/>
         <image name="icon_import.png" width="20" height="20"/>
         <image name="icon_import_blue.png" width="20" height="20"/>

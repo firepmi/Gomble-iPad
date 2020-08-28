@@ -17,6 +17,7 @@ class Testdatabase {
     public static var measurementData = [JSON]()
     public static var patternData = [JSON]()
     public static var readyToWearData = [JSON]()
+    public static var sizeRangeData = JSON()
     public static let techPackData = [
         ["title":"Summer dress collection", "image":"test1.png"],
         ["title":"Elegant gray dress", "image":"test2.png"],
