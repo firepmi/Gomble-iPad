@@ -26,6 +26,8 @@
 		FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */; };
 		FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */; };
 		FC3574BF24F857290067D9A3 /* SelectSizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */; };
+		FC3574C124F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3574C024F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift */; };
+		FC3574C324F9D4B30067D9A3 /* image_success.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3574C224F9D4B20067D9A3 /* image_success.png */; };
 		FC3F481A24F8353300942819 /* ReadyToWearView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F481924F8353300942819 /* ReadyToWearView.swift */; };
 		FC3F481C24F8357C00942819 /* ReadyToWearView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC3F481B24F8357C00942819 /* ReadyToWearView.xib */; };
 		FC3F481E24F835B400942819 /* ReadyToWearCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3F481D24F835B300942819 /* ReadyToWearCell.swift */; };
@@ -228,6 +230,8 @@
 		FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
 		FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
 		FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSizesViewController.swift; sourceTree = "<group>"; };
+		FC3574C024F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAddedTechpackViewController.swift; sourceTree = "<group>"; };
+		FC3574C224F9D4B20067D9A3 /* image_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_success.png; sourceTree = "<group>"; };
 		FC3F481924F8353300942819 /* ReadyToWearView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToWearView.swift; sourceTree = "<group>"; };
 		FC3F481B24F8357C00942819 /* ReadyToWearView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReadyToWearView.xib; sourceTree = "<group>"; };
 		FC3F481D24F835B300942819 /* ReadyToWearCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadyToWearCell.swift; sourceTree = "<group>"; };
@@ -550,6 +554,7 @@
 		FC5B374624E5849100216DBD /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FC3574C224F9D4B20067D9A3 /* image_success.png */,
 				FC3F482324F84EC900942819 /* icon_add_big.png */,
 				FC69DFF624F6AA2700351D2A /* icon_annotation.png */,
 				FCF08F7E24F5C5CE0032A629 /* btn_color_picker.png */,
@@ -699,6 +704,7 @@
 				FC69E00E24F7618F00351D2A /* AddPatternViewController.swift */,
 				FC3F482124F8412100942819 /* AddReadyToWearViewController.swift */,
 				FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */,
+				FC3574C024F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift */,
 			);
 			path = Designer;
 			sourceTree = "<group>";
@@ -1077,6 +1083,7 @@
 				FC4E968124F3CBEC00EA6221 /* icon_add_grey.png in Resources */,
 				FCB07B1E24F0212200A2E5F1 /* icon_radio_off_grey.png in Resources */,
 				FCF08F3024F3F29C0032A629 /* icon_edit.png in Resources */,
+				FC3574C324F9D4B30067D9A3 /* image_success.png in Resources */,
 				FC3F482424F84EC900942819 /* icon_add_big.png in Resources */,
 				FCB07B0D24EF8F6B00A2E5F1 /* icon_link.png in Resources */,
 				FC44BFBC24E715B8008CD233 /* CustomHeaderView.xib in Resources */,
@@ -1298,6 +1305,7 @@
 				FC12065924E5AE5B00E5F304 /* Common.swift in Sources */,
 				FC69E00B24F7590100351D2A /* PatternCell.swift in Sources */,
 				FCC21F9124E253F900D90C32 /* SceneDelegate.swift in Sources */,
+				FC3574C124F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift in Sources */,
 				FC4CB70A24EBDE0F00FDDEC7 /* CustomerTechpackAboutDesignerViewController.swift in Sources */,
 				FC4CB70624EBDB2600FDDEC7 /* CustomerTechpackOptionsViewController.swift in Sources */,
 				FC803B6124EA283B009D470D /* RoundedLabel.swift in Sources */,

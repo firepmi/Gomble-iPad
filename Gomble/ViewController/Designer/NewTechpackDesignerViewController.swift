@@ -75,6 +75,17 @@ class NewTechpackDesignerViewController: DefaultViewController {
     
     @IBAction func onPreview(_ sender: Any) {
     }
+    
+    @IBAction func onSaveProgress(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func onCreateAndPublish(_ sender: Any) {
+//        Testdatabase.techpacks =
+        openDialog(id: "success_added") {
+            self.onBack()
+        }
+    }
+    
 }
 
 extension NewTechpackDesignerViewController: ExpandableDelegate {
