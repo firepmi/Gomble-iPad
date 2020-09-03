@@ -1,9 +1,13 @@
 ${PODS_ROOT}/Target Support Files/Pods-Gomble-GombleUITests/Pods-Gomble-GombleUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AKImageCropperView/AKImageCropperView.framework
+${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
+${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework
 ${BUILT_PRODUCTS_DIR}/EFColorPicker/EFColorPicker.framework
 ${BUILT_PRODUCTS_DIR}/ExpandableCell/ExpandableCell.framework
 ${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework
+${BUILT_PRODUCTS_DIR}/JGProgressHUD/JGProgressHUD.framework
 ${BUILT_PRODUCTS_DIR}/SideMenu/SideMenu.framework
 ${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework
+${BUILT_PRODUCTS_DIR}/Toast-Swift/Toast_Swift.framework
 ${BUILT_PRODUCTS_DIR}/XLPagerTabStrip/XLPagerTabStrip.framework
 ${BUILT_PRODUCTS_DIR}/iOSDropDown/iOSDropDown.framework

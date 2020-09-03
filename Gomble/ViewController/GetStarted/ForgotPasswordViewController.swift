@@ -23,7 +23,7 @@ class ForgotPasswordViewController: UIViewController {
     }
     @IBAction func onSend(_ sender: Any) {
         if(emailTextField.text == "") {
-            Globals.alert(context: self, title: "Forgot Password", message: "Email is empty", delayed: false)
+            Globals.alert(context: self, title: "Forgot Password", message: "Email is empty")
             return
         }
         performSegue(withIdentifier: "toNewPassword", sender: nil)

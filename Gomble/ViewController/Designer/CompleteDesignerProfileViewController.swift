@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompleteDesignerProfileViewController: DefaultDialogViewController {
+class CompleteDesignerProfileViewController: BaseDialogViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

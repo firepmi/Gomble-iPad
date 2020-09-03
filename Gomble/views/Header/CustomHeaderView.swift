@@ -8,7 +8,7 @@
 
 import UIKit
 @IBDesignable
-class CustomHeaderView: DefaultView {
+class CustomHeaderView: BaseView {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileImageView: RoundedImageView!

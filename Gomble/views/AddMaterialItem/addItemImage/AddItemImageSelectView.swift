@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 @IBDesignable
-class AddItemImageSelectView: DefaultView {
+class AddItemImageSelectView: BaseView {
     
     @IBOutlet weak var imageView: RoundedImageView!
     @IBOutlet weak var emptyView: UIView!

@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 @IBDesignable
-class MeasurementsView: DefaultView {
+class MeasurementsView: BaseView {
     @IBOutlet weak var tagListView: TagListView!
     @IBOutlet weak var iconInches: UIImageView!
     @IBOutlet weak var iconCenti: UIImageView!
@@ -20,7 +20,7 @@ class MeasurementsView: DefaultView {
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tagListViewWidth: NSLayoutConstraint!
     var unit = "cemti"
-    var delegate:DefaultViewController?
+    var delegate:BaseViewController?
     var viewHeight:CGFloat = 432
     let cellID = "measurementCell";
     var onHightChanged : ((CGFloat)->Void)?

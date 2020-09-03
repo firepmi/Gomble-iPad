@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class AddMeasurementViewController: DefaultDialogViewController {
+class AddMeasurementViewController: BaseDialogViewController {
     @IBOutlet weak var addButtonView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     

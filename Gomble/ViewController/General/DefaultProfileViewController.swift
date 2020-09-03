@@ -1,5 +1,5 @@
 //
-//  CustomerProfileViewController.swift
+//  BaseProfileViewController.swift
 //  Gomble
 //
 //  Created by mobileworld on 8/16/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CustomerProfileViewController: DefaultViewController {
+class BaseProfileViewController: DefaultViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

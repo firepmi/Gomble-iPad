@@ -1,5 +1,5 @@
 //
-//  DefaultView.swift
+//  BaseView.swift
 //  Gomble
 //
 //  Created by mobileworld on 8/24/20.
@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class DefaultView: UIView {
+class BaseView: UIView {
     var nibName = ""
 
     var contentView:UIView?

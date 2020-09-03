@@ -8,9 +8,9 @@
 
 import UIKit
 import ExpandableCell
+import SwiftyJSON
 
-
-class NewTechpackDesignerViewController: DefaultViewController {
+class NewTechpackDesignerViewController: BaseViewController {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var previewButtonView: UIView!
     @IBOutlet weak var tableView: ExpandableTableView!
@@ -80,12 +80,14 @@ class NewTechpackDesignerViewController: DefaultViewController {
         dismiss(animated: true, completion: nil)
     }
     @IBAction func onCreateAndPublish(_ sender: Any) {
-//        Testdatabase.techpacks =
+        var json = JSON()
+        json["title"].stringValue = "Summer dress collection"
+        json["image"].stringValue = "test5.png"
+        Testdatabase.techpacks.append(json)
         openDialog(id: "success_added") {
             self.onBack()
         }
-    }
-    
+    }    
 }
 
 extension NewTechpackDesignerViewController: ExpandableDelegate {

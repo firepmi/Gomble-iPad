@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class AddPatternViewController: DefaultDialogViewController {
+class AddPatternViewController: BaseDialogViewController {
     @IBOutlet weak var addButtonView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DesignerMyFoldersViewController: DefaultViewController {
+class DesignerMyFoldersViewController: BaseViewController {
 
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -16,6 +16,7 @@ class DesignerMyFoldersViewController: DefaultViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        Globals.type = "designer"
         type = "designer"
         pathView.setPath(path: ["My folders"])
     }
@@ -31,9 +32,6 @@ class DesignerMyFoldersViewController: DefaultViewController {
             emptyView.isHidden = true
             collectionView.isHidden = false
         }
-    }
-    override func onProfileClicked() {
-        openDialog(id: "complete_profile_designer")
     }
     
     @IBAction func onCreateNewFolder(_ sender: Any) {

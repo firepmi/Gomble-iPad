@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class SelectTypeViewController: UIViewController {
 
@@ -20,12 +21,26 @@ class SelectTypeViewController: UIViewController {
         designerView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)
     }
     @IBAction func onCustomerSelected(_ sender: Any) {
-        let customer = storyboard!.instantiateViewController(withIdentifier: "customer_home")
-        customer.modalPresentationStyle = .fullScreen
-        present(customer, animated: true, completion: nil)
+        APIManager.setType(type: "customer") { json in
+            self.onResult(json: json)
+        }
     }
     @IBAction func onDesignerSelected(_ sender: Any) {
-        let customer = storyboard!.instantiateViewController(withIdentifier: "designer_home")
+        APIManager.setType(type: "designer") { json in
+            self.onResult(json: json)
+        }
+    }
+    func onResult(json:JSON) {
+        if json["success"].boolValue {
+            Globals.type = json["type"].stringValue
+            moveToNext()
+        }
+        else {
+            Globals.alert(context: self, title: "Set Type", message: json["message"].stringValue)
+        }
+    }
+    func moveToNext(){
+        let customer = storyboard!.instantiateViewController(withIdentifier: "\(Globals.type)_home")
         customer.modalPresentationStyle = .fullScreen
         present(customer, animated: true, completion: nil)
     }

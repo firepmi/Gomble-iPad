@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DesignerTechpacksViewController: DefaultViewController {
+class DesignerTechpacksViewController: BaseViewController {
 
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -31,6 +31,7 @@ class DesignerTechpacksViewController: DefaultViewController {
         else {
             emptyView.isHidden = true
             collectionView.isHidden = false
+            collectionView.reloadData()
         }
     }
      
@@ -46,29 +47,32 @@ extension DesignerTechpacksViewController: UICollectionViewDelegate, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "folderCell", for: indexPath as IndexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "techpackCell", for: indexPath as IndexPath)
+
+        let imageName:String = Testdatabase.techpacks[indexPath.row]["image"].stringValue
         
-        let name = cell.viewWithTag(100) as! UILabel
-        name.text = Testdatabase.techpacks[indexPath.row]["name"].stringValue
+        let image = cell.viewWithTag(100) as! UIImageView
+        image.image = UIImage(named: imageName)//techPackData[indexPath.row]["title"]!)
         
-        let description = cell.viewWithTag(101) as! UILabel
-        description.text = Testdatabase.techpacks[indexPath.row]["description"].stringValue
+        let title = cell.viewWithTag(101) as! UILabel
+        title.text = Testdatabase.techpacks[indexPath.row]["title"].stringValue
         
-        let itemCount = cell.viewWithTag(102) as! UILabel
-        itemCount.text = "\(Testdatabase.techpacks[indexPath.row]["items"].arrayValue.count) items"
+        let massView = cell.viewWithTag(104)!
+        massView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)
+        massView.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
         
         return cell;
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        navigateTo(id: "preview_customer")
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let yourWidth:CGFloat = (view.bounds.width-96)/3.0
-        let yourHeight:CGFloat = 190
-        return CGSize(width: yourWidth, height: yourHeight)
+        return CGSize(width: 224, height: 329)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 24, left: 24, bottom: 0, right: 24)
+        let numberofCell = view.frame.size.width / 224
+        let edgeInsets = (view.frame.size.width - (numberofCell * 224)) / (numberofCell + 1)
+        return UIEdgeInsets(top: 0, left: edgeInsets, bottom: 0, right: edgeInsets)
     }
 }
 

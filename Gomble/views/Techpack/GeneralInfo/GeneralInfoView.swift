@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class GeneralInfoView: DefaultView {
+class GeneralInfoView: BaseView {
     @IBOutlet weak var titleTextField: RoundedTextField!
     @IBOutlet weak var tagListView: TagListView!
     @IBOutlet weak var descriptionTextView: RoundedTextView!

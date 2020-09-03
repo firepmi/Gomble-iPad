@@ -10,14 +10,14 @@ import UIKit
 import SwiftyJSON
 
 @IBDesignable
-class SketchesView: DefaultView {
+class SketchesView: BaseView {
     
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var dataView: UIView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
-    var delegate:DefaultViewController?
+    var delegate:BaseViewController?
     var viewHeight:CGFloat = 280
     let cellID = "sketchesTableViewCell";
     var onHightChanged : ((CGFloat)->Void)?

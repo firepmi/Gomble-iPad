@@ -9,12 +9,13 @@
 import UIKit
 
 struct Globals {
-    public static func alert(context: UIViewController, title: String, message: String, delayed: Bool = true) {
+    public static var type = "-"
+    public static func alert(context: UIViewController, title: String, message: String, delayed: Bool = false, completion:(()->Void)? = nil ) {
         if(delayed) {
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (_) in
-
+                    completion?()
                 }))
                 context.present(alert, animated: true, completion: nil)
             }
@@ -22,7 +23,7 @@ struct Globals {
         else {
             let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: { (_) in
-
+                completion?()
             }))
             context.present(alert, animated: true, completion: nil)
         }

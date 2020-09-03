@@ -8,6 +8,7 @@
 
 import UIKit
 import XLPagerTabStrip
+import JGProgressHUD
 
 class SignUpViewController: UIViewController, IndicatorInfoProvider {
     @IBOutlet weak var checkboxImageView: UIImageView!
@@ -43,19 +44,39 @@ class SignUpViewController: UIViewController, IndicatorInfoProvider {
     @IBAction func onCreateAccount(_ sender: Any) {
 //        performSegue(withIdentifier: "toSelectType", sender: nil) //TODO; remove after tested
         if(!isChecked) {
-            Globals.alert(context: self, title: "Sign Up", message: "You should agree to the terms of service to create an account", delayed: false)
+            Globals.alert(context: self, title: "Sign Up", message: "You should agree to the terms of service to create an account")
         }
         else if(emailTextField.text == "" || passwordTextField.text == "" || confirmTextField.text == "") {
-            Globals.alert(context: self, title: "Sign Up", message: "Please fill out all required fields", delayed: false)
+            Globals.alert(context: self, title: "Sign Up", message: "Please fill out all required fields")
         }
         else if(passwordTextField.text!.count < 6) {
-            Globals.alert(context: self, title: "Sign Up", message: "Password required at least 6 letters", delayed: false)
+            Globals.alert(context: self, title: "Sign Up", message: "Password required at least 6 letters")
         }
         else if(passwordTextField.text != confirmTextField.text) {
-            Globals.alert(context: self, title: "Sign Up", message: "Password does not match", delayed: false)
+            Globals.alert(context: self, title: "Sign Up", message: "Password does not match")
         }
         else {
-            performSegue(withIdentifier: "toSelectType", sender: nil)
+            onRegister(email: emailTextField.text!, password: passwordTextField.text!)
+        }
+    }
+    func onRegister(email:String, password:String){
+        var param = [String:String]()
+        param["email"] = email
+        param["password"] = password
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        APIManager.register(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                Globals.alert(context: self, title: "Sign Up", message: "Registered successfully!") {
+                    let pvc = self.parent as! GetStartedViewController
+                    pvc.moveToViewController(at: 0)
+                }
+            }
+            else {
+                Globals.alert(context: self, title: "Sign Up", message: json["message"].stringValue)
+            }
         }
     }
 }

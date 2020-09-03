@@ -30,13 +30,13 @@ class CreateNewPasswordViewController: UIViewController {
     }
     @IBAction func onConfirm(_ sender: Any) {
         if(passwordTextField.text == "" || confirmTextField.text == "" ) {
-            Globals.alert(context: self, title: "Create New Password", message: "Please fill out all required fields", delayed: false)
+            Globals.alert(context: self, title: "Create New Password", message: "Please fill out all required fields")
         }
         else if(passwordTextField.text!.count < 6 ) {
-            Globals.alert(context: self, title: "Create New Password", message: "Password required at least 6 letters", delayed: false)
+            Globals.alert(context: self, title: "Create New Password", message: "Password required at least 6 letters")
         }
         else if(passwordTextField.text != confirmTextField.text) {
-            Globals.alert(context: self, title: "Create New Password", message: "Password does not match", delayed: false)
+            Globals.alert(context: self, title: "Create New Password", message: "Password does not match")
         }
         else {
             closeAll()

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class MaterialQuantityView: DefaultView {
+class MaterialQuantityView: BaseView {
     override func setNibName() {
         nibName = "MaterialQuantityView"
     }

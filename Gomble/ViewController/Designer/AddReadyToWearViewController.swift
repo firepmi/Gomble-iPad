@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class AddReadyToWearViewController: DefaultDialogViewController {
+class AddReadyToWearViewController: BaseDialogViewController {
     @IBOutlet weak var addButtonView: UIView!
     @IBOutlet weak var imageView: UIImageView!
     

@@ -1,5 +1,5 @@
 //
-//  DefaultDialogViewController.swift
+//  BaseDialogViewController.swift
 //  Gomble
 //
 //  Created by mobileworld on 8/20/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DefaultDialogViewController: UIViewController {
+class BaseDialogViewController: UIViewController {
 
     var completion: (()->Void)?
     

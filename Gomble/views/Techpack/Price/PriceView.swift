@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class PriceView: DefaultView {
+class PriceView: BaseView {
     override func setNibName() {
         nibName = "PriceView"
     }

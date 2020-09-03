@@ -10,7 +10,7 @@ import UIKit
 import SwiftyJSON
 
 @IBDesignable
-class CollaborationView: DefaultView {            
+class CollaborationView: BaseView {            
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var inviteTextField: RoundedTextField!

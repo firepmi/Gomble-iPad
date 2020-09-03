@@ -1,46 +1,63 @@
 PODS:
   - AKImageCropperView (2.0.0)
+  - Alamofire (5.2.2)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
   - EFColorPicker (5.2.0)
   - ExpandableCell (1.3.0)
   - ImageSlideshow (1.9.1):
     - ImageSlideshow/Core (= 1.9.1)
   - ImageSlideshow/Core (1.9.1)
   - iOSDropDown (0.3.4)
+  - JGProgressHUD (2.1)
   - SideMenu (6.4.8)
   - SwiftyJSON (5.0.0)
+  - Toast-Swift (5.0.1)
   - XLPagerTabStrip (9.0.0)
 
 DEPENDENCIES:
   - AKImageCropperView
+  - Alamofire
+  - AlamofireImage
   - EFColorPicker
   - ExpandableCell
   - ImageSlideshow
   - iOSDropDown
+  - JGProgressHUD
   - SideMenu
   - SwiftyJSON
+  - Toast-Swift
   - XLPagerTabStrip
 
 SPEC REPOS:
   trunk:
     - AKImageCropperView
+    - Alamofire
+    - AlamofireImage
     - EFColorPicker
     - ExpandableCell
     - ImageSlideshow
     - iOSDropDown
+    - JGProgressHUD
     - SideMenu
     - SwiftyJSON
+    - Toast-Swift
     - XLPagerTabStrip
 
 SPEC CHECKSUMS:
   AKImageCropperView: 9c80fd45512daa69426161ad51c248655c1b5182
+  Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
   EFColorPicker: ac692380016b47ad0e61706a910fc1414214a760
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
   ImageSlideshow: 67184be896a28472bd3b906c33ce4e0734aa3d22
   iOSDropDown: c10a761f9a00c3f1cc9d3bce43ae504628e2f692
+  JGProgressHUD: aa403e9a5b45cae98903c4600cccdd98c0c3ec90
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 4b756ef92b9c3d82fff54c2ec13fc606c87b45de
+PODFILE CHECKSUM: 524422978d97b7907a97b48b3fb5438e4cecaf9f
 
 COCOAPODS: 1.9.3

@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class FactoryView: DefaultView {
+class FactoryView: BaseView {
     override func setNibName() {
         nibName = "FactoryView"
     }

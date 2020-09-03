@@ -9,12 +9,13 @@
 import UIKit
 import SideMenu
 
-class CustomerHomeViewController: DefaultViewController {
+class CustomerHomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         type = "customer"
+        Globals.type = "customer"
         pathView.setPath(path: ["Products"])
     }
 }

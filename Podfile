@@ -14,6 +14,10 @@ pod 'SwiftyJSON'
 pod 'iOSDropDown'
 pod 'ExpandableCell'
 pod 'AKImageCropperView'
+pod 'Alamofire'
+pod 'AlamofireImage'
+pod 'JGProgressHUD'
+pod 'Toast-Swift'
 
   target 'GombleTests' do
     inherit! :search_paths
@@ -24,4 +28,14 @@ pod 'AKImageCropperView'
     # Pods for testing
   end
 
+end
+
+DEFAULT_SWIFT_VERSION = '5.0'
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['SWIFT_VERSION'] = DEFAULT_SWIFT_VERSION
+    end
+  end
 end

@@ -10,7 +10,7 @@ import UIKit
 import ImageSlideshow
 import XLPagerTabStrip
 
-class CustomerTechpackPreviewViewController: DefaultViewController {
+class CustomerTechpackPreviewViewController: BaseViewController {
 
     @IBOutlet weak var slideshow: ImageSlideshow!
     @IBOutlet weak var tagListView: TagListView!

@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class SelectSizesViewController: DefaultDialogViewController {
+class SelectSizesViewController: BaseDialogViewController {
     @IBOutlet weak var selectedTagListView: TagListView!
     @IBOutlet weak var unSelectedTagListView: TagListView!
     

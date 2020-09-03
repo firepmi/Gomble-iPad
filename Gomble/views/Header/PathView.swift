@@ -8,7 +8,7 @@
 
 import UIKit
 @IBDesignable
-class PathView: DefaultView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+class PathView: BaseView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     @IBOutlet weak var collectionView: UICollectionView!
     
     var delegate:PathViewDelegate!

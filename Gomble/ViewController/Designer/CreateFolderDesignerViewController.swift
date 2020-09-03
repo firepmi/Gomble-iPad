@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class CreateFolderDesignerViewController: DefaultDialogViewController {
+class CreateFolderDesignerViewController: BaseDialogViewController {
 
     @IBOutlet weak var folderNameLabel: RoundedTextField!
     @IBOutlet weak var descriptionTextView: RoundedTextView!

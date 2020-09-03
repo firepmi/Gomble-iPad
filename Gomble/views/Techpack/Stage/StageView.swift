@@ -8,7 +8,7 @@
 
 import UIKit
 @IBDesignable
-class StageView: DefaultView {
+class StageView: BaseView {
     var selectedColor = UIColor.init(hexString:"#4B62FF")
     
     @IBOutlet weak var ideaView: RoundedView!

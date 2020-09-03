@@ -1,5 +1,5 @@
 //
-//  DefaultViewController.swift
+//  BaseViewController.swift
 //  Gomble
 //
 //  Created by mobileworld on 8/16/20.
@@ -9,10 +9,10 @@
 import UIKit
 import SideMenu
 
-class DefaultViewController: UIViewController {
+class BaseViewController: UIViewController {
     @IBOutlet weak var customHeaderView: CustomHeaderView!
     @IBOutlet weak var pathView: PathView!
-    var type = "customer"
+    var type = Globals.type
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -36,7 +36,7 @@ class DefaultViewController: UIViewController {
         present(sideMenu, animated: true, completion: nil)
     }
     func openDialog(id:String, completion: (()->Void)? = nil) {
-        let vc = storyboard!.instantiateViewController(withIdentifier: id) as! DefaultDialogViewController
+        let vc = storyboard!.instantiateViewController(withIdentifier: id) as! BaseDialogViewController
                 
         vc.modalPresentationStyle = .overFullScreen
         vc.completion = completion
@@ -62,12 +62,13 @@ class DefaultViewController: UIViewController {
         print("notification")
     }
     func onProfileClicked(){
-        if type == "designer" {
-            openDialog(id: "complete_profile_designer")
-        }
-        else {
-            navigateTo(id: "profile_customer")
-        }
+        navigateTo(id: "profile", "Profile")
+//        if type == "designer" {
+//            openDialog(id: "complete_profile_designer")
+//        }
+//        else {
+//            navigateTo(id: "profile")
+//        }
     }
     func onSettingsClicked(){
         print("settings")
@@ -82,7 +83,7 @@ class DefaultViewController: UIViewController {
     }
 }
 
-extension DefaultViewController: CustomHeaderViewDelegate {
+extension BaseViewController: CustomHeaderViewDelegate {
     func customHeaderView(_ customerHeaderView: CustomHeaderView, clicked index: Int) {
         switch index {
         case 0: onMenuClicked()
@@ -94,7 +95,7 @@ extension DefaultViewController: CustomHeaderViewDelegate {
         }
     }
 }
-extension DefaultViewController: PathViewDelegate {
+extension BaseViewController: PathViewDelegate {
     func pathView(_ pathView: PathView, clicked index: Int) {
         print("selected path \(index)")
     }

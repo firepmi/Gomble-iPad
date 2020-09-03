@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class SuccessAddedTechpackViewController: DefaultDialogViewController {
+class SuccessAddedTechpackViewController: BaseDialogViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

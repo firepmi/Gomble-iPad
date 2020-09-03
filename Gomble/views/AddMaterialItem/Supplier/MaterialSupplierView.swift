@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class MaterialSupplierView: DefaultView {
+class MaterialSupplierView: BaseView {
     override func setNibName() {
         nibName = "MaterialSupplierView"
     }

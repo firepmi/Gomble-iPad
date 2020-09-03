@@ -9,7 +9,7 @@
 import UIKit
 import SwiftyJSON
 
-class AddSketchDialogViewController: DefaultDialogViewController {
+class AddSketchDialogViewController: BaseDialogViewController {
 
 
     @IBOutlet weak var addButtonView: UIView!

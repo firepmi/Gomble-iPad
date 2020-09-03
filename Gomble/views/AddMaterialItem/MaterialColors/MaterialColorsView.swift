@@ -11,7 +11,7 @@ import SwiftyJSON
 import EFColorPicker
 
 @IBDesignable
-class MaterialColorsView: DefaultView {
+class MaterialColorsView: BaseView {
     var delegate:UIViewController?
     @IBOutlet weak var tableView: UITableView!
     var selectedColor = UIColor.red

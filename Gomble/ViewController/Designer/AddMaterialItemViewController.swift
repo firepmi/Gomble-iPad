@@ -10,7 +10,7 @@ import UIKit
 import ExpandableCell
 import SwiftyJSON
 
-class AddMaterialItemViewController: DefaultDialogViewController {
+class AddMaterialItemViewController: BaseDialogViewController {
     let categoryCells = [
         "image_cell",
         "general_info_cell",

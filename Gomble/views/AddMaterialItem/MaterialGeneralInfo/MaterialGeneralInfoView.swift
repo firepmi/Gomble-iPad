@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-class MaterialGeneralInfoView: DefaultView {
+class MaterialGeneralInfoView: BaseView {
     @IBOutlet weak var titleTextField: RoundedTextField!
     @IBOutlet weak var placementTextField: RoundedTextField!
     @IBOutlet weak var tagListView: TagListView!
