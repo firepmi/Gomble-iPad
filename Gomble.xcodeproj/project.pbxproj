@@ -328,6 +328,7 @@
 		FC97D4F724ED967200E30158 /* icon_add_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_add_white.png; sourceTree = "<group>"; };
 		FC97D4F924ED987E00E30158 /* DesignerSideMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignerSideMenuViewController.swift; sourceTree = "<group>"; };
 		FC97D4FB24EDA95500E30158 /* CompleteDesignerProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteDesignerProfileViewController.swift; sourceTree = "<group>"; };
+		FC9E20B52502791500223504 /* Gomble.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Gomble.entitlements; sourceTree = "<group>"; };
 		FCA4CF572500858300C9913A /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		FCB07B0824EF828C00A2E5F1 /* CollaborationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollaborationView.swift; sourceTree = "<group>"; };
 		FCB07B0A24EF82B700A2E5F1 /* CollaborationView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollaborationView.xib; sourceTree = "<group>"; };
@@ -712,14 +713,14 @@
 			path = Designer;
 			sourceTree = "<group>";
 		};
-		FC97D4F224ED7A1800E30158 /* General */ = {
+		FC97D4F224ED7A1800E30158 /* Base */ = {
 			isa = PBXGroup;
 			children = (
 				FC803B6224EA496C009D470D /* BaseViewController.swift */,
 				FC50826424EED3DE0034D032 /* BaseDialogViewController.swift */,
 				FC803B5224EA1FC7009D470D /* BaseProfileViewController.swift */,
 			);
-			path = General;
+			path = Base;
 			sourceTree = "<group>";
 		};
 		FCB07B0724EF7F7400A2E5F1 /* Techpack */ = {
@@ -793,6 +794,7 @@
 		FCC21F8D24E253F900D90C32 /* Gomble */ = {
 			isa = PBXGroup;
 			children = (
+				FC9E20B52502791500223504 /* Gomble.entitlements */,
 				FC5B374524E5848600216DBD /* resources */,
 				FCC21F8E24E253F900D90C32 /* AppDelegate.swift */,
 				FCC21F9024E253F900D90C32 /* SceneDelegate.swift */,
@@ -830,7 +832,7 @@
 		FCC21FC024E37ED500D90C32 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				FC97D4F224ED7A1800E30158 /* General */,
+				FC97D4F224ED7A1800E30158 /* Base */,
 				FC97D4EF24ED70B500E30158 /* Designer */,
 				FCF374CA24E6CFE20035B84D /* Customer */,
 				FCF374C924E6CFC10035B84D /* GetStarted */,
@@ -1535,6 +1537,7 @@
 			baseConfigurationReference = 85E718CDDD24CC65D2649B15 /* Pods-Gomble.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gomble/Gomble.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JUHFG93YM;
 				INFOPLIST_FILE = Gomble/Info.plist;
@@ -1543,7 +1546,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.gomble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Gomble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1555,6 +1558,7 @@
 			baseConfigurationReference = 1393FAB4854DF85E8E1C3250 /* Pods-Gomble.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Gomble/Gomble.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7JUHFG93YM;
 				INFOPLIST_FILE = Gomble/Info.plist;
@@ -1563,7 +1567,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.app.gomble;
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.Gomble;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

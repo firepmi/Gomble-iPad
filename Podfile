@@ -18,6 +18,8 @@ pod 'Alamofire'
 pod 'AlamofireImage'
 pod 'JGProgressHUD'
 pod 'Toast-Swift'
+pod 'SDWebImage'
+pod 'FBSDKLoginKit'
 
   target 'GombleTests' do
     inherit! :search_paths

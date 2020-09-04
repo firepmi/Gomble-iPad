@@ -33,6 +33,12 @@ class CustomHeaderView: BaseView {
     override func initView() {
         titleLabel.text = title
         profileImageView.image = profileImage
+        APIManager.basicProfile { json in
+            if json["success"].boolValue {
+                let imageUrl = APIManager.fullUserImagePath(name: json["res","image"].stringValue)
+                self.profileImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "profile-anonymous.jpg"))
+            }
+        }
     }
     
     @IBAction func onMenuClicked(_ sender: Any) {
