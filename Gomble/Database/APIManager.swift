@@ -10,12 +10,27 @@ import Alamofire
 import SwiftyJSON
 
 class APIManager {
-//    public static let rootUrl = "http://192.168.1.238:5000/"
-    public static let rootUrl = "http://18.219.54.224:5000/"
+    public static let rootUrl = "http://192.168.1.238:5000/"
+//    public static let rootUrl = "http://18.219.54.224:5000/"
     public static let apiUrl = "\(rootUrl)api/"
     public static let imageUrl = "\(rootUrl)public/uploads/"
     public static var token = ""
     
+    static func saveToken(){
+        if token != "" {
+            UserDefaults.standard.set(token, forKey: "token")
+        }
+    }
+    static func loadToken() -> Bool {
+        if UserDefaults.standard.string(forKey: "token") != nil {
+            token = UserDefaults.standard.string(forKey: "token")!
+            return true
+        }
+        return false
+    }
+    static func clearToken() {
+        UserDefaults.standard.set("", forKey: "token")
+    }
     static func fullUserImagePath(name:String) -> String {
         return "\(imageUrl)users/\(name)"
     }
@@ -35,6 +50,9 @@ class APIManager {
     static func basicProfile(completion:((JSON)->Void)?) {
         post(url: "users/basic-profile", param: nil, completion: completion)
     }
+    static func type(completion:((JSON)->Void)?) {
+        post(url: "users/type", param: nil, completion: completion)
+    }
     static func updateProfile(param:[String:String], completion:((JSON)->Void)?) {
         post(url: "users/update-profile", param: param, completion: completion)
     }
@@ -46,6 +64,12 @@ class APIManager {
     }
     static func applelogin(param:[String:String], completion:((JSON)->Void)?) {
         post(url: "auth/applelogin", param: param, completion: completion)
+    }
+    static func getFolders(completion:((JSON)->Void)?) {
+        post(url: "folders", param: nil, completion: completion)
+    }
+    static func createFolder(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "folders/create", param: param, completion: completion)
     }
     static func post(url: String, param:[String:String]?, completion:((JSON)->Void)?) {
         let link = apiUrl + url

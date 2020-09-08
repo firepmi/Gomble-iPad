@@ -25,15 +25,30 @@ class SignInViewController: UIViewController, IndicatorInfoProvider {
         view.addGestureRecognizer(tap)
         
         passwordTextField.textContentType = .oneTimeCode
+                
+        if APIManager.loadToken() {
+            let hud = JGProgressHUD(style: .dark)
+            hud.textLabel.text = "Please wait..."
+            hud.show(in: self.view)
+            APIManager.type { json in
+                hud.dismiss()
+                if json["success"].boolValue {
+                    var vc_id = "select_type"
+                    if json["res","type"].stringValue != "-" {
+                        vc_id = json["res","type"].stringValue + "_home"
+                    }
+                    self.goToVC(id: vc_id)
+                }
+                else {
+                    print(json["message"].stringValue)
+                }
+            }
+        }
     }
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return itemInfo
     }
     @IBAction func onLogin(_ sender: Any) {
-        //TODO: remove after tested
-//        let customer = storyboard!.instantiateViewController(withIdentifier: "designer_home")
-//        customer.modalPresentationStyle = .fullScreen
-//        present(customer, animated: true, completion: nil)
         if(emailTextField.text == "" || passwordTextField.text == "") {
             Globals.alert(context: self, title: "Sign In", message: "Please fill out all required fields")
             return
@@ -53,6 +68,7 @@ class SignInViewController: UIViewController, IndicatorInfoProvider {
             hud.dismiss()
             if json["success"].boolValue {
                 APIManager.token = json["token"].stringValue
+                APIManager.saveToken();
                 
                 var vc_id = "select_type"
                 if json["type"].stringValue != "-" {
@@ -61,7 +77,6 @@ class SignInViewController: UIViewController, IndicatorInfoProvider {
                 self.goToVC(id: vc_id)
             }
             else {
-//                self.view.makeToast(json["message"].stringValue)
                 Globals.alert(context: self, title: "Sign In", message: json["message"].stringValue)
             }
         }

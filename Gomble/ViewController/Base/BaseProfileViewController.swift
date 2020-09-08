@@ -37,14 +37,20 @@ class BaseProfileViewController: BaseViewController {
         getData()
     }
     func getData(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
         APIManager.getProfile { json in
             print(json)
-            if json["res","first_name"].string == nil && Globals.type == "designer" {
-                self.openDialog(id: "complete_profile_designer") {
-                    self.getData()
+            hud.dismiss()
+            if json["success"].boolValue {
+                if json["res","first_name"].string == nil && Globals.type == "designer" {
+                    self.openDialog(id: "complete_profile_designer") {
+                        self.getData()
+                    }
                 }
+                self.loadData(json: json["res"])
             }
-            self.loadData(json: json["res"])
         }
     }
     func loadData(json:JSON){

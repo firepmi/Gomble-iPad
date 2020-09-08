@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import JGProgressHUD
 
 class CreateFolderDesignerViewController: BaseDialogViewController {
 
@@ -32,14 +33,22 @@ class CreateFolderDesignerViewController: BaseDialogViewController {
         else {
             folderNameLabel.borderColor = UIColor.init(hexString:"#D7E1EC")
         }
-        var json = JSON()
-        json["name"].string = folderNameLabel.text!
-        json["description"].string = descriptionTextView.text
-        Testdatabase.folders.append(json)
-        if (completion != nil) {
-            completion!()
+        var param = [String:String]()
+        param["name"] = folderNameLabel.text!
+        param["description"] = descriptionTextView.text
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        APIManager.createFolder(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.completion?()
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                Globals.alert(context: self, title: "Folders", message: json["message"].stringValue)
+            }
         }
-        dismiss(animated: true, completion: nil)
     }
 }
 extension CreateFolderDesignerViewController: UITextFieldDelegate {
