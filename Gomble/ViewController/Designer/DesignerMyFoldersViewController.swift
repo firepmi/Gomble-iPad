@@ -38,7 +38,6 @@ class DesignerMyFoldersViewController: BaseViewController {
                 self.refreshView()
             }
             else {
-//                Globals.alert(context: self, title: "Folders", message: json["message"].stringValue)
                 self.view.makeToast(json["message"].stringValue)
             }
         }

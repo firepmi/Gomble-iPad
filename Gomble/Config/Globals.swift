@@ -11,6 +11,7 @@ import UIKit
 struct Globals {
     public static var type = "-"
     public static var folderID = ""
+    public static var techpackID = ""
     public static func alert(context: UIViewController, title: String, message: String, delayed: Bool = false, completion:(()->Void)? = nil ) {
         if(delayed) {
             DispatchQueue.main.asyncAfter(deadline: .now()+1) {

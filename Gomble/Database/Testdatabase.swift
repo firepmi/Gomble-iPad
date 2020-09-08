@@ -10,7 +10,6 @@ import UIKit
 import SwiftyJSON
 
 class Testdatabase {
-    public static var techpacks = [JSON]()
     public static var sketchData = [JSON]()
     public static var materialData = [JSON]()
     public static var measurementData = [JSON]()

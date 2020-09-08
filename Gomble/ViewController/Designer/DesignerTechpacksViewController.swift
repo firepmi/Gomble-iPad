@@ -7,12 +7,16 @@
 //
 
 import UIKit
+import JGProgressHUD
+import SwiftyJSON
 
 class DesignerTechpacksViewController: BaseViewController {
 
     @IBOutlet weak var emptyView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    var techpacks = [JSON]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +25,27 @@ class DesignerTechpacksViewController: BaseViewController {
         titleLabel.text = PathView.pathData.last
     }
     override func viewDidAppear(_ animated: Bool) {
-        refreshView()
+        getData()
+    }
+    func getData(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        var param = [String:String]()
+        param["folder_id"] = Globals.folderID
+        APIManager.getTechpacks(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.techpacks = json["res"].arrayValue
+                self.refreshView()
+            }
+            else {
+                self.view.makeToast(json["message"].stringValue)
+            }
+        }
     }
     func refreshView() {
-        if(Testdatabase.techpacks.count == 0) {
+        if(techpacks.count == 0) {
             emptyView.isHidden = false
             collectionView.isHidden = true
         }
@@ -42,20 +63,20 @@ class DesignerTechpacksViewController: BaseViewController {
 
 extension DesignerTechpacksViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Testdatabase.techpacks.count;
+        return techpacks.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "techpackCell", for: indexPath as IndexPath)
 
-        let imageName:String = Testdatabase.techpacks[indexPath.row]["image"].stringValue
+        let imageName:String = techpacks[indexPath.row]["image"].stringValue
         
         let image = cell.viewWithTag(100) as! UIImageView
         image.image = UIImage(named: imageName)//techPackData[indexPath.row]["title"]!)
         
         let title = cell.viewWithTag(101) as! UILabel
-        title.text = Testdatabase.techpacks[indexPath.row]["title"].stringValue
+        title.text = techpacks[indexPath.row]["title"].stringValue
         
         let massView = cell.viewWithTag(104)!
         massView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)

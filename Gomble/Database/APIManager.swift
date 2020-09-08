@@ -71,6 +71,12 @@ class APIManager {
     static func createFolder(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "folders/create", param: param, completion: completion)
     }
+    static func getTechpacks(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "techpacks", param: param, completion: completion)
+    }
+    static func getDraft(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "techpacks/draft", param: param, completion: completion)
+    }
     static func post(url: String, param:[String:String]?, completion:((JSON)->Void)?) {
         let link = apiUrl + url
         print(link)
