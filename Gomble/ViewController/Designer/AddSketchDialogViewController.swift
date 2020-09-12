@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyJSON
+import Alamofire
+import JGProgressHUD
 
 class AddSketchDialogViewController: BaseDialogViewController {
 
@@ -21,6 +23,7 @@ class AddSketchDialogViewController: BaseDialogViewController {
     var tags = [String]()
     
     let picker:UIImagePickerController?=UIImagePickerController()
+    var isImageUpdated = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,16 +65,45 @@ class AddSketchDialogViewController: BaseDialogViewController {
         else {
             titleTextField.borderColor = UIColor.init(hexString:"#D7E1EC")
         }
-        var json = JSON()
-        json["title"].string = titleTextField.text!
-        json["description"].string = descriptionTextView.text
-        json["tags"].arrayObject = tags
         
-        Testdatabase.sketchData.append(json)
-        if (completion != nil) {
-            completion!()
+        let multipartFormData = MultipartFormData()
+        var tagStr = ""
+        for tag in tags {
+            tagStr = tagStr + tag + ","
         }
-        dismiss(animated: true, completion: nil)
+        tagStr = tagStr[0..<tagStr.count-1]
+        let title = titleTextField.text!
+        let description = descriptionTextView.text!
+        
+        if title != "" {
+            multipartFormData.append(title.data(using: .utf8, allowLossyConversion: false)!, withName: "title")
+        }
+        if description != "" {
+            multipartFormData.append(description.data(using: .utf8, allowLossyConversion: false)!, withName: "description")
+        }
+        if tagStr != "" {
+            multipartFormData.append(tagStr.data(using: .utf8, allowLossyConversion: false)!, withName: "tags")
+        }
+        multipartFormData.append(Globals.techpackID.data(using: .utf8, allowLossyConversion: false)!, withName: "techpack_id")
+        if isImageUpdated {
+            multipartFormData.append((imageView.image!.jpegData(compressionQuality: 1))!, withName: "image",fileName: "generalinfo.jpg", mimeType: "image/jpg")
+        }
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        APIManager.addSketch(param: multipartFormData, uploadProgress: { progress in
+            print(progress)
+        }) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                print(json["message"].stringValue)
+                self.completion?()
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                self.view.makeToast(json["message"].stringValue)
+            }
+        }
         
     }
 }
@@ -139,6 +171,7 @@ extension AddSketchDialogViewController: UINavigationControllerDelegate, UIImage
         print("cropped")
         imageView.image = image
         addButtonView.isHidden = true
+        isImageUpdated = true
     }
     func openCamera()
     {

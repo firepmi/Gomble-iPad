@@ -16,7 +16,6 @@ class NewTechpackDesignerViewController: BaseViewController {
     @IBOutlet weak var previewButtonView: UIView!
     @IBOutlet weak var tableView: ExpandableTableView!
         
-    var techpackId = ""
     let categoryCells = [
         "collaboration_cell",
          "stage_cell",
@@ -53,6 +52,17 @@ class NewTechpackDesignerViewController: BaseViewController {
         330, //Price
         330, //Ready to wear product
     ]
+    var currentIndex = 0
+    var stageView: StageView?
+    var generalInfoView: GeneralInfoView?
+    var sketchesView: SketchesView?
+    var materialView: MaterialView?
+    var measurementsView: MeasurementsView?
+    var patternView: PatternView?
+    var factoryView: FactoryView?
+    var priceView: PriceView?
+    var readyToWearView: ReadyToWearView?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -91,17 +101,33 @@ class NewTechpackDesignerViewController: BaseViewController {
     
     @IBAction func onPreview(_ sender: Any) {
     }
-    
+    func updateData() {
+        stageView?.updateData()
+        generalInfoView?.updateData()
+        priceView?.updateData()
+    }
     @IBAction func onSaveProgress(_ sender: Any) {
+        updateData()
         self.onBack()
     }
     @IBAction func onCreateAndPublish(_ sender: Any) {
-        var json = JSON()
-//        json["title"].stringValue = "Summer dress collection"
-//        json["image"].stringValue = "test5.png"
-//        Testdatabase.techpacks.append(json)
-        openDialog(id: "success_added") {
-            self.onBack()
+        updateData()
+    
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.publishTechpack(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.openDialog(id: "success_added") {
+                    self.onBack()
+                }
+            }
+            else {
+                Globals.alert(context: self, title: "New Techpack", message: json["message"].stringValue)
+            }
         }
     }    
 }
@@ -110,13 +136,15 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
     func expandableTableView(_ expandableTableView: ExpandableTableView, expandedCellsForRowAt indexPath: IndexPath) -> [UITableViewCell]? {
         let cell = tableView.dequeueReusableCell(withIdentifier: categoryCells[indexPath.row])
         switch indexPath.row {
+        case 1:
+            stageView = cell?.viewWithTag(100) as? StageView
         case 2:
-            let view = cell?.viewWithTag(100) as! GeneralInfoView
-            view.delegate = self
+            generalInfoView = cell?.viewWithTag(100) as? GeneralInfoView
+            generalInfoView!.delegate = self
         case 3:
-            let view = cell?.viewWithTag(100) as! SketchesView
-            view.delegate = self
-            view.onHightChanged = { height in
+            sketchesView = cell?.viewWithTag(100) as? SketchesView
+            sketchesView!.delegate = self
+            sketchesView!.onHightChanged = { height in
                 self.categoryHeights[3] = height
                 self.tableView.close(at: IndexPath(row: 3, section: 0))
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -124,9 +152,9 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
                 }
             }
         case 4:
-            let view = cell?.viewWithTag(100) as! MaterialView
-            view.delegate = self
-            view.onHightChanged = { height in
+            materialView = cell?.viewWithTag(100) as? MaterialView
+            materialView!.delegate = self
+            materialView!.onHightChanged = { height in
                 self.categoryHeights[4] = height
                 self.tableView.close(at: IndexPath(row: 4, section: 0))
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -134,9 +162,9 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
                 }
             }
         case 5:
-            let view = cell?.viewWithTag(100) as! MeasurementsView
-            view.delegate = self
-            view.onHightChanged = { height in
+            measurementsView = cell?.viewWithTag(100) as? MeasurementsView
+            measurementsView!.delegate = self
+            measurementsView!.onHightChanged = { height in
                 self.categoryHeights[5] = height
                 self.tableView.close(at: IndexPath(row: 5, section: 0))
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -144,19 +172,23 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
                 }
             }
         case 6:
-            let view = cell?.viewWithTag(100) as! PatternView
-            view.delegate = self
-            view.onHightChanged = { height in
+            patternView = cell?.viewWithTag(100) as? PatternView
+            patternView!.delegate = self
+            patternView!.onHightChanged = { height in
                 self.categoryHeights[6] = height
                 self.tableView.close(at: IndexPath(row: 6, section: 0))
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.tableView.open(at: IndexPath(row: 6, section: 0))
                 }
             }
+        case 7:
+            factoryView = cell?.viewWithTag(100) as? FactoryView
+        case 8:
+            priceView = cell?.viewWithTag(100) as? PriceView
         case 9:
-            let view = cell?.viewWithTag(100) as! ReadyToWearView
-            view.delegate = self
-            view.onHightChanged = { height in
+            readyToWearView = cell?.viewWithTag(100) as? ReadyToWearView
+            readyToWearView?.delegate = self
+            readyToWearView?.onHightChanged = { height in
                 self.categoryHeights[9] = height
                 self.tableView.close(at: IndexPath(row: 9, section: 0))
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
@@ -186,6 +218,7 @@ extension NewTechpackDesignerViewController: ExpandableDelegate {
 //    func expandableTableView(_ expandableTableView: ExpandableTableView, didSelectExpandedRowAt indexPath: IndexPath) {
 ////        print("didSelectExpandedRowAt:\(indexPath)")
 //    }
+    
     func expandableTableView(_ expandableTableView: ExpandableTableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             guard let cellFirst = expandableTableView.dequeueReusableCell(withIdentifier: "title_cell_first") as? ExpandableInitiallyExpanded else { return UITableViewCell() }

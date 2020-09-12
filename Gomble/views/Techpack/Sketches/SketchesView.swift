@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftyJSON
+import JGProgressHUD
 
 @IBDesignable
 class SketchesView: BaseView {
@@ -19,9 +20,9 @@ class SketchesView: BaseView {
     
     var delegate:BaseViewController?
     var viewHeight:CGFloat = 280
-    let cellID = "sketchesTableViewCell";
+    let cellID = "sketchesTableViewCell"
     var onHightChanged : ((CGFloat)->Void)?
-    var sketchesData:[JSON] = Testdatabase.sketchData {
+    var sketchesData:[JSON] = [] {
         didSet {
             tableView.reloadData()
             tableView.layoutIfNeeded()
@@ -50,12 +51,28 @@ class SketchesView: BaseView {
     override func initView() {
         tableView.register(UINib(nibName: "SketchesTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        sketchesData = Testdatabase.sketchData
+        self.getData()
     }
     @IBAction func onAddSketch(_ sender: Any) {
         delegate?.openDialog(id: "add_sketch", completion: {
-            self.sketchesData = Testdatabase.sketchData
+            self.getData()
         })
+    }
+    func getData(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self)
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getSketches(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.sketchesData = json["res"].arrayValue
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
     }
 }
 extension SketchesView:UITableViewDelegate, UITableViewDataSource {
@@ -69,7 +86,11 @@ extension SketchesView:UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         
         let data = sketchesData[indexPath.row]
-        
+        if (data["image"].string != nil) {
+            let imageUrl = "\(APIManager.imageUrl)sketches/\(data["image"].stringValue)"
+            print(imageUrl)
+            cell.sketchimageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "test_sketch.png"))
+        }
         cell.titleLabel.text = data["title"].stringValue
         cell.descriptionLabel.text = data["description"].stringValue
         cell.tagView.removeAllTags()

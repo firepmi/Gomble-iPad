@@ -123,13 +123,13 @@ extension ExpandableTableView: UITableViewDataSource, UITableViewDelegate {
     }
     
     private func close(indexPath: IndexPath) {
+        expandableDelegate?.expandableTableView(self, didCloseRowAt: indexPath)
         expandableProcessor.delete(indexPath: indexPath)
         guard let indexPaths = closeIndexPaths(indexPath: indexPath) else { return }
         self.deleteRows(at: indexPaths, with: animation)
         
         guard let cell = self.cellForRow(at: indexPath) as? ExpandableCell else { return }
         cell.close()
-
     }
     
     private func closeIndexPaths(indexPath: IndexPath) -> [IndexPath]? {

@@ -25,6 +25,8 @@
 		FC12066624E5DADA00E5F304 /* bg_header.png in Resources */ = {isa = PBXBuildFile; fileRef = FC12066524E5DADA00E5F304 /* bg_header.png */; };
 		FC12066924E5DDB500E5F304 /* Gilroy-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */; };
 		FC12066A24E5DDB500E5F304 /* Gilroy-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */; };
+		FC323D39250A7AC7002BC294 /* StageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC323D38250A7AC7002BC294 /* StageTableViewCell.swift */; };
+		FC323D3B250A7ADE002BC294 /* StageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC323D3A250A7ADE002BC294 /* StageTableViewCell.xib */; };
 		FC3574BF24F857290067D9A3 /* SelectSizesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */; };
 		FC3574C124F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3574C024F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift */; };
 		FC3574C324F9D4B30067D9A3 /* image_success.png in Resources */ = {isa = PBXBuildFile; fileRef = FC3574C224F9D4B20067D9A3 /* image_success.png */; };
@@ -230,6 +232,8 @@
 		FC12066524E5DADA00E5F304 /* bg_header.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg_header.png; sourceTree = "<group>"; };
 		FC12066724E5DDB400E5F304 /* Gilroy-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-ExtraBold.otf"; sourceTree = "<group>"; };
 		FC12066824E5DDB500E5F304 /* Gilroy-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gilroy-Light.otf"; sourceTree = "<group>"; };
+		FC323D38250A7AC7002BC294 /* StageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageTableViewCell.swift; sourceTree = "<group>"; };
+		FC323D3A250A7ADE002BC294 /* StageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StageTableViewCell.xib; sourceTree = "<group>"; };
 		FC3574BE24F857290067D9A3 /* SelectSizesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSizesViewController.swift; sourceTree = "<group>"; };
 		FC3574C024F9D0380067D9A3 /* SuccessAddedTechpackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessAddedTechpackViewController.swift; sourceTree = "<group>"; };
 		FC3574C224F9D4B20067D9A3 /* image_success.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image_success.png; sourceTree = "<group>"; };
@@ -756,6 +760,8 @@
 			children = (
 				FCB07B1824F0114500A2E5F1 /* StageView.swift */,
 				FCB07B1A24F0115F00A2E5F1 /* StageView.xib */,
+				FC323D38250A7AC7002BC294 /* StageTableViewCell.swift */,
+				FC323D3A250A7ADE002BC294 /* StageTableViewCell.xib */,
 			);
 			path = Stage;
 			sourceTree = "<group>";
@@ -1078,6 +1084,7 @@
 				FCF08F7F24F5C5CF0032A629 /* btn_color_picker.png in Resources */,
 				FC803B4324E97D4E009D470D /* icon_dropdown.png in Resources */,
 				FCB07B1124EFCB6600A2E5F1 /* CollaborationTableViewCell.xib in Resources */,
+				FC323D3B250A7ADE002BC294 /* StageTableViewCell.xib in Resources */,
 				FC5B375324E58B9900216DBD /* logo.png in Resources */,
 				FCF08F7924F5B8850032A629 /* MaterialColorsView.xib in Resources */,
 				FCF08F4124F421DF0032A629 /* test_sketch.png in Resources */,
@@ -1363,6 +1370,7 @@
 				FC97D4FA24ED987E00E30158 /* DesignerSideMenuViewController.swift in Sources */,
 				FC12065724E5A60000E5F304 /* Globals.swift in Sources */,
 				FCF08F3924F407AB0032A629 /* BaseView.swift in Sources */,
+				FC323D39250A7AC7002BC294 /* StageTableViewCell.swift in Sources */,
 				FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

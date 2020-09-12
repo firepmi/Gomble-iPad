@@ -20,6 +20,7 @@ pod 'JGProgressHUD'
 pod 'Toast-Swift'
 pod 'SDWebImage'
 pod 'FBSDKLoginKit'
+pod 'DatePickerDialog'
 
   target 'GombleTests' do
     inherit! :search_paths

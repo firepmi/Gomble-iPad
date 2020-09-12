@@ -77,6 +77,28 @@ class APIManager {
     static func getDraft(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "techpacks/draft", param: param, completion: completion)
     }
+    static func updateStage(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "stage/update", param: param, completion: completion)
+    }
+    static func updateGeneralInfo(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
+        multipartPost(url: "generalinfo/update", param: param, uploadProgress: uploadProgress, completion: completion)
+    }
+    static func updatePrice(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "price/update", param: param, completion: completion)
+    }
+    static func getPrice(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "price", param: param, completion: completion)
+    }
+    static func addSketch(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
+        multipartPost(url: "sketch/add", param: param, uploadProgress: uploadProgress, completion: completion)
+    }
+    static func getSketches(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "sketch", param: param, completion: completion)
+    }
+    static func publishTechpack(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "techpacks/publish", param: param, completion: completion)
+    }
+    
     static func post(url: String, param:[String:String]?, completion:((JSON)->Void)?) {
         let link = apiUrl + url
         print(link)

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 @IBDesignable
 class GeneralInfoView: BaseView {
@@ -22,6 +23,8 @@ class GeneralInfoView: BaseView {
     override func setNibName() {
         nibName = "GeneralInfoView"        
     }
+    var isImageUpdated = false
+    
     override func initView() {
         imageContentView.isHidden = true
         emptyView.isHidden = false
@@ -31,7 +34,40 @@ class GeneralInfoView: BaseView {
         tagListView.addTags(tags);
         tagListView.delegate = self
     }
+    func updateData(){
+        let multipartFormData = MultipartFormData()
+        var tagStr = ""
+        for tag in tags {
+            tagStr = tagStr + tag + ","
+        }
+        tagStr = tagStr[0..<tagStr.count-1]
+        let title = titleTextField.text!
+        let description = descriptionTextView.text!
         
+        if title != "" {
+            multipartFormData.append(title.data(using: .utf8, allowLossyConversion: false)!, withName: "title")
+        }
+        if description != "" {
+            multipartFormData.append(description.data(using: .utf8, allowLossyConversion: false)!, withName: "description")
+        }
+        if tagStr != "" {
+            multipartFormData.append(tagStr.data(using: .utf8, allowLossyConversion: false)!, withName: "tags")
+        }
+        multipartFormData.append(Globals.techpackID.data(using: .utf8, allowLossyConversion: false)!, withName: "techpack_id")
+        if isImageUpdated {
+            multipartFormData.append((imageView.image!.jpegData(compressionQuality: 1))!, withName: "image",fileName: "generalinfo.jpg", mimeType: "image/jpg")
+        }
+        APIManager.updateGeneralInfo(param: multipartFormData, uploadProgress: { progress in
+            print(progress)
+        }) { json in
+            if json["success"].boolValue {
+                print(json["message"].stringValue)
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
+    }
     @IBAction func onUploadImage(_ sender: Any) {
         var alert = UIAlertController(title:"Select image from...", message:nil, preferredStyle: .actionSheet)
         
@@ -91,6 +127,7 @@ extension GeneralInfoView: UINavigationControllerDelegate, UIImagePickerControll
         imageView.image = image
         emptyView.isHidden = true
         imageContentView.isHidden = false
+        isImageUpdated = true
     }
     func openCamera()
     {

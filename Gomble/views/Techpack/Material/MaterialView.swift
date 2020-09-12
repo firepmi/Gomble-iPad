@@ -50,7 +50,7 @@ class MaterialView: BaseView {
     override func initView() {
         tableView.register(UINib(nibName: "MaterialTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        materialData = Testdatabase.sketchData
+        materialData = Testdatabase.materialData
     }
     @IBAction func onAddItem(_ sender: Any) {
         delegate?.openDialog(id: "add_material_item", completion: {
