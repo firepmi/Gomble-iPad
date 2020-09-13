@@ -102,6 +102,11 @@ class BaseProfileViewController: BaseViewController {
     }
     @IBAction func onChangePassword(_ sender: Any) {
     }
+    @IBAction func onLogOut(_ sender: Any) {
+        APIManager.clearToken()
+        dismiss(animated: true, completion: nil)
+    }
+    
     @IBAction func onSave(_ sender: Any) {
         if firstNameTextField.text == "" {
             firstNameTextField.borderColor = UIColor.red

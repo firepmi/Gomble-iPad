@@ -34,6 +34,9 @@ class APIManager {
     static func fullUserImagePath(name:String) -> String {
         return "\(imageUrl)users/\(name)"
     }
+    static func fullGeneralInfoImagePath(name:String) -> String {
+        return "\(imageUrl)generalinfo/\(name)"
+    }
     
     static func login(param:[String:String], completion:((JSON)->Void)?) {
         post(url: "auth/login", param: param, completion: completion)
@@ -74,11 +77,20 @@ class APIManager {
     static func getTechpacks(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "techpacks", param: param, completion: completion)
     }
+    static func getProducts(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "techpacks/products", param: param, completion: completion)
+    }
     static func getDraft(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "techpacks/draft", param: param, completion: completion)
     }
     static func updateStage(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "stage/update", param: param, completion: completion)
+    }
+    static func getGeneralInfo(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "generalinfo", param: param, completion: completion)
+    }
+    static func getTechpackDesigner(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "techpacks/designer", param: param, completion: completion)
     }
     static func updateGeneralInfo(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
         multipartPost(url: "generalinfo/update", param: param, uploadProgress: uploadProgress, completion: completion)

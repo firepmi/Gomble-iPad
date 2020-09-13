@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import SwiftyJSON
 
 @IBDesignable
 class GeneralInfoView: BaseView {
@@ -33,6 +34,19 @@ class GeneralInfoView: BaseView {
         tags.append("dress")
         tagListView.addTags(tags);
         tagListView.delegate = self
+    }
+    func getData(){
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getGeneralInfo(param: param) { (json) in
+            print(json)
+            if json["success"].boolValue {
+                
+            }
+            else {
+                print(json["message"].stringValue)
+            }
+        }
     }
     func updateData(){
         let multipartFormData = MultipartFormData()
@@ -161,11 +175,14 @@ extension GeneralInfoView: UINavigationControllerDelegate, UIImagePickerControll
 extension GeneralInfoView: TagListViewDelegate {
     func tagAddedPressed(_ title: String, sender: TagListView) {
         tagListView.addTag(title)
+        tags.append(title)
     }
     func tagRemoveButtonPressed(_ title: String, tagView: TagView, sender: TagListView) {
         tagListView.removeTag(title)
+        tags = tags.filter{ $0 != title}
     }
     func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
         tagListView.removeTag(title)
+        tags = tags.filter{ $0 != title}
     }
 }

@@ -16,9 +16,10 @@ PODS:
     - FBSDKLoginKit/Login (= 7.1.1)
   - FBSDKLoginKit/Login (7.1.1):
     - FBSDKCoreKit (~> 7.1.1)
-  - ImageSlideshow (1.9.1):
-    - ImageSlideshow/Core (= 1.9.1)
   - ImageSlideshow/Core (1.9.1)
+  - ImageSlideshow/SDWebImage (1.9.1):
+    - ImageSlideshow/Core
+    - SDWebImage (>= 3.7)
   - iOSDropDown (0.3.4)
   - JGProgressHUD (2.1)
   - SDWebImage (5.8.4):
@@ -37,7 +38,7 @@ DEPENDENCIES:
   - EFColorPicker
   - ExpandableCell
   - FBSDKLoginKit
-  - ImageSlideshow
+  - ImageSlideshow/SDWebImage
   - iOSDropDown
   - JGProgressHUD
   - SDWebImage
@@ -83,6 +84,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: ff72eb6e5f5baf68d89bf0ddcf4d825fce79ff11
+PODFILE CHECKSUM: 56831f0acef5d4b3dd7bed92f778a8fe55558cca
 
 COCOAPODS: 1.9.3

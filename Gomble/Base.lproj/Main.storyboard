@@ -1179,13 +1179,13 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nickname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dim-3h-bft">
-                                        <rect key="frame" x="108.5" y="265" width="63" height="16.5"/>
+                                        <rect key="frame" x="108.5" y="265" width="66.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yec-lQ-kVH" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="108.5" y="285.5" width="471" height="40"/>
+                                        <rect key="frame" x="108.5" y="287.5" width="471" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="471" id="JpM-yN-WQw"/>
@@ -1215,13 +1215,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First Name *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfd-Ci-EvN">
-                                        <rect key="frame" x="108.5" y="349.5" width="77.5" height="16.5"/>
+                                        <rect key="frame" x="108.5" y="351.5" width="82" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wh5-wV-U9X" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="108.5" y="370" width="223.5" height="40"/>
+                                        <rect key="frame" x="108.5" y="374" width="223.5" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="KG0-5B-ObK"/>
@@ -1250,13 +1250,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last name *" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L0j-ge-i5E">
-                                        <rect key="frame" x="356" y="349.5" width="74.5" height="16.5"/>
+                                        <rect key="frame" x="356" y="351.5" width="79" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ook-kf-GYB" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="356" y="370" width="223.5" height="40"/>
+                                        <rect key="frame" x="356" y="374" width="223.5" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="oCI-4K-7ss"/>
@@ -1285,13 +1285,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your website" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RJV-DC-MKN">
-                                        <rect key="frame" x="108.5" y="547.5" width="80.5" height="16.5"/>
+                                        <rect key="frame" x="108.5" y="553.5" width="85" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hJV-If-ewp" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="108.5" y="568" width="471" height="40"/>
+                                        <rect key="frame" x="108.5" y="576" width="471" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="ieW-yO-JKh"/>
@@ -1320,13 +1320,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="urf-HY-vZV">
-                                        <rect key="frame" x="108.5" y="632" width="40.5" height="16.5"/>
+                                        <rect key="frame" x="108.5" y="640" width="41.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JhA-7V-tQ8" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="108.5" y="652.5" width="471" height="40"/>
+                                        <rect key="frame" x="108.5" y="662.5" width="471" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="JR5-Nr-509"/>
@@ -1355,13 +1355,13 @@
                                         </connections>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56t-L1-LDl">
-                                        <rect key="frame" x="108.5" y="434" width="71.5" height="16.5"/>
+                                        <rect key="frame" x="108.5" y="438" width="77" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CQZ-MF-SFh" customClass="RoundedTextView" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="108.5" y="454.5" width="471" height="69"/>
+                                        <rect key="frame" x="108.5" y="460.5" width="471" height="69"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="69" id="Ebd-5m-wzT"/>
@@ -1857,6 +1857,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="o88-xc-odo"/>
                     <connections>
+                        <outlet property="collectionView" destination="fpg-rs-KM9" id="lck-e9-ll6"/>
                         <outlet property="customHeaderView" destination="X3j-fZ-bWB" id="clu-K0-qOd"/>
                         <outlet property="pathView" destination="Wb3-AP-bBn" id="Yh1-Av-tVV"/>
                     </connections>
@@ -1897,7 +1898,7 @@
                                 <rect key="frame" x="0.0" y="60" width="768" height="245"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create new password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SBE-Z1-f8E">
-                                <rect key="frame" x="189" y="137" width="390" height="48"/>
+                                <rect key="frame" x="182.5" y="137" width="403.5" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="imy-eS-cbY"/>
                                 </constraints>
@@ -1906,13 +1907,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvL-aO-fTC">
-                                <rect key="frame" x="148.5" y="353" width="62" height="16.5"/>
+                                <rect key="frame" x="148.5" y="353" width="63" height="18.5"/>
                                 <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                 <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="a4r-Gw-c9v" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                <rect key="frame" x="148.5" y="373.5" width="471" height="40"/>
+                                <rect key="frame" x="148.5" y="375.5" width="471" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="471" id="qHl-3X-cc2"/>
@@ -1942,7 +1943,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iEA-Db-AyU" customClass="RoundedButton" customModule="Gomble" customModuleProvider="target">
-                                <rect key="frame" x="294" y="522" width="180" height="48"/>
+                                <rect key="frame" x="294" y="526" width="180" height="48"/>
                                 <color key="backgroundColor" red="0.32549019607843138" green="0.43137254901960786" blue="1" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="0IV-kq-uIb"/>
@@ -1975,16 +1976,16 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cL2-HS-jXb">
-                                <rect key="frame" x="243" y="209" width="282.5" height="22"/>
+                                <rect key="frame" x="234" y="209" width="300.5" height="22"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We sent you an email to " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56u-3u-EGg">
-                                        <rect key="frame" x="0.0" y="0.0" width="175.5" height="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="181.5" height="22"/>
                                         <fontDescription key="fontDescription" name="DMSans-Regular" family="DM Sans" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="asia@mail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irf-3a-nPe">
-                                        <rect key="frame" x="175.5" y="0.0" width="107" height="22"/>
+                                        <rect key="frame" x="181.5" y="0.0" width="119" height="22"/>
                                         <fontDescription key="fontDescription" name="DMSans-Bold" family="DM Sans" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1995,13 +1996,13 @@
                                 </constraints>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confirm password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LYr-5G-4ex">
-                                <rect key="frame" x="148.5" y="437.5" width="115" height="16.5"/>
+                                <rect key="frame" x="148.5" y="439.5" width="121" height="18.5"/>
                                 <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                 <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xqS-Bl-8fW" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                <rect key="frame" x="148.5" y="458" width="471" height="40"/>
+                                <rect key="frame" x="148.5" y="462" width="471" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="471" id="Ips-A2-4rd"/>
@@ -2636,13 +2637,22 @@
                                                         </userDefinedRuntimeAttributes>
                                                     </view>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Change password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HpT-EF-oSl">
-                                                        <rect key="frame" x="606" y="501" width="138" height="30"/>
+                                                        <rect key="frame" x="606" y="499.5" width="138" height="33"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF3-o6-H7s">
+                                                        <rect key="frame" x="522" y="499.5" width="54" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <state key="normal" title="Logout"/>
+                                                        <connections>
+                                                            <action selector="onLogOut:" destination="KY1-7m-yj6" eventType="touchUpInside" id="ie2-qo-od9"/>
+                                                        </connections>
+                                                    </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uki-iC-U8R">
-                                                        <rect key="frame" x="606" y="501" width="138" height="30"/>
+                                                        <rect key="frame" x="606" y="499.5" width="138" height="33"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <connections>
                                                             <action selector="onChangePassword:" destination="KY1-7m-yj6" eventType="touchUpInside" id="Ioo-LN-Oyl"/>
                                                         </connections>
@@ -2665,6 +2675,7 @@
                                                     <constraint firstItem="Nl6-b9-39h" firstAttribute="top" secondItem="uLI-8m-XmF" secondAttribute="bottom" constant="16" id="D7p-CG-Vjg"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="hY3-hb-gdb" secondAttribute="trailing" constant="20" symbolic="YES" id="D9s-Qp-2pK"/>
                                                     <constraint firstItem="vhX-dw-DcQ" firstAttribute="leading" secondItem="EuF-Q1-2zL" secondAttribute="leading" constant="24" id="F5Q-TO-soW"/>
+                                                    <constraint firstItem="cF3-o6-H7s" firstAttribute="trailing" secondItem="Uki-iC-U8R" secondAttribute="leading" constant="-30" id="FAl-Ob-ENm"/>
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5Fi-Q5-x9w" secondAttribute="trailing" constant="20" symbolic="YES" id="Fa2-FD-WfB"/>
                                                     <constraint firstItem="HR6-cw-Ure" firstAttribute="top" secondItem="HYO-za-HbA" secondAttribute="bottom" constant="16" id="Ffr-Pj-ERB"/>
                                                     <constraint firstItem="4Ll-af-mSo" firstAttribute="top" secondItem="nlA-cq-LCt" secondAttribute="bottom" constant="4" id="GsB-v4-rlf"/>
@@ -2696,6 +2707,7 @@
                                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gtv-zZ-CdK" secondAttribute="trailing" constant="20" symbolic="YES" id="bdu-xf-u0Y"/>
                                                     <constraint firstItem="Uki-iC-U8R" firstAttribute="bottom" secondItem="HpT-EF-oSl" secondAttribute="bottom" id="evr-aZ-VrH"/>
                                                     <constraint firstAttribute="trailing" secondItem="1wF-iU-R3j" secondAttribute="trailing" constant="24" id="fTC-Te-3zd"/>
+                                                    <constraint firstItem="cF3-o6-H7s" firstAttribute="centerY" secondItem="Uki-iC-U8R" secondAttribute="centerY" id="h9P-te-tL9"/>
                                                     <constraint firstItem="M5n-Lf-tgx" firstAttribute="centerY" secondItem="JoC-NO-mL5" secondAttribute="centerY" id="hXA-Qd-YPx"/>
                                                     <constraint firstAttribute="trailing" secondItem="HR6-cw-Ure" secondAttribute="trailing" constant="199.5" id="haP-fS-6u5"/>
                                                     <constraint firstItem="Uki-iC-U8R" firstAttribute="leading" secondItem="HpT-EF-oSl" secondAttribute="leading" id="jba-xw-W8G"/>
@@ -2949,6 +2961,11 @@
                                             <constraint firstAttribute="height" constant="40" id="w6N-xZ-JWk"/>
                                             <constraint firstAttribute="width" constant="40" id="zPh-Jt-WTO"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view tag="104" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7h-xK-mYK">
                                         <rect key="frame" x="641" y="26" width="127" height="20"/>
@@ -3168,7 +3185,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="AKB-cl-hvp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <state key="normal" title="Save">
+                                        <state key="normal" title="Make an order">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -3176,6 +3193,9 @@
                                                 <real key="value" value="4"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="onMakeOrder:" destination="RCg-vW-KPg" eventType="touchUpInside" id="mFd-cG-zPR"/>
+                                        </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iHH-kz-frb">
                                         <rect key="frame" x="0.0" y="473.5" width="768" height="411.5"/>
@@ -3288,10 +3308,16 @@
                     <navigationItem key="navigationItem" id="INN-rL-2lg"/>
                     <connections>
                         <outlet property="customHeaderView" destination="CZA-yG-gwP" id="YGX-Ba-zgz"/>
+                        <outlet property="descriptionLabel" destination="juY-2m-yha" id="j4s-k3-zwz"/>
+                        <outlet property="designerNameLabel" destination="de7-Y5-orM" id="yJw-Kh-r0u"/>
+                        <outlet property="designerProfileImageView" destination="J9l-Jh-G97" id="WVT-pn-Nnb"/>
                         <outlet property="massProductionView" destination="a7h-xK-mYK" id="Dld-1v-72B"/>
                         <outlet property="pathView" destination="dR2-dd-hlG" id="FZV-nU-14Z"/>
+                        <outlet property="priceLabel" destination="5OQ-2Q-HXE" id="ohO-FM-PBc"/>
                         <outlet property="slideshow" destination="Tjp-Zf-d5w" id="TxQ-Zm-hr9"/>
                         <outlet property="tagListView" destination="nUF-zq-L7A" id="ws6-8n-N9z"/>
+                        <outlet property="title2Label" destination="zH1-mN-dJo" id="F9U-sG-YAc"/>
+                        <outlet property="titleLabel" destination="Yl8-Ck-ob0" id="jLT-Cq-8pD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vsn-vR-fKs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -6243,13 +6269,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ejM-nN-GES">
-                                        <rect key="frame" x="40" y="410" width="26.5" height="16.5"/>
+                                        <rect key="frame" x="40" y="410" width="29" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXp-6f-E2x" customClass="RoundedTextField" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="430.5" width="608" height="40"/>
+                                        <rect key="frame" x="40" y="432.5" width="608" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="471" id="6xv-Nh-RYH"/>
@@ -6276,7 +6302,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HHG-Qc-wd1" customClass="RoundedTextView" customModule="Gomble" customModuleProvider="target">
-                                        <rect key="frame" x="40" y="524" width="608" height="99"/>
+                                        <rect key="frame" x="40" y="528" width="608" height="99"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="99" id="9V5-Nb-tS3"/>
@@ -6297,19 +6323,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max 500 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="29o-h8-VvE">
-                                        <rect key="frame" x="523.5" y="627" width="124.5" height="16.5"/>
+                                        <rect key="frame" x="513.5" y="631" width="134.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max 150 characters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ufy-bq-j5y">
-                                        <rect key="frame" x="523.5" y="474.5" width="124.5" height="16.5"/>
+                                        <rect key="frame" x="518.5" y="476.5" width="129.5" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0si-r6-ULz">
-                                        <rect key="frame" x="40" y="503.5" width="71.5" height="16.5"/>
+                                        <rect key="frame" x="40" y="505.5" width="77" height="18.5"/>
                                         <fontDescription key="fontDescription" name="DMSans-Medium" family="DM Sans" pointSize="14"/>
                                         <color key="textColor" red="0.50980392159999999" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="custom" customColorSpace="adobeRGB1998"/>
                                         <nil key="highlightedColor"/>

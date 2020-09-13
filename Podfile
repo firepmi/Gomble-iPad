@@ -8,7 +8,8 @@ target 'Gomble' do
   # Pods for Gomble
 pod 'XLPagerTabStrip'
 pod 'SideMenu'
-pod 'ImageSlideshow'
+#pod 'ImageSlideshow'
+pod 'ImageSlideshow/SDWebImage'
 pod 'EFColorPicker'
 pod 'SwiftyJSON'
 pod 'iOSDropDown'

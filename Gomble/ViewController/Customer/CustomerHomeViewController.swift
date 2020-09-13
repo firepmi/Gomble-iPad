@@ -8,8 +8,13 @@
 
 import UIKit
 import SideMenu
+import JGProgressHUD
+import SwiftyJSON
 
 class CustomerHomeViewController: BaseViewController {
+    var techpacks = [JSON]()
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -18,23 +23,54 @@ class CustomerHomeViewController: BaseViewController {
         Globals.type = "customer"
         pathView.setPath(path: ["Products"])
     }
+    override func viewDidAppear(_ animated: Bool) {
+        getData()
+    }
+    func getData(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        var param = [String:String]()
+        param["folder_id"] = Globals.folderID
+        APIManager.getProducts(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.techpacks = json["res"].arrayValue
+                self.collectionView.reloadData()
+//                self.refreshView()
+            }
+            else {
+                self.view.makeToast(json["message"].stringValue)
+            }
+        }
+    }
 }
 extension CustomerHomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return Testdatabase.techPackData.count;
+        return techpacks.count;
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "techpackCell", for: indexPath as IndexPath)
 
-        let imageName:String = Testdatabase.techPackData[indexPath.row]["image"]!
-        
+        let imageUrl = APIManager.fullGeneralInfoImagePath(name: techpacks[indexPath.row]["image"].stringValue)
         let image = cell.viewWithTag(100) as! UIImageView
-        image.image = UIImage(named: imageName)//techPackData[indexPath.row]["title"]!)
+        image.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "test1.png"))
         
         let title = cell.viewWithTag(101) as! UILabel
-        title.text = Testdatabase.techPackData[indexPath.row]["title"]
+        title.text = techpacks[indexPath.row]["title"].stringValue
+        
+        let tagLabel = cell.viewWithTag(102) as! UILabel
+        var tagStr = ""
+        for tag in techpacks[indexPath.row]["tags"].arrayValue {
+            tagStr += tag.stringValue + ","
+        }
+        tagStr = tagStr[0..<tagStr.count-1]
+        tagLabel.text = tagStr
+        
+        let price = cell.viewWithTag(103) as! UILabel
+        price.text = techpacks[indexPath.row]["price_total"].floatValue.currencyFormattedStr()
         
         let massView = cell.viewWithTag(104)!
         massView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)
@@ -43,7 +79,8 @@ extension CustomerHomeViewController: UICollectionViewDelegate, UICollectionView
         return cell;
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        navigateTo(id: "preview_customer")
+        Globals.techpackID = techpacks[indexPath.row]["_id"].stringValue
+        navigateTo(id: "preview_customer",pathId: techpacks[indexPath.row]["title"].stringValue)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: 224, height: 329)

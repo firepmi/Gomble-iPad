@@ -40,18 +40,18 @@ class PriceView: BaseView {
         }
     }
     func refreshView(json:JSON){
-        factoryTextField.text = String(format: "%.2f", json["factory"].floatValue).currencyInputFormatting()
-        feeTextField.text = String(format: "%.2f", json["fee"].floatValue).currencyInputFormatting()
-        deliveryTextField.text = String(format: "%.2f", json["delivery"].floatValue).currencyInputFormatting()
+        factoryTextField.text = json["factory"].floatValue.currencyFormattedStr()
+        feeTextField.text = json["fee"].floatValue.currencyFormattedStr()
+        deliveryTextField.text = json["delivery"].floatValue.currencyFormattedStr()
         calcTotal()
     }
     func updateData(){
         var param = [String:String]()
-        param["factory"] = String(describing: factoryTextField.text?.currencyValue())
+        param["factory"] = "\(factoryTextField.text?.currencyValue() ?? 0)"
         param["materials"] = "25"//materialsLabel.text
-        param["fee"] = String(describing: feeTextField.text?.currencyValue())
-        param["delivery"] = String(describing: deliveryTextField.text?.currencyValue())
-        param["total"] = String(describing: totalLabel.text?.currencyValue())
+        param["fee"] = "\(feeTextField.text?.currencyValue() ?? 0)"
+        param["delivery"] = "\(deliveryTextField.text?.currencyValue() ?? 0)"
+        param["total"] = "\(totalLabel.text?.currencyValue() ?? 0)"
         param["techpack_id"] = Globals.techpackID
         
         APIManager.updatePrice(param: param) { json in
@@ -70,11 +70,11 @@ class PriceView: BaseView {
         calcTotal()
     }
     func calcTotal(){
-        var total:Double = 20
+        var total:Float = 20
         total += (factoryTextField.text?.currencyValue())!
         total += (feeTextField.text?.currencyValue())!
         total += (deliveryTextField.text?.currencyValue())!
-        totalLabel.text = String(format: "%.2lf", total).currencyInputFormatting()
+        totalLabel.text = total.currencyFormattedStr()
     }
 }
 

@@ -58,15 +58,22 @@ extension String {
 
         return formatter.string(from: number)!
     }
-    func currencyValue() -> Double {
+    func currencyValue() -> Float {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale(identifier: "en_US")
         
         if let number = formatter.number(from: self) {
-            return number.doubleValue
+            return number.floatValue
         }
         return 0
+    }
+}
+
+extension Float {
+    func currencyFormattedStr() -> String {
+        let str = String(format: "%.02f", self)
+        return str.currencyInputFormatting()
     }
 }
 
