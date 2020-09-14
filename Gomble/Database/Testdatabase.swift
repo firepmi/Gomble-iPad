@@ -10,18 +10,10 @@ import UIKit
 import SwiftyJSON
 
 class Testdatabase {
-    public static var materialData = [JSON]()
     public static var measurementData = [JSON]()
     public static var patternData = [JSON]()
     public static var readyToWearData = [JSON]()
-    public static var sizeRangeData = JSON()
-    public static let techPackData = [
-        ["title":"Summer dress collection", "image":"test1.png"],
-        ["title":"Elegant gray dress", "image":"test2.png"],
-        ["title":"Coral cotton dress", "image":"test3.png"],
-        ["title":"Summer dress collection with dot", "image":"test4.png"],
-        ["title":"Summer dress collection with flowers", "image":"test5.png"]
-    ]
+    public static var sizeRangeData = JSON()    
     public static func getTestColaborationData() -> [JSON]{
         var json1 = JSON()
         json1["first_name"].string = "John"

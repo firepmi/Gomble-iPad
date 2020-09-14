@@ -17,6 +17,8 @@ class AddItemImageSelectView: BaseView {
     
     var delegate: UIViewController?
     let picker:UIImagePickerController?=UIImagePickerController()
+    var isImageUpdated = false
+    
     override func setNibName() {
         nibName = "AddItemImageSelectView"
     }
@@ -79,7 +81,7 @@ extension AddItemImageSelectView: UINavigationControllerDelegate, UIImagePickerC
         print("cropped")
         imageView.image = image
         emptyView.isHidden = true
-//        imageContentView.isHidden = false
+        isImageUpdated = true
     }
     func openCamera()
     {

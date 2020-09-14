@@ -21,7 +21,7 @@ class MaterialView: BaseView {
     var viewHeight:CGFloat = 280
     let cellID = "materialTableViewCell";
     var onHightChanged : ((CGFloat)->Void)?
-    var materialData:[JSON] = Testdatabase.materialData {
+    var materialData:[JSON] = [] {
         didSet {
             tableView.reloadData()
             tableView.layoutIfNeeded()
@@ -35,7 +35,6 @@ class MaterialView: BaseView {
                 self.tableViewHeight.constant = 80 * CGFloat(self.materialData.count)
                 self.tableView.setNeedsUpdateConstraints()
                 self.tableView.layoutIfNeeded()
-//                tableView.alwaysBounceVertical = false
                 viewHeight = CGFloat(tableViewHeight.constant + 120)
                 if (onHightChanged != nil) {
                     onHightChanged!(viewHeight)
@@ -50,11 +49,24 @@ class MaterialView: BaseView {
     override func initView() {
         tableView.register(UINib(nibName: "MaterialTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        materialData = Testdatabase.materialData
+        getData()
+    }
+    func getData(){
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getMaterials(param: param) { json in
+            if json["success"].boolValue {
+                self.materialData = json["res"].arrayValue
+                self.tableView.reloadData()
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
     }
     @IBAction func onAddItem(_ sender: Any) {
         delegate?.openDialog(id: "add_material_item", completion: {
-            self.materialData = Testdatabase.materialData
+            self.getData()
         })
     }
     @IBAction func importCSV(_ sender: Any) {
@@ -74,6 +86,13 @@ extension MaterialView:UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = data["title"].stringValue
         cell.descriptionLabel.text = data["description"].stringValue
+        let imageUrl = APIManager.fullMaterialImagePath(name: data["image"].stringValue)
+        cell.materialImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "test_material.png"))
+        cell.placementLabel.text = data["placement"].stringValue
+        cell.quantityLabel.text = data["quantity"].stringValue
+        cell.colorListView.colorList = data["colors"].arrayValue
+        cell.factoryNameLabel.text = data["factory_name"].stringValue
+        cell.factoryEmailLabel.text = data["factory_phone"].stringValue
         
         return cell
     }

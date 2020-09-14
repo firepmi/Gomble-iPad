@@ -37,7 +37,9 @@ class APIManager {
     static func fullGeneralInfoImagePath(name:String) -> String {
         return "\(imageUrl)generalinfo/\(name)"
     }
-    
+    static func fullMaterialImagePath(name:String) -> String {
+        return "\(imageUrl)materials/\(name)"
+    }
     static func login(param:[String:String], completion:((JSON)->Void)?) {
         post(url: "auth/login", param: param, completion: completion)
     }
@@ -91,6 +93,21 @@ class APIManager {
     }
     static func getTechpackDesigner(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "techpacks/designer", param: param, completion: completion)
+    }
+    static func getMaterialDraft(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "material/draft", param: param, completion: completion)
+    }
+    static func getMaterials(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "material", param: param, completion: completion)
+    }
+    static func addMaterial(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
+        multipartPost(url: "material/add", param: param, uploadProgress: uploadProgress, completion: completion)
+    }
+    static func getMaterialColor(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "color", param: param, completion: completion)
+    }
+    static func addMaterialColor(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "color/add", param: param, completion: completion)
     }
     static func updateGeneralInfo(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
         multipartPost(url: "generalinfo/update", param: param, uploadProgress: uploadProgress, completion: completion)

@@ -15,7 +15,7 @@ class MaterialColorsView: BaseView {
     var delegate:UIViewController?
     @IBOutlet weak var tableView: UITableView!
     var selectedColor = UIColor.red
-    var colorData:[UIColor] = [.purple, .blue] {
+    var colorData:[JSON] = [] {
             didSet {
                 tableView.reloadData()
 //                tableView.layoutIfNeeded()
@@ -44,7 +44,21 @@ class MaterialColorsView: BaseView {
     override func initView() {
         tableView.register(UINib(nibName: cellID, bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-//        colorData = Testdatabase.sketchData
+        getData()
+    }
+    func getData(){
+        var param = [String:String]()
+        param["material_id"] = Globals.materialID
+        APIManager.getMaterialColor(param: param) { json in
+            if json["success"].boolValue {
+                self.colorData = json["res",0,"color_list"].arrayValue
+                print(self.colorData)
+                self.tableView.reloadData()
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
     }
     @IBAction func onAddItem(_ sender: UIButton) {
         let colorSelectionController = EFColorSelectionViewController()
@@ -76,8 +90,18 @@ class MaterialColorsView: BaseView {
     }
     @objc func ef_dismissViewController(sender: UIBarButtonItem) {
         delegate?.dismiss(animated: true, completion: {
-            self.colorData.append(self.selectedColor)
-        })        
+            var param = [String:String]()
+            param["material_id"] = Globals.materialID
+            param["code"] = self.selectedColor.toHex
+            APIManager.addMaterialColor(param: param) { json in
+                if json["success"].boolValue {
+                    self.getData()
+                }
+                else {
+                    self.makeToast(json["message"].stringValue)
+                }
+            }
+        })
     }
 }
 extension MaterialColorsView: EFColorSelectionViewControllerDelegate, UIPopoverPresentationControllerDelegate {
@@ -94,9 +118,9 @@ extension MaterialColorsView:UITableViewDelegate, UITableViewDataSource {
         let cell:MaterialColorCell = tableView.dequeueReusableCell(withIdentifier: cellID) as! MaterialColorCell
         cell.selectionStyle = .none
         
-        let data = colorData[indexPath.row]
+        let colorCode = "#\(colorData[indexPath.row]["code"].stringValue)"
         
-        cell.colorView.backgroundColor = data
+        cell.colorView.backgroundColor = UIColor(hexString: colorCode)
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

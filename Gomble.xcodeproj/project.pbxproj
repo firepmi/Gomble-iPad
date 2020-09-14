@@ -152,6 +152,8 @@
 		FCC21FB124E2542600D90C32 /* GombleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FB024E2542600D90C32 /* GombleUITests.swift */; };
 		FCC21FBF24E37ECF00D90C32 /* GetStartedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */; };
 		FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */; };
+		FCD327CD2510112C0060B482 /* CircleColorListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCD327CC2510112B0060B482 /* CircleColorListView.xib */; };
+		FCD327CF251013A70060B482 /* CircleColorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD327CE251013A70060B482 /* CircleColorCell.swift */; };
 		FCE8EE8E24F7F57200939AAF /* PriceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE8EE8D24F7F57200939AAF /* PriceView.swift */; };
 		FCE8EE9024F7F57E00939AAF /* PriceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE8EE8F24F7F57E00939AAF /* PriceView.xib */; };
 		FCF08F2C24F3E73B0032A629 /* icon_save.png in Resources */ = {isa = PBXBuildFile; fileRef = FCF08F2B24F3E73B0032A629 /* icon_save.png */; };
@@ -366,6 +368,8 @@
 		FCC21FB224E2542600D90C32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC21FBE24E37ECF00D90C32 /* GetStartedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedViewController.swift; sourceTree = "<group>"; };
 		FCC21FC124E4CE8C00D90C32 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		FCD327CC2510112B0060B482 /* CircleColorListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CircleColorListView.xib; sourceTree = "<group>"; };
+		FCD327CE251013A70060B482 /* CircleColorCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleColorCell.swift; sourceTree = "<group>"; };
 		FCE8EE8D24F7F57200939AAF /* PriceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceView.swift; sourceTree = "<group>"; };
 		FCE8EE8F24F7F57E00939AAF /* PriceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PriceView.xib; sourceTree = "<group>"; };
 		FCF08F2B24F3E73B0032A629 /* icon_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_save.png; sourceTree = "<group>"; };
@@ -891,6 +895,8 @@
 			isa = PBXGroup;
 			children = (
 				FCF08F6024F4B06A0032A629 /* CircleColorListView.swift */,
+				FCD327CC2510112B0060B482 /* CircleColorListView.xib */,
+				FCD327CE251013A70060B482 /* CircleColorCell.swift */,
 				FCF08F6624F4B1E10032A629 /* CircleColorCell.xib */,
 			);
 			path = CircleColorListView;
@@ -1121,6 +1127,7 @@
 				FCC21F9824E2542300D90C32 /* Assets.xcassets in Resources */,
 				FCB07B2A24F062E300A2E5F1 /* bg_general_info.png in Resources */,
 				FC50826D24EF0D120034D032 /* icon_left_arrow_white.png in Resources */,
+				FCD327CD2510112C0060B482 /* CircleColorListView.xib in Resources */,
 				FCB07B1B24F0115F00A2E5F1 /* StageView.xib in Resources */,
 				FC5B374A24E5849B00216DBD /* icon_check_on.png in Resources */,
 				FC803B4024E934A4009D470D /* PathViewCell.xib in Resources */,
@@ -1336,6 +1343,7 @@
 				FCF08F3524F406D00032A629 /* SketchesView.swift in Sources */,
 				FCC21FC224E4CE8C00D90C32 /* SignInViewController.swift in Sources */,
 				FCF08F4324F432340032A629 /* AddSketchDialogViewController.swift in Sources */,
+				FCD327CF251013A70060B482 /* CircleColorCell.swift in Sources */,
 				FC12066124E5C58100E5F304 /* SelectTypeViewController.swift in Sources */,
 				FCB07B1324EFCC4900A2E5F1 /* CollaborationTableViewCell.swift in Sources */,
 				FC4CB6FF24EBD56800FDDEC7 /* CustomerTechpackPreviewDetailsViewController.swift in Sources */,

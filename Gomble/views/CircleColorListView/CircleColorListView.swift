@@ -7,43 +7,35 @@
 //
 
 import UIKit
+import SwiftyJSON
+
 @IBDesignable
-class CircleColorListView: UIView {
+class CircleColorListView: BaseView {
+    
+    @IBOutlet weak var collectionView: UICollectionView!
     var identifier = "CircleColorCell"
     @IBInspectable var radius: CGFloat = 8 {
         didSet {
             collectionView.reloadData()
         }
     }
-    var colorList:[UIColor] = [.white, .black, .green]
-    lazy var collectionView : UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
-        let cv = UICollectionView(frame: bounds, collectionViewLayout: layout)
-        cv.translatesAutoresizingMaskIntoConstraints = true
-        cv.delegate = self
-        cv.dataSource = self
-        cv.register(UINib(nibName: "CircleColorCell", bundle: nil), forCellWithReuseIdentifier: identifier)
-        cv.backgroundColor = UIColor.clear
-        cv.showsHorizontalScrollIndicator = false
-        let flowLayout = cv.collectionViewLayout as! UICollectionViewFlowLayout
-        flowLayout.scrollDirection = .vertical
-        
-        return cv
-    }()
-        
-    override var bounds: CGRect {
+    var colorList:[JSON] = [] {
         didSet {
-            collectionView.frame = bounds
-//            backgroundColor = .clear
-            addSubview(collectionView)
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+                self.collectionView!.collectionViewLayout.invalidateLayout()
+                self.collectionView!.layoutSubviews()
+            }
         }
     }
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+        
+    override func setNibName() {
+        nibName = "CircleColorListView"
     }
-    override init(frame: CGRect) {
-        super.init(frame: frame)        
+    override func initView() {
+        collectionView.register(UINib(nibName: identifier, bundle: nil), forCellWithReuseIdentifier: identifier)
     }
+    
 }
 extension CircleColorListView: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -52,11 +44,11 @@ extension CircleColorListView: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath as IndexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: identifier, for: indexPath as IndexPath) as! CircleColorCell
         
-        let circleView = cell.viewWithTag(100) as! RoundedView
-        circleView.cornerRadius = radius
-        circleView.backgroundColor = colorList[indexPath.row]
+        cell.circleView.cornerRadius = radius
+        let colorCode = "#\(colorList[indexPath.row]["code"].stringValue)"
+        cell.circleView.backgroundColor = UIColor(hexString: colorCode)
         
         return cell;
     }

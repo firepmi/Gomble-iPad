@@ -129,7 +129,7 @@ class NewTechpackDesignerViewController: BaseViewController {
                 Globals.alert(context: self, title: "New Techpack", message: json["message"].stringValue)
             }
         }
-    }    
+    }
 }
 
 extension NewTechpackDesignerViewController: ExpandableDelegate {

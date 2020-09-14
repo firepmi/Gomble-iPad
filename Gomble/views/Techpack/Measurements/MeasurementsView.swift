@@ -38,7 +38,6 @@ class MeasurementsView: BaseView {
                 self.tableViewHeight.constant = 80 * CGFloat(self.measurementData.count)
                 self.tableView.setNeedsUpdateConstraints()
                 self.tableView.layoutIfNeeded()
-//                tableView.alwaysBounceVertical = false
                 viewHeight = CGFloat(tableViewHeight.constant + 320)
                 if (onHightChanged != nil) {
                     onHightChanged!(viewHeight)
