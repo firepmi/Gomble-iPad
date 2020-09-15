@@ -111,6 +111,12 @@ class NewTechpackDesignerViewController: BaseViewController {
         self.onBack()
     }
     @IBAction func onCreateAndPublish(_ sender: Any) {
+        if stageView == nil || generalInfoView == nil ||
+            sketchesView == nil || materialView == nil || factoryView == nil ||
+            priceView == nil {
+            Globals.alert(context: self, title: "New Techpack", message: "Please fill all fields")
+            return
+        }
         updateData()
     
         let hud = JGProgressHUD(style: .dark)

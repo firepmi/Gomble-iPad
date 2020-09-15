@@ -54,7 +54,9 @@ class GeneralInfoView: BaseView {
         for tag in tags {
             tagStr = tagStr + tag + ","
         }
-        tagStr = tagStr[0..<tagStr.count-1]
+        if tagStr.count != 0 {
+            tagStr = tagStr[0..<tagStr.count-1]
+        }
         let title = titleTextField.text!
         let description = descriptionTextView.text!
         

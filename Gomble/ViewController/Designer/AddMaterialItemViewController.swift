@@ -83,8 +83,9 @@ class AddMaterialItemViewController: BaseDialogViewController {
         for tag in materialGeneralInfoView!.tags {
             tagStr = tagStr + tag + ","
         }
-        tagStr = tagStr[0..<tagStr.count-1]
-        
+        if tagStr.count != 0 {
+            tagStr = tagStr[0..<tagStr.count-1]
+        }
         let title = materialGeneralInfoView!.titleTextField.text!
         let placement = materialGeneralInfoView!.placementTextField.text!
         let description = materialGeneralInfoView!.descriptionTextView.text!

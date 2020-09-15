@@ -82,7 +82,9 @@ extension DesignerTechpacksViewController: UICollectionViewDelegate, UICollectio
         for tag in techpacks[indexPath.row]["tags"].arrayValue {
             tagStr += tag.stringValue + ","
         }
-        tagStr = tagStr[0..<tagStr.count-1]
+        if tagStr.count != 0 {
+            tagStr = tagStr[0..<tagStr.count-1]
+        }
         tagLabel.text = tagStr
         
         let price = cell.viewWithTag(103) as! UILabel
