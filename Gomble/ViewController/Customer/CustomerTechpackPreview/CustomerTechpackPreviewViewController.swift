@@ -12,6 +12,8 @@ import XLPagerTabStrip
 import SDWebImage
 import JGProgressHUD
 import SwiftyJSON
+import BraintreeDropIn
+import Braintree
 
 class CustomerTechpackPreviewViewController: BaseViewController {
 
@@ -24,10 +26,13 @@ class CustomerTechpackPreviewViewController: BaseViewController {
     @IBOutlet weak var designerNameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var orderButton: RoundedButton!
     
     var generalInfo = JSON()
+    var price = JSON()
     var designer = JSON()
     var localSource = [SDWebImageSource]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -53,6 +58,15 @@ class CustomerTechpackPreviewViewController: BaseViewController {
                 Globals.alert(context: self, title: "Preview Techpack", message: json["message"].stringValue)
             }
         }
+        APIManager.getPrice(param: param) { json in
+            if json["success"].boolValue {
+                self.price = json["res"]
+                self.priceLabel.text = self.price["total"].floatValue.currencyFormattedStr()
+            }
+            else {
+                Globals.alert(context: self, title: "Preview Techpack", message: json["message"].stringValue)
+            }
+        }
         
         APIManager.getTechpackDesigner(param: param) { json in
             if json["success"].boolValue {
@@ -63,7 +77,15 @@ class CustomerTechpackPreviewViewController: BaseViewController {
                 Globals.alert(context: self, title: "Preview Techpack", message: json["message"].stringValue)
             }
         }
+        
+        if Globals.type == "customer" {
+            orderButton.titleLabel?.text = "Make an order"
+        }
+        else {
+            orderButton.titleLabel?.text = "Edit"
+        }
     }
+    
     func refreshViewGeneralInfo(){
         if generalInfo["title"].string != nil {
             titleLabel.text = generalInfo["title"].stringValue
@@ -96,11 +118,68 @@ class CustomerTechpackPreviewViewController: BaseViewController {
     @IBAction func onFullScreenImage(_ sender: Any) {
         slideshow.presentFullScreenController(from: self)
     }
-    
+    // MARK: payment
     @IBAction func onMakeOrder(_ sender: Any) {
-        
+        if Globals.type == "customer" {
+            getClientToken()
+        }
+    }
+    func getClientToken(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        APIManager.getPaymentClientToken { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                Globals.clientToken = json["res"].stringValue
+                self.showDropIn()
+            }
+            else {
+                Globals.alert(context: self, title: "Purchase Techpack", message: json["message"].stringValue)
+            }
+        }
+    }
+    func showDropIn(){
+        let request = BTDropInRequest()
+        let dropIn = BTDropInController(authorization: Globals.clientToken, request: request) { (controller, result, error) in
+            if error != nil {
+                print(error.debugDescription)
+            }
+            else if result?.isCancelled ?? false {
+                print("Cancelled")
+            }
+            else if let result = result {
+                print(result.paymentDescription)
+                print(result.paymentMethod)
+                print(result.paymentOptionType)
+//                result.paymentDescription = generalInfo["title"].stringValue
+                self.paymentCheckout(paymentMethod: result.paymentMethod!)
+            }
+            controller.dismiss(animated: true, completion: nil)
+        }
+        present(dropIn!, animated: true, completion: nil)
+    }
+    func paymentCheckout(paymentMethod: BTPaymentMethodNonce){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        var param = [String:String]()
+        param["amount"] = "\(priceLabel.text?.currencyValue() ?? 0)"
+        param["payment_method_nonce"] = paymentMethod.nonce
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getPaymentCheckOuts(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                print(json["res"])
+                Globals.alert(context: self, title: "Purchase Techpack", message: json["res","processorResponseText"].stringValue)
+            }
+            else {
+                Globals.alert(context: self, title: "Purchase Techpack", message: json["message"].stringValue)
+            }
+        }
     }
 }
+
 extension CustomerTechpackPreviewViewController: ImageSlideshowDelegate {
     func imageSlideshow(_ imageSlideshow: ImageSlideshow, didChangeCurrentPageTo page: Int) {
         print("current page:",page)

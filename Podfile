@@ -22,6 +22,9 @@ pod 'Toast-Swift'
 pod 'SDWebImage'
 pod 'FBSDKLoginKit'
 pod 'DatePickerDialog'
+pod 'BraintreeDropIn'
+pod 'Braintree/Apple-Pay'
+pod 'Braintree/Venmo'
 
   target 'GombleTests' do
     inherit! :search_paths

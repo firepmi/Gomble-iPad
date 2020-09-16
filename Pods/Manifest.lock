@@ -3,6 +3,42 @@ PODS:
   - Alamofire (5.2.2)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
+  - Braintree/Apple-Pay (4.35.0):
+    - Braintree/Core
+  - Braintree/Card (4.35.0):
+    - Braintree/Core
+  - Braintree/Core (4.35.0)
+  - Braintree/PaymentFlow (4.35.0):
+    - Braintree/Card
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPal (4.35.0):
+    - Braintree/Core
+    - Braintree/PayPalOneTouch
+  - Braintree/PayPalDataCollector (4.35.0):
+    - Braintree/Core
+    - Braintree/PayPalUtils
+  - Braintree/PayPalOneTouch (4.35.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+    - Braintree/PayPalUtils
+  - Braintree/PayPalUtils (4.35.0)
+  - Braintree/UnionPay (4.35.0):
+    - Braintree/Card
+    - Braintree/Core
+  - Braintree/Venmo (4.35.0):
+    - Braintree/Core
+    - Braintree/PayPalDataCollector
+  - BraintreeDropIn (8.1.1):
+    - BraintreeDropIn/DropIn (= 8.1.1)
+  - BraintreeDropIn/DropIn (8.1.1):
+    - Braintree/Card (~> 4.32)
+    - Braintree/Core (~> 4.32)
+    - Braintree/PaymentFlow (~> 4.32)
+    - Braintree/PayPal (~> 4.32)
+    - Braintree/UnionPay (~> 4.32)
+    - BraintreeDropIn/UIKit
+  - BraintreeDropIn/UIKit (8.1.1)
   - DatePickerDialog (3.0)
   - EFColorPicker (5.2.0)
   - ExpandableCell (1.3.0)
@@ -34,6 +70,9 @@ DEPENDENCIES:
   - AKImageCropperView
   - Alamofire
   - AlamofireImage
+  - Braintree/Apple-Pay
+  - Braintree/Venmo
+  - BraintreeDropIn
   - DatePickerDialog
   - EFColorPicker
   - ExpandableCell
@@ -52,6 +91,8 @@ SPEC REPOS:
     - AKImageCropperView
     - Alamofire
     - AlamofireImage
+    - Braintree
+    - BraintreeDropIn
     - DatePickerDialog
     - EFColorPicker
     - ExpandableCell
@@ -70,6 +111,8 @@ SPEC CHECKSUMS:
   AKImageCropperView: 9c80fd45512daa69426161ad51c248655c1b5182
   Alamofire: 814429acc853c6c54ff123fc3d2ef66803823ce0
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  Braintree: 7ff6755ba50506e403dc03779ae68c5ccf6b9808
+  BraintreeDropIn: 2cf07a9041df45ff671586042dbaf7b5d2767347
   DatePickerDialog: 03dbb8350bfa80302ab2a8c83cee1fec70184444
   EFColorPicker: ac692380016b47ad0e61706a910fc1414214a760
   ExpandableCell: 69ca7d71971c171473a7a30964d2127f4c6ceaf6
@@ -84,6 +127,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   XLPagerTabStrip: 61c57fd61f611ee5f01ff1495ad6fbee8bf496c5
 
-PODFILE CHECKSUM: 56831f0acef5d4b3dd7bed92f778a8fe55558cca
+PODFILE CHECKSUM: b0fe25cedf433f6a13e808b0715c81e3c6a70366
 
 COCOAPODS: 1.9.3

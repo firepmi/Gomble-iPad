@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import Braintree
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        BTAppSwitch.setReturnURLScheme("com.app.Gomble.payments")
+        
         return true
     }
 
@@ -26,6 +29,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String,
             annotation: options[UIApplication.OpenURLOptionsKey.annotation]
         )
+        if url.scheme?.localizedCaseInsensitiveCompare("com.app.Gomble.payments") == .orderedSame {
+            return BTAppSwitch.handleOpen(url, sourceApplication: options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String)
+        }
+        return false
     }
     
     // MARK: UISceneSession Lifecycle

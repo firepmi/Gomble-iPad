@@ -8,6 +8,7 @@
 
 import UIKit
 import FBSDKCoreKit
+import Braintree
 
 @available(iOS 13.0, *)
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -61,6 +62,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             sourceApplication: nil,
             annotation: [UIApplication.OpenURLOptionsKey.annotation]
         )
+        URLContexts.forEach { context in
+            if context.url.scheme?.localizedCaseInsensitiveCompare("com.my-app.your-app.payments") == .orderedSame {
+                BTAppSwitch.handleOpenURLContext(context)
+            }
+        }
     }
 
 }
