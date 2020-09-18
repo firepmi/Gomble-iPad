@@ -14,6 +14,7 @@ import SwiftyJSON
 class CustomerHomeViewController: BaseViewController {
     var techpacks = [JSON]()
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var searchTextField: RoundedTextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,8 @@ class CustomerHomeViewController: BaseViewController {
         type = "customer"
         Globals.type = "customer"
         pathView.setPath(path: ["Products"])
+        
+        searchTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
     }
     override func viewDidAppear(_ animated: Bool) {
         getData()
@@ -31,7 +34,7 @@ class CustomerHomeViewController: BaseViewController {
         hud.textLabel.text = "Please wait..."
         hud.show(in: self.view)
         var param = [String:String]()
-        param["folder_id"] = Globals.folderID
+        param["search_key"] = Globals.folderID
         APIManager.getProducts(param: param) { json in
             hud.dismiss()
             if json["success"].boolValue {
@@ -41,6 +44,19 @@ class CustomerHomeViewController: BaseViewController {
             }
             else {
                 self.view.makeToast(json["message"].stringValue)
+            }
+        }
+    }
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        var param = [String:String]()
+        param["search_key"] = textField.text
+        APIManager.getProducts(param: param) { json in
+            if json["success"].boolValue {
+                self.techpacks = json["res"].arrayValue
+                self.collectionView.reloadData()
+            }
+            else {
+                print(json["message"].stringValue)
             }
         }
     }

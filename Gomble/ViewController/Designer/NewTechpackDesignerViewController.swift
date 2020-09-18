@@ -16,6 +16,11 @@ class NewTechpackDesignerViewController: BaseViewController {
     @IBOutlet weak var previewButtonView: UIView!
     @IBOutlet weak var tableView: ExpandableTableView!
         
+    @IBOutlet weak var publishButtonLabel: UILabel!
+    @IBOutlet weak var saveButtonLabel: UILabel!
+    @IBOutlet weak var saveButtonView: RoundedView!
+    @IBOutlet weak var saveIcon: UIImageView!
+    
     let categoryCells = [
         "collaboration_cell",
          "stage_cell",
@@ -62,26 +67,36 @@ class NewTechpackDesignerViewController: BaseViewController {
     var factoryView: FactoryView?
     var priceView: PriceView?
     var readyToWearView: ReadyToWearView?
-    var titleStr = "New Techpack"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         type = "designer"
-        titleLabel.text = titleStr
+        if Globals.isNew {
+            titleLabel.text = "New Techpack"
+            publishButtonLabel.text = "Create and publish"
+            saveButtonLabel.text = "Save progress"
+        }
+        else {
+            titleLabel.text = "Edit Techpack"
+            publishButtonLabel.text = "Save"
+            saveIcon.isHidden = true
+            saveButtonLabel.text = "Delete techpack"
+        }
         previewButtonView.roundCorners(corners: [.topLeft, .bottomLeft], radius: 13.5)
         
-        let hud = JGProgressHUD(style: .dark)
-        hud.textLabel.text = "Please wait..."
-        hud.show(in: self.view)
-        print(Globals.folderID)
-        APIManager.getDraft(param: ["folder_id" : Globals.folderID]) { json in
-            hud.dismiss()
-            if json["success"].boolValue {
-                Globals.techpackID = json["res"].stringValue
-            }
-            else {
-                Globals.alert(context: self, title: "New Techpack", message: json["message"].stringValue)
-                self.onBack()
+        if Globals.isNew {
+            let hud = JGProgressHUD(style: .dark)
+            hud.textLabel.text = "Please wait..."
+            hud.show(in: self.view)
+            APIManager.getDraft(param: ["folder_id" : Globals.folderID]) { json in
+                hud.dismiss()
+                if json["success"].boolValue {
+                    Globals.techpackID = json["res"].stringValue
+                }
+                else {
+                    Globals.alert(context: self, title: "New Techpack", message: json["message"].stringValue)
+                    self.onBack()
+                }
             }
         }
     }
@@ -91,13 +106,7 @@ class NewTechpackDesignerViewController: BaseViewController {
         tableView.expansionStyle = .single
         tableView.autoReleaseDelegate = false
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        refreshView()
-    }
-    func refreshView() {
-        
-    }
+    }    
     
     @IBAction func onPreview(_ sender: Any) {
     }
@@ -249,12 +258,40 @@ class NewTechpackDesignerViewController: BaseViewController {
         }
     }
     @IBAction func onSaveProgress(_ sender: Any) {
-        stageView?.updateData(completion: nil)
-        generalInfoView?.updateData(completion: nil)
-        measurementsView?.updateData(completion: nil)
-        factoryView?.updateData(completion: nil)
-        priceView?.updateData(completion: nil)
-        self.onBack()
+        if Globals.isNew {
+            stageView?.updateData(completion: nil)
+            generalInfoView?.updateData(completion: nil)
+            measurementsView?.updateData(completion: nil)
+            factoryView?.updateData(completion: nil)
+            priceView?.updateData(completion: nil)
+            self.onBack()
+        }
+        else {
+            let alert = UIAlertController(title: "Delete Techpack", message: "Do you want remove this techpack? This action cannot be undone.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Delete anyway", style: .default, handler: { (_) in
+                self.deleteTechpack()
+            }))
+            alert.addAction(UIAlertAction(title: "keep it", style: .cancel, handler: { (_) in
+                
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+    }
+    func deleteTechpack(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.deleteTechpack(param: param) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.onBack()
+            }
+            else {
+                Globals.alert(context: self, title: "Delete Techpack", message: json["message"].stringValue)
+            }
+        }
     }
     @IBAction func onCreateAndPublish(_ sender: Any) {
         if stageView == nil || generalInfoView == nil ||

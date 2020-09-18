@@ -42,7 +42,15 @@ class CustomerTechpackPreviewViewController: BaseViewController {
         
         massProductionView.dropShadow(color: UIColor.black, opacity: 0.2, offSet: CGSize(width: -1,height: 1), radius: 10, scale: true)
         massProductionView.roundCorners(corners: [.topLeft, .bottomLeft], radius: 10)
-        
+                
+        if Globals.type == "customer" {
+            orderButton.setTitle("Make an order", for: .normal)
+        }
+        else {
+            orderButton.setTitle("Edit", for: .normal)
+        }
+    }
+    override func viewDidAppear(_ animated: Bool) {
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Please wait..."
         hud.show(in: self.view)
@@ -78,12 +86,6 @@ class CustomerTechpackPreviewViewController: BaseViewController {
             }
         }
         
-        if Globals.type == "customer" {
-            orderButton.titleLabel?.text = "Make an order"
-        }
-        else {
-            orderButton.titleLabel?.text = "Edit"
-        }
     }
     
     func refreshViewGeneralInfo(){
@@ -122,6 +124,10 @@ class CustomerTechpackPreviewViewController: BaseViewController {
     @IBAction func onMakeOrder(_ sender: Any) {
         if Globals.type == "customer" {
             getClientToken()
+        }
+        else {
+            Globals.isNew = false
+            navigateTo(id: "new_techpack_designer", pathId: "Edit techpack")
         }
     }
     func getClientToken(){

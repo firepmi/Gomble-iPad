@@ -16,6 +16,7 @@ struct Globals {
     public static var clientToken = ""
     public static var sizeRanges = [String]()
     public static var unit = "cm"
+    public static var isNew = true
     
     public static func alert(context: UIViewController, title: String, message: String, delayed: Bool = false, completion:(()->Void)? = nil ) {
         if(delayed) {

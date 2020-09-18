@@ -57,6 +57,7 @@ class DesignerTechpacksViewController: BaseViewController {
     }
      
     @IBAction func onCreateTechpack(_ sender: Any) {
+        Globals.isNew = true
         navigateTo(id: "new_techpack_designer", pathId: "New techpack")
     }
 }

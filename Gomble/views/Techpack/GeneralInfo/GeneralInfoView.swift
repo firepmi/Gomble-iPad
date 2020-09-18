@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import JGProgressHUD
 
 @IBDesignable
 class GeneralInfoView: BaseView {
@@ -38,10 +39,14 @@ class GeneralInfoView: BaseView {
         getData()
     }
     func getData(){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self)
         var param = [String:String]()
         param["techpack_id"] = Globals.techpackID
         APIManager.getGeneralInfo(param: param) { (json) in
             print(json)
+            hud.dismiss()
             if json["success"].boolValue {
                 self.refreshView(json: json["res"])
             }

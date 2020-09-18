@@ -163,6 +163,9 @@ class APIManager {
     static func publishTechpack(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "techpacks/publish", param: param, completion: completion)
     }
+    static func deleteTechpack(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "techpacks/delete", param: param, completion: completion)
+    }
     static func getFactory(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "factory", param: param, completion: completion)
     }

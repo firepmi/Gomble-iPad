@@ -1860,6 +1860,7 @@
                         <outlet property="collectionView" destination="fpg-rs-KM9" id="lck-e9-ll6"/>
                         <outlet property="customHeaderView" destination="X3j-fZ-bWB" id="clu-K0-qOd"/>
                         <outlet property="pathView" destination="Wb3-AP-bBn" id="Yh1-Av-tVV"/>
+                        <outlet property="searchTextField" destination="MVM-MW-ID8" id="Plb-UV-4hK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gef-cF-JRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -3185,7 +3186,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="270" id="AKB-cl-hvp"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                        <state key="normal" title="Make an order">
+                                        <state key="normal">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -5095,6 +5096,10 @@
                         <outlet property="customHeaderView" destination="bBC-sI-Oam" id="cEQ-CT-LLM"/>
                         <outlet property="pathView" destination="IGa-vu-mee" id="fxP-6Q-Aug"/>
                         <outlet property="previewButtonView" destination="fdj-bp-XiR" id="Kn0-hS-07j"/>
+                        <outlet property="publishButtonLabel" destination="cRi-qn-Pv1" id="TtP-uK-whj"/>
+                        <outlet property="saveButtonLabel" destination="ZnS-nM-5DH" id="Rfl-AT-eQt"/>
+                        <outlet property="saveButtonView" destination="M28-jS-IAp" id="cFw-KE-U1l"/>
+                        <outlet property="saveIcon" destination="gDI-c9-HlW" id="9V3-Qf-lEc"/>
                         <outlet property="tableView" destination="IaB-eT-Nc8" id="rtE-Hk-Ouh"/>
                         <outlet property="titleLabel" destination="r6V-bY-Xdw" id="jS3-xe-Tx0"/>
                     </connections>
