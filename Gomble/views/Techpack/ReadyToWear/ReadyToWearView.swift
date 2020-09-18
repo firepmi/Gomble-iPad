@@ -21,7 +21,7 @@ class ReadyToWearView: BaseView {
     var viewHeight:CGFloat = 280
     let cellID = "readyToWearCell";
     var onHightChanged : ((CGFloat)->Void)?
-    var readyToWearData:[JSON] = Testdatabase.readyToWearData {
+    var readyToWearData:[JSON] = [] {
         didSet {
             tableView.reloadData()
             tableView.layoutIfNeeded()
@@ -50,11 +50,24 @@ class ReadyToWearView: BaseView {
     override func initView() {
         tableView.register(UINib(nibName: "ReadyToWearCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        readyToWearData = Testdatabase.readyToWearData
+        getData()
+    }
+    func getData(){
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getReadyToWears(param: param) { json in
+            if json["success"].boolValue {
+                self.readyToWearData = json["res"].arrayValue
+                self.tableView.reloadData()
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
     }
     @IBAction func onAddImage(_ sender: Any) {
         delegate?.openDialog(id: "add_ready_to_wear", completion: {
-            self.readyToWearData = Testdatabase.readyToWearData
+            self.getData()
         })
     }
 }
@@ -72,7 +85,8 @@ extension ReadyToWearView:UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = data["title"].stringValue
         cell.descriptionLabel.text = data["description"].stringValue
-        
+        let imageUrl = APIManager.fullReadyToWearImagePath(name: data["image"].stringValue)
+        cell.productImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "test1.png"))
         cell.onDeleteClicked(){
             print("deleted")
         }

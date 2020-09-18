@@ -13,6 +13,8 @@ class MeasurementCell: UITableViewCell {
     @IBOutlet weak var measurementImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var sizeRangeLabel: UILabel!
+    @IBOutlet weak var tolLabel: UILabel!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)

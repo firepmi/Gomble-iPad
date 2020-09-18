@@ -21,7 +21,7 @@ class PatternView: BaseView {
     var viewHeight:CGFloat = 280
     let cellID = "patternView";
     var onHightChanged : ((CGFloat)->Void)?
-    var patternData:[JSON] = Testdatabase.patternData {
+    var patternData:[JSON] = [] {
         didSet {
             tableView.reloadData()
             tableView.layoutIfNeeded()
@@ -50,11 +50,24 @@ class PatternView: BaseView {
     override func initView() {
         tableView.register(UINib(nibName: "PatternCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
-        patternData = Testdatabase.patternData
+        getData()
+    }
+    func getData(){
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getPattern(param: param) { json in
+            if json["success"].boolValue {
+                self.patternData = json["res"].arrayValue
+                self.tableView.reloadData()
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
     }
     @IBAction func onAddPattern(_ sender: Any) {
         delegate?.openDialog(id: "add_pattern", completion: {
-            self.patternData = Testdatabase.patternData
+            self.getData()
         })
     }
 }
@@ -72,7 +85,8 @@ extension PatternView:UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = data["title"].stringValue
         cell.descriptionLabel.text = data["description"].stringValue
-        
+        let imageUrl = APIManager.fullPatternPath(name: data["image"].stringValue)
+        cell.patternImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "test_pattern.png"))
         cell.onDeleteClicked(){
             print("deleted")
         }

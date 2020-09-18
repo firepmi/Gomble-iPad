@@ -62,12 +62,12 @@ class NewTechpackDesignerViewController: BaseViewController {
     var factoryView: FactoryView?
     var priceView: PriceView?
     var readyToWearView: ReadyToWearView?
-    
+    var titleStr = "New Techpack"
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         type = "designer"
-        titleLabel.text = "New techpack"
+        titleLabel.text = titleStr
         previewButtonView.roundCorners(corners: [.topLeft, .bottomLeft], radius: 13.5)
         
         let hud = JGProgressHUD(style: .dark)
@@ -101,24 +101,178 @@ class NewTechpackDesignerViewController: BaseViewController {
     
     @IBAction func onPreview(_ sender: Any) {
     }
-    func updateData() {
-        stageView?.updateData()
-        generalInfoView?.updateData()
-        priceView?.updateData()
+    func updateData(completion:((JSON)->Void)?) {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading Stage Data..."
+        hud.show(in: self.view)
+        stageView?.updateData{ json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.updateGeneralInfo(completion: completion)
+            }
+            else {
+                completion?(json)
+            }
+        }
+    }
+    func updateGeneralInfo(completion:((JSON)->Void)?) {
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Upload General Info..."
+        hud.show(in: self.view)
+        generalInfoView?.updateData{ json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.updateSketchData(completion: completion)
+            }
+            else {
+                completion?(json)
+            }
+        }
+    }
+    func updateSketchData(completion:((JSON)->Void)?){
+        if sketchesView?.sketchesData.count == 0 {
+            let alert = UIAlertController(title: "Publish Techpack", message: "No sketch data added, Do you want add it?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                
+            }))
+            alert.addAction(UIAlertAction(title: "No, Thanks", style: .cancel, handler: { (_) in
+                self.updateMaterialData(completion: completion)
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            self.updateMaterialData(completion: completion)
+        }
+    }
+    func updateMaterialData(completion:((JSON)->Void)?){
+        if materialView?.materialData.count == 0 {
+            let alert = UIAlertController(title: "Publish Techpack", message: "No material data added, Do you want add it?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                
+            }))
+            alert.addAction(UIAlertAction(title: "No, Thanks", style: .cancel, handler: { (_) in
+                self.updateMeasurementBasicInfo(completion: completion)
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            self.updateMeasurementBasicInfo(completion: completion)
+        }
+    }
+    func updateMeasurementBasicInfo(completion:((JSON)->Void)?){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading Measurement Info..."
+        hud.show(in: self.view)
+        measurementsView?.updateData{ json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.updateMeasurementData(completion: completion)
+            }
+            else {
+                completion?(json)
+            }
+        }
+    }
+    func updateMeasurementData(completion:((JSON)->Void)?){
+        if materialView?.materialData.count == 0 {
+            let alert = UIAlertController(title: "Publish Techpack", message: "No measurement data added, Do you want add it?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                
+            }))
+            alert.addAction(UIAlertAction(title: "No, Thanks", style: .cancel, handler: { (_) in
+                self.updatePatternData(completion: completion)
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            self.updatePatternData(completion: completion)
+        }
+    }
+    func updatePatternData(completion:((JSON)->Void)?){
+        if patternView?.patternData.count == 0 {
+            let alert = UIAlertController(title: "Publish Techpack", message: "No pattern data added, Do you want add it?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                
+            }))
+            alert.addAction(UIAlertAction(title: "No, Thanks", style: .cancel, handler: { (_) in
+                self.updateFactoryData(completion: completion)
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            self.updateFactoryData(completion: completion)
+        }
+    }
+    func updateFactoryData(completion:((JSON)->Void)?){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading Factory Data..."
+        hud.show(in: self.view)
+        factoryView?.updateData{ json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.updatePriceData(completion: completion)
+            }
+            else {
+                completion?(json)
+            }
+        }
+    }
+    func updatePriceData(completion:((JSON)->Void)?){
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading Price Data..."
+        hud.show(in: self.view)
+        priceView?.updateData{ json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.updateReadyToWear(completion: completion)
+            }
+            else {
+                completion?(json)
+            }
+        }
+    }
+    func updateReadyToWear(completion:((JSON)->Void)?){
+        var json = JSON()
+        json["success"].bool = true
+        if readyToWearView?.readyToWearData.count == 0 {
+            let alert = UIAlertController(title: "Publish Techpack", message: "No ready to wear data added, Do you want add it?", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (_) in
+                
+            }))
+            alert.addAction(UIAlertAction(title: "No, Thanks", style: .cancel, handler: { (_) in
+                completion?(json)
+            }))
+            present(alert, animated: true, completion: nil)
+        }
+        else {
+            completion?(json)
+        }
     }
     @IBAction func onSaveProgress(_ sender: Any) {
-        updateData()
+        stageView?.updateData(completion: nil)
+        generalInfoView?.updateData(completion: nil)
+        measurementsView?.updateData(completion: nil)
+        factoryView?.updateData(completion: nil)
+        priceView?.updateData(completion: nil)
         self.onBack()
     }
     @IBAction func onCreateAndPublish(_ sender: Any) {
         if stageView == nil || generalInfoView == nil ||
             sketchesView == nil || materialView == nil || factoryView == nil ||
-            priceView == nil {
+            priceView == nil || patternView == nil || readyToWearView == nil {
             Globals.alert(context: self, title: "New Techpack", message: "Please fill all fields")
             return
         }
-        updateData()
-    
+        updateData { json in
+            if json["success"].boolValue {
+                self.publishTechpack()
+            }
+            else {
+                Globals.alert(context: self, title: "Publish Techpack", message: json["message"].stringValue)
+            }
+        }
+    }
+    func publishTechpack(){
         let hud = JGProgressHUD(style: .dark)
         hud.textLabel.text = "Please wait..."
         hud.show(in: self.view)

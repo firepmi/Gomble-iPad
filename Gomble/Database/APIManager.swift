@@ -40,6 +40,15 @@ class APIManager {
     static func fullMaterialImagePath(name:String) -> String {
         return "\(imageUrl)materials/\(name)"
     }
+    static func fullMeasurementPath(name:String) -> String {
+        return "\(imageUrl)measurements/\(name)"
+    }
+    static func fullPatternPath(name:String) -> String {
+        return "\(imageUrl)patterns/\(name)"
+    }
+    static func fullReadyToWearImagePath(name:String) -> String {
+        return "\(imageUrl)readytowears/\(name)"
+    }
     static func login(param:[String:String], completion:((JSON)->Void)?) {
         post(url: "auth/login", param: param, completion: completion)
     }
@@ -85,6 +94,9 @@ class APIManager {
     static func getDraft(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "techpacks/draft", param: param, completion: completion)
     }
+    static func getStage(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "stage", param: param, completion: completion)
+    }
     static func updateStage(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "stage/update", param: param, completion: completion)
     }
@@ -109,6 +121,24 @@ class APIManager {
     static func addMaterialColor(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "color/add", param: param, completion: completion)
     }
+    static func getMeasurements(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "measurement", param: param, completion: completion)
+    }
+    static func addMeasurement(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
+        multipartPost(url: "measurement/add", param: param, uploadProgress: uploadProgress, completion: completion)
+    }
+    static func updateMeasurementBasicInfo(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "measurement/update-basic-info", param: param, completion: completion)
+    }
+    static func getMeasurementBasicInfo(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "measurement/basic-info", param: param, completion: completion)
+    }
+    static func getReadyToWears(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "readytowear", param: param, completion: completion)
+    }
+    static func addReadyToWear(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
+        multipartPost(url: "readytowear/add", param: param, uploadProgress: uploadProgress, completion: completion)
+    }
     static func updateGeneralInfo(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
         multipartPost(url: "generalinfo/update", param: param, uploadProgress: uploadProgress, completion: completion)
     }
@@ -124,17 +154,30 @@ class APIManager {
     static func getSketches(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "sketch", param: param, completion: completion)
     }
+    static func addPattern(param:MultipartFormData, uploadProgress: ((Double)->Void)?, completion:((JSON)->Void)?) {
+        multipartPost(url: "pattern/add", param: param, uploadProgress: uploadProgress, completion: completion)
+    }
+    static func getPattern(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "pattern", param: param, completion: completion)
+    }
     static func publishTechpack(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "techpacks/publish", param: param, completion: completion)
     }
-    
+    static func getFactory(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "factory", param: param, completion: completion)
+    }
+    static func updateFactory(param:[String:String],completion:((JSON)->Void)?) {
+        post(url: "factory/update", param: param, completion: completion)
+    }
     static func getPaymentClientToken(completion:((JSON)->Void)?) {
         post(url: "payment/client-token", param: nil, completion: completion)
     }
     static func getPaymentCheckOuts(param:[String:String],completion:((JSON)->Void)?) {
         post(url: "payment/checkouts", param: param, completion: completion)
     }
-    
+    static func getMyOrders(completion:((JSON)->Void)?) {
+        post(url: "payment/orders", param: nil, completion: completion)
+    }
     static func post(url: String, param:[String:String]?, completion:((JSON)->Void)?) {
         let link = apiUrl + url
         print(link)
@@ -144,7 +187,7 @@ class APIManager {
                 switch response.result {
                 case .success(let value):
                     let json = JSON(value)
-                    completion!(json)
+                    completion?(json)
                 case .failure(let error):
                     print(error.localizedDescription)
                     var json = JSON()
@@ -155,7 +198,7 @@ class APIManager {
                     else {
                         json["message"].string = error.localizedDescription
                     }
-                    completion!(json)
+                    completion?(json)
                 }
         }
     }
@@ -174,7 +217,7 @@ class APIManager {
             switch response.result {
             case .success(let value):
                 let json = JSON(value!)
-                completion!(json)
+                completion?(json)
             case .failure(let error):
                 print(error.localizedDescription)
                 var json = JSON()
@@ -185,7 +228,7 @@ class APIManager {
                 else {
                     json["message"].string = error.localizedDescription
                 }
-                completion!(json)
+                completion?(json)
             }
         }
     }

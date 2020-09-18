@@ -25,6 +25,7 @@ class GeneralInfoView: BaseView {
         nibName = "GeneralInfoView"        
     }
     var isImageUpdated = false
+    var generalInfoData = JSON()
     
     override func initView() {
         imageContentView.isHidden = true
@@ -34,6 +35,7 @@ class GeneralInfoView: BaseView {
         tags.append("dress")
         tagListView.addTags(tags);
         tagListView.delegate = self
+        getData()
     }
     func getData(){
         var param = [String:String]()
@@ -41,14 +43,32 @@ class GeneralInfoView: BaseView {
         APIManager.getGeneralInfo(param: param) { (json) in
             print(json)
             if json["success"].boolValue {
-                
+                self.refreshView(json: json["res"])
             }
             else {
                 print(json["message"].stringValue)
             }
         }
     }
-    func updateData(){
+    func refreshView(json:JSON){
+        titleTextField.text = json["title"].stringValue
+        descriptionTextView.text = json["description"].stringValue
+        tags = []
+        for tag in json["tags"].arrayValue {
+            tags.append(tag.stringValue)
+        }
+        tagListView.removeAllTags()
+        tagListView.addTags(tags)
+        let imageUrl = APIManager.fullGeneralInfoImagePath(name: json["image"].stringValue)
+        imageView.sd_setImage(with: URL(string: imageUrl)){ image, error, cache, urls in
+            if error == nil {
+                self.imageView.image = image
+                self.emptyView.isHidden = true
+                self.imageContentView.isHidden = false
+            }
+        }
+    }
+    func updateData(completion:((JSON)->Void)?){
         let multipartFormData = MultipartFormData()
         var tagStr = ""
         for tag in tags {
@@ -75,14 +95,7 @@ class GeneralInfoView: BaseView {
         }
         APIManager.updateGeneralInfo(param: multipartFormData, uploadProgress: { progress in
             print(progress)
-        }) { json in
-            if json["success"].boolValue {
-                print(json["message"].stringValue)
-            }
-            else {
-                self.makeToast(json["message"].stringValue)
-            }
-        }
+        }, completion: completion)
     }
     @IBAction func onUploadImage(_ sender: Any) {
         var alert = UIAlertController(title:"Select image from...", message:nil, preferredStyle: .actionSheet)
@@ -103,7 +116,14 @@ class GeneralInfoView: BaseView {
         
         delegate!.present(alert, animated: true, completion: nil)
     }
+    @IBAction func onEditImage(_ sender: Any) {
+        onUploadImage(sender)
+    }
     @IBAction func onDeleteImage(_ sender: Any) {
+        imageView.image = nil
+        emptyView.isHidden = false
+        imageContentView.isHidden = true
+        isImageUpdated = false
     }
 }
 

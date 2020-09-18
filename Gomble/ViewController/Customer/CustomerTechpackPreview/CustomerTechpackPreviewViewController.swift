@@ -141,6 +141,8 @@ class CustomerTechpackPreviewViewController: BaseViewController {
     }
     func showDropIn(){
         let request = BTDropInRequest()
+        request.venmoDisabled = false
+        request.applePayDisabled = false
         let dropIn = BTDropInController(authorization: Globals.clientToken, request: request) { (controller, result, error) in
             if error != nil {
                 print(error.debugDescription)

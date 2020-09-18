@@ -8,6 +8,7 @@
 
 import UIKit
 import JGProgressHUD
+import SwiftyJSON
 
 @IBDesignable
 class StageView: BaseView {
@@ -17,6 +18,8 @@ class StageView: BaseView {
     let cellID = "stageTableViewCell"
     var menuData = ["Idea", "Sample","Production"]
     var startDateData = ["","",""]
+    var endDateData = ["","",""]
+    var completionData:[Float] = [50,50,50]
     var selectedIndex = 0
     
     override func setNibName() {
@@ -26,8 +29,38 @@ class StageView: BaseView {
         tableView.register(UINib(nibName: "StageTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         tableView.separatorStyle = .none
+        getData()
     }
-    func updateData(){
+    func getData(){
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getStage(param: param) { json in
+            if json["success"].boolValue {
+                print(json["message"].stringValue)
+                self.refreshView(json: json["res"])
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
+    }
+    func refreshView(json:JSON){
+        switch json["title"].stringValue {
+        case "Idea":
+            selectedIndex = 0
+        case "Sample":
+            selectedIndex = 1
+        case "Product":
+            selectedIndex = 2
+        default:
+            break
+        }
+        startDateData[selectedIndex] = json["start_date"].stringValue
+        endDateData[selectedIndex] = json["end_date"].stringValue
+        completionData[selectedIndex] = json["completion"].floatValue
+        tableView.reloadData()
+    }
+    func updateData(completion:((JSON)->Void)?){
         let cell = tableView.cellForRow(at: IndexPath(row: selectedIndex, section: 0)) as! StageTableViewCell
         var param = [String:String]()
         param["title"] = cell.titleLabel.text
@@ -36,14 +69,7 @@ class StageView: BaseView {
         param["completion"] = "\(cell.completion)"
         param["techpack_id"] = Globals.techpackID
         
-        APIManager.updateStage(param: param) { json in
-            if json["success"].boolValue {
-                print(json["message"].stringValue)
-            }
-            else {
-                self.makeToast(json["message"].stringValue)
-            }
-        }
+        APIManager.updateStage(param: param, completion: completion)
     }
     
 }
@@ -58,6 +84,9 @@ extension StageView:UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         
         cell.titleLabel.text = menuData[indexPath.row]
+        cell.startDateLabel.text = startDateData[indexPath.row]
+        cell.endDateLabel.text = endDateData[indexPath.row]
+        cell.completion = completionData[indexPath.row]
         cell.containerView.borderColor = selectedColor
         if selectedIndex == indexPath.row {
             cell.isSelected = true

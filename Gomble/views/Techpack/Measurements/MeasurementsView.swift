@@ -19,12 +19,13 @@ class MeasurementsView: BaseView {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
     @IBOutlet weak var tagListViewWidth: NSLayoutConstraint!
-    var unit = "cemti"
+    var unit = "cm"
+    var tags = ["XS","S","M","L",]
     var delegate:BaseViewController?
     var viewHeight:CGFloat = 432
     let cellID = "measurementCell";
     var onHightChanged : ((CGFloat)->Void)?
-    var measurementData:[JSON] = Testdatabase.measurementData {
+    var measurementData:[JSON] = [] {
         didSet {
             tableView.reloadData()
             tableView.layoutIfNeeded()
@@ -53,40 +54,104 @@ class MeasurementsView: BaseView {
         tableView.register(UINib(nibName: "MeasurementCell", bundle: nil), forCellReuseIdentifier: cellID)
         tableView.tableFooterView = UIView(frame: CGRect.zero)
         
-        if Testdatabase.sizeRangeData.count == 0 {
-            Testdatabase.sizeRangeData.arrayObject = ["XS","S","M","L",]
-        }
         tagListView.removeAllTags()
-        for tag in Testdatabase.sizeRangeData.arrayValue {
-            self.tagListView.addTag(tag.stringValue)
-        }
+        self.tagListView.addTags(tags)
         tagListViewWidth.constant = tagListView.tagViewWidth
         tagListView.layoutIfNeeded()
         tagListView.delegate = self
-        measurementData = Testdatabase.measurementData
+        
+        if unit == "cm" {
+            iconInches.image = UIImage(named: "icon_radio_off_grey.png")
+            iconCenti.image = UIImage(named: "icon_radio_on.png")
+        }
+        else {
+            iconInches.image = UIImage(named: "icon_radio_on.png")
+            iconCenti.image = UIImage(named: "icon_radio_off_grey.png")
+        }
+        getData()
+    }
+    func getData(){
+        var param = [String:String]()
+        param["techpack_id"] = Globals.techpackID
+        APIManager.getMeasurements(param: param) { json in
+            if json["success"].boolValue {
+                self.measurementData = json["res"].arrayValue
+                self.tableView.reloadData()
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
+        APIManager.getMeasurementBasicInfo(param: param) { json in
+            if json["success"].boolValue {
+                self.refreshView(json: json["res"])
+                self.tableView.reloadData()
+            }
+            else {
+                self.makeToast(json["message"].stringValue)
+            }
+        }
+    }
+    func refreshView(json:JSON){
+        tags = []
+        for tag in json["size_range"].arrayValue {
+            tags.append(tag.stringValue)
+        }
+        tagListView.removeAllTags()
+        self.tagListView.addTags(tags)
+        tagListViewWidth.constant = tagListView.tagViewWidth
+        tagListView.layoutIfNeeded()
+        
+        unit = json["unit"].stringValue
+        if unit == "cm" {
+            iconInches.image = UIImage(named: "icon_radio_off_grey.png")
+            iconCenti.image = UIImage(named: "icon_radio_on.png")
+        }
+        else {
+            iconInches.image = UIImage(named: "icon_radio_on.png")
+            iconCenti.image = UIImage(named: "icon_radio_off_grey.png")
+        }
+    }
+    func updateData(completion:((JSON)->Void)?){
+        var tagStr = ""
+        for tag in tags {
+            tagStr = tagStr + tag + ","
+        }
+        if tagStr.count != 0 {
+            tagStr = tagStr[0..<tagStr.count-1]
+        }
+        var param = [String:String]()
+        
+        param["unit"] = unit
+        param["size_ranges"] = tagStr
+        param["techpack_id"] = Globals.techpackID
+        
+        APIManager.updateMeasurementBasicInfo(param: param, completion: completion)
     }
     @IBAction func onInches(_ sender: Any) {
-        unit = "inchi"
+        unit = "inch"
         iconInches.image = UIImage(named: "icon_radio_on.png")
         iconCenti.image = UIImage(named: "icon_radio_off_grey.png")
         
     }
     @IBAction func onCentimeter(_ sender: Any) {
-        unit = "cemti"
+        unit = "cm"
         iconInches.image = UIImage(named: "icon_radio_off_grey.png")
         iconCenti.image = UIImage(named: "icon_radio_on.png")
     }
     @IBAction func onAddMeasurement(_ sender: Any) {
+        Globals.unit = unit
+        Globals.sizeRanges = tags
         delegate?.openDialog(id: "add_measurement", completion: {
-            self.measurementData = Testdatabase.measurementData
+            self.getData()
         })
     }
     @IBAction func onAddSizeRange(_ sender: Any) {
+        Globals.sizeRanges = tags
         delegate?.openDialog(id: "select_sizes", completion: {
+            self.tags = Globals.sizeRanges
             self.tagListView.removeAllTags()
-            for tag in Testdatabase.sizeRangeData.arrayValue {
-                self.tagListView.addTag(tag.stringValue)
-            }
+            self.tagListView.addTags(self.tags)
             self.tagListViewWidth.constant = self.tagListView.tagViewWidth
             self.tagListView.layoutIfNeeded()
             self.tagListView.delegate = self
@@ -108,6 +173,18 @@ extension MeasurementsView:UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = data["title"].stringValue
         cell.descriptionLabel.text = data["description"].stringValue
+        let ranges = data["size_range"].arrayValue
+        var tagStr = ""
+        for tag in ranges {
+            tagStr = tagStr + tag.stringValue + ", "
+        }
+        if tagStr.count > 1 {
+            tagStr = tagStr[0..<tagStr.count-2]
+        }
+        cell.sizeRangeLabel.text = tagStr
+        cell.tolLabel.text = data["tol"].stringValue
+        let imageUrl = APIManager.fullMeasurementPath(name: data["image"].stringValue)
+        cell.measurementImageView.sd_setImage(with: URL(string: imageUrl), placeholderImage: UIImage(named: "test_measurement.png"))
         
         return cell
     }
@@ -123,12 +200,12 @@ extension MeasurementsView: TagListViewDelegate {
         tagListView.removeTag(title)
         tagListViewWidth.constant = tagListView.tagViewWidth
         tagListView.layoutIfNeeded()
-        Testdatabase.sizeRangeData.arrayObject = Testdatabase.sizeRangeData.arrayValue.filter{ $0.stringValue != title}
+        tags = tags.filter{ $0 != title}
     }
     func tagPressed(_ title: String, tagView: TagView, sender: TagListView) {
         tagListView.removeTag(title)
         tagListViewWidth.constant = tagListView.tagViewWidth
         tagListView.layoutIfNeeded()
-        Testdatabase.sizeRangeData.arrayObject = Testdatabase.sizeRangeData.arrayValue.filter{ $0.stringValue != title}
+        tags = tags.filter{ $0 != title}
     }
 }

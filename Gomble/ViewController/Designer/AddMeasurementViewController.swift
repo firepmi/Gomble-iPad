@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyJSON
+import JGProgressHUD
+import Alamofire
 
 class AddMeasurementViewController: BaseDialogViewController {
     @IBOutlet weak var addButtonView: UIView!
@@ -15,11 +17,15 @@ class AddMeasurementViewController: BaseDialogViewController {
     
     @IBOutlet weak var titleTextField: RoundedTextField!
     @IBOutlet weak var descriptionTextView: RoundedTextView!
+    @IBOutlet weak var tolTextField: RoundedTextField!
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var sizeRangeLabel: UILabel!
     
     let picker:UIImagePickerController?=UIImagePickerController()
     
-    var tags = [String]()
+    var measurementUnit = Globals.unit
+    var isImageUpdated = false
+    var tags = Globals.sizeRanges
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -28,10 +34,22 @@ class AddMeasurementViewController: BaseDialogViewController {
         view.addGestureRecognizer(tap)
         
         picker?.delegate = self
-        
-        for tag in Testdatabase.sizeRangeData.arrayValue {
-            tags.append(tag.stringValue)
+                
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        print(Globals.folderID)
+        APIManager.getMeasurements(param: ["techpack_id" : Globals.techpackID]) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                Globals.materialID = json["res"].stringValue
+            }
+            else {
+                Globals.alert(context: self, title: "New Meterial", message: json["message"].stringValue)
+                self.dismiss(animated: true, completion: nil)
+            }
         }
+        sizeRangeLabel.text = "Size Range [\(measurementUnit)]"
     }
     
     @IBAction func onAddPhoto(_ sender: Any) {
@@ -61,15 +79,55 @@ class AddMeasurementViewController: BaseDialogViewController {
         else {
             titleTextField.borderColor = UIColor.init(hexString:"#D7E1EC")
         }
-        var json = JSON()
-        json["title"].string = titleTextField.text!
-        json["description"].string = descriptionTextView.text
-        
-        Testdatabase.measurementData.append(json)
-        if (completion != nil) {
-            completion!()
+        let multipartFormData = MultipartFormData()
+        var sizeRangeStr = ""
+        for i in 0 ..< tags.count {
+            let cell = collectionView.cellForItem(at: IndexPath(item: i, section: 0))
+            let valueLabel = cell?.viewWithTag(100) as! UILabel
+            sizeRangeStr  = sizeRangeStr + valueLabel.text! + ","
         }
-        dismiss(animated: true, completion: nil)
+        if sizeRangeStr.count != 0 {
+            sizeRangeStr = sizeRangeStr[0..<sizeRangeStr.count-1]
+        }
+        let title = titleTextField.text!
+        let description = descriptionTextView.text!
+        let tol = tolTextField.text!
+        
+        if title != "" {
+            multipartFormData.append(title.data(using: .utf8, allowLossyConversion: false)!, withName: "title")
+        }
+        if description != "" {
+            multipartFormData.append(description.data(using: .utf8, allowLossyConversion: false)!, withName: "description")
+        }
+        if sizeRangeStr != "" {
+            multipartFormData.append(sizeRangeStr.data(using: .utf8, allowLossyConversion: false)!, withName: "size_ranges")
+        }
+        if tol != "" {
+            multipartFormData.append(tol.data(using: .utf8, allowLossyConversion: false)!, withName: "tol")
+        }
+        
+        multipartFormData.append(Globals.techpackID.data(using: .utf8, allowLossyConversion: false)!, withName: "techpack_id")
+        if isImageUpdated {
+            multipartFormData.append((imageView.image!.jpegData(compressionQuality: 1))!, withName: "image",fileName: "generalinfo.jpg", mimeType: "image/jpg")
+        }
+        
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Uploading..."
+        hud.indicatorView = JGProgressHUDPieIndicatorView()
+        hud.show(in: self.view)
+        print(Globals.folderID)
+        APIManager.addMeasurement(param: multipartFormData, uploadProgress: { progress in
+            hud.progress = Float(progress)
+        }) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                self.completion?()
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                Globals.alert(context: self, title: "New measurement item", message: json["message"].stringValue)
+            }
+        }
         
     }
 }
@@ -124,6 +182,7 @@ extension AddMeasurementViewController: UINavigationControllerDelegate, UIImageP
         print("cropped")
         imageView.image = image
         addButtonView.isHidden = true
+        isImageUpdated = true
     }
     func openCamera()
     {

@@ -45,7 +45,7 @@ class PriceView: BaseView {
         deliveryTextField.text = json["delivery"].floatValue.currencyFormattedStr()
         calcTotal()
     }
-    func updateData(){
+    func updateData(completion:((JSON)->Void)?){
         var param = [String:String]()
         param["factory"] = "\(factoryTextField.text?.currencyValue() ?? 0)"
         param["materials"] = "25"//materialsLabel.text
@@ -54,14 +54,7 @@ class PriceView: BaseView {
         param["total"] = "\(totalLabel.text?.currencyValue() ?? 0)"
         param["techpack_id"] = Globals.techpackID
         
-        APIManager.updatePrice(param: param) { json in
-            if json["success"].boolValue {
-                print(json["message"].stringValue)
-            }
-            else {
-                self.makeToast(json["message"].stringValue)
-            }
-        }
+        APIManager.updatePrice(param: param, completion: completion)
     }
     @objc func textFieldDidChange(_ textField: UITextField) {
         if let amountString = textField.text?.currencyInputFormatting() {

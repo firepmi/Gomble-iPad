@@ -38,7 +38,18 @@ extension CustomerSideMenuViewController: UITableViewDelegate, UITableViewDataSo
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(menus[indexPath.row])
+        switch indexPath.row {
+        case 0:
+            print("products")
+        case 1:
+            let nvc = presentingViewController as! UINavigationController
+            let vc = nvc.viewControllers.last as! BaseViewController
+            vc.navigateTo(id: "customer_order", pathId: "My Orders")
+            dismiss(animated: true, completion: nil)
+        default:
+            break
+        }
+        
     }
 }
 

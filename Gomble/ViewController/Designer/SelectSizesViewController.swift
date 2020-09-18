@@ -22,9 +22,9 @@ class SelectSizesViewController: BaseDialogViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         unselectedTags = allTags
-        for tag in Testdatabase.sizeRangeData.arrayValue {
-            selectedTags.append(tag.stringValue)
-            unselectedTags = unselectedTags.filter{ $0 != tag.stringValue}
+        for tag in Globals.sizeRanges {
+            selectedTags.append(tag)
+            unselectedTags = unselectedTags.filter{ $0 != tag}
         }
         selectedTagListView.addTags(selectedTags)
         unSelectedTagListView.addTags(unselectedTags)
@@ -33,7 +33,7 @@ class SelectSizesViewController: BaseDialogViewController {
     }
     
     @IBAction func onSave(_ sender: Any) {
-        Testdatabase.sizeRangeData.arrayObject = selectedTags        
+        Globals.sizeRanges = selectedTags        
         if (completion != nil) {
             completion!()
         }

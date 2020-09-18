@@ -14,6 +14,8 @@ struct Globals {
     public static var techpackID = ""
     public static var materialID = ""
     public static var clientToken = ""
+    public static var sizeRanges = [String]()
+    public static var unit = "cm"
     
     public static func alert(context: UIViewController, title: String, message: String, delayed: Bool = false, completion:(()->Void)? = nil ) {
         if(delayed) {

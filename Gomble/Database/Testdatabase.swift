@@ -10,10 +10,6 @@ import UIKit
 import SwiftyJSON
 
 class Testdatabase {
-    public static var measurementData = [JSON]()
-    public static var patternData = [JSON]()
-    public static var readyToWearData = [JSON]()
-    public static var sizeRangeData = JSON()    
     public static func getTestColaborationData() -> [JSON]{
         var json1 = JSON()
         json1["first_name"].string = "John"

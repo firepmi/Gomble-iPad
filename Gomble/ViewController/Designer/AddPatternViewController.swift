@@ -8,6 +8,8 @@
 
 import UIKit
 import SwiftyJSON
+import JGProgressHUD
+import Alamofire
 
 class AddPatternViewController: BaseDialogViewController {
     @IBOutlet weak var addButtonView: UIView!
@@ -17,6 +19,7 @@ class AddPatternViewController: BaseDialogViewController {
     @IBOutlet weak var descriptionTextView: RoundedTextView!
     
     let picker:UIImagePickerController?=UIImagePickerController()
+    var isImageUpdated = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +50,7 @@ class AddPatternViewController: BaseDialogViewController {
         
         present(alert, animated: true, completion: nil)
     }
-    @IBAction func onAddMeasurement(_ sender: Any) {
+    @IBAction func onAddPattern(_ sender: Any) {
         if titleTextField.text == "" {
             titleTextField.borderColor = UIColor.red
             return
@@ -55,15 +58,38 @@ class AddPatternViewController: BaseDialogViewController {
         else {
             titleTextField.borderColor = UIColor.init(hexString:"#D7E1EC")
         }
-        var json = JSON()
-        json["title"].string = titleTextField.text!
-        json["description"].string = descriptionTextView.text
         
-        Testdatabase.patternData.append(json)
-        if (completion != nil) {
-            completion!()
+        let multipartFormData = MultipartFormData()
+        
+        let title = titleTextField.text!
+        let description = descriptionTextView.text!
+        
+        if title != "" {
+            multipartFormData.append(title.data(using: .utf8, allowLossyConversion: false)!, withName: "title")
         }
-        dismiss(animated: true, completion: nil)
+        if description != "" {
+            multipartFormData.append(description.data(using: .utf8, allowLossyConversion: false)!, withName: "description")
+        }
+        multipartFormData.append(Globals.techpackID.data(using: .utf8, allowLossyConversion: false)!, withName: "techpack_id")
+        if isImageUpdated {
+            multipartFormData.append((imageView.image!.jpegData(compressionQuality: 1))!, withName: "image",fileName: "generalinfo.jpg", mimeType: "image/jpg")
+        }
+        let hud = JGProgressHUD(style: .dark)
+        hud.textLabel.text = "Please wait..."
+        hud.show(in: self.view)
+        APIManager.addPattern(param: multipartFormData, uploadProgress: { progress in
+            print(progress)
+        }) { json in
+            hud.dismiss()
+            if json["success"].boolValue {
+                print(json["message"].stringValue)
+                self.completion?()
+                self.dismiss(animated: true, completion: nil)
+            }
+            else {
+                self.view.makeToast(json["message"].stringValue)
+            }
+        }
         
     }
 }
@@ -118,6 +144,7 @@ extension AddPatternViewController: UINavigationControllerDelegate, UIImagePicke
         print("cropped")
         imageView.image = image
         addButtonView.isHidden = true
+        isImageUpdated = true
     }
     func openCamera()
     {
