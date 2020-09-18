@@ -10,8 +10,8 @@ import Alamofire
 import SwiftyJSON
 
 class APIManager {
-    public static let rootUrl = "http://192.168.1.238:5000/"
-//    public static let rootUrl = "http://18.219.54.224:5000/"
+//    public static let rootUrl = "http://192.168.1.238:5000/"
+    public static let rootUrl = "http://18.219.54.224:5000/"
     public static let apiUrl = "\(rootUrl)api/"
     public static let imageUrl = "\(rootUrl)public/uploads/"
     public static var token = ""
