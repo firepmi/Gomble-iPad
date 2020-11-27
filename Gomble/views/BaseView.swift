@@ -40,7 +40,7 @@ class BaseView: UIView {
     func setNibName(){        
     }
     func loadViewFromNib() -> UIView? {
-        let bundle = Bundle(for: CustomHeaderView.self)
+        let bundle = Bundle(for: BaseView.self)
         let nib = UINib(nibName: nibName, bundle: bundle)
         return nib.instantiate(withOwner: self, options: nil).first as? UIView
     }

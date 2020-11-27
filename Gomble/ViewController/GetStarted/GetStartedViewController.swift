@@ -9,7 +9,6 @@
 import UIKit
 import XLPagerTabStrip
 import FBSDKLoginKit
-import FBSDKLoginKit
 import SwiftyJSON
 import JGProgressHUD
 import AuthenticationServices
